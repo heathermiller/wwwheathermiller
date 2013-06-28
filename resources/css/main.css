@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #EDEDED;
   text-align: left;
   font-family: Helvetica,Arial,Verdana,sans-serif;
   font-size: 15px;
@@ -110,16 +110,68 @@ ul > li {
  margin-left: 24px;
 }
 
-.graystripe {
+.gradientstripe {
   width: 100%;
-  background-color: #363636;
-  height: 24px;
+  background: #02daaf; /* Old browsers */
+  background: -moz-linear-gradient(left,  #02daaf 0%, #5bc9cc 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#02daaf), color-stop(100%,#5bc9cc)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #02daaf 0%,#5bc9cc 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #02daaf 0%,#5bc9cc 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #02daaf 0%,#5bc9cc 100%); /* IE10+ */
+  background: linear-gradient(to right,  #02daaf 0%,#5bc9cc 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02daaf', endColorstr='#5bc9cc',GradientType=1 ); /* IE6-9 */
+  height: 8px;
 }
 
-.bluestripe {
+.darkstripe {
   width: 100%;
-  background-color: #7CBAC0;
-  height: 60px;
+  background-color: #143941;
+  height: 100px;
+}
+
+.name {
+  position: relative;
+  float: left;
+  margin-top: 50px;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  font-size: 48px;
+}
+
+.profile-pic {
+  position: relative;
+  float: left;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  background: url("{{ site.baseurl }}/resources/img/profilepic.png") no-repeat;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .profile-pic {
+    background-image: url("{{ site.baseurl }}/resources/img/profilepic@2x.png");
+    background-size: 100px 100px;
+  }
+}
+
+.epfl-logo {
+  position: relative;
+  float: right;
+  margin-top: 30px;
+  width: 103px;
+  height: 50px;
+  background: url("{{ site.baseurl }}/resources/img/epfl-logo.png") no-repeat;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .epfl-logo {
+    background-image: url("{{ site.baseurl }}/resources/img/epfl-logo@2x.png");
+    background-size: 103px 50px;
+  }
 }
 
 .bluestripe .container p {
