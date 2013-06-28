@@ -1,24 +1,8 @@
 ---
 layout: default
 ---
+{% include header.html %}
 
-<!DOCTYPE html>
-<html>
-<!DOCTYPE html>
-<html>
-  <head>
+{{ content }}
 
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}" />
-    {% endif %}
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="robots" content="noindex, nofollow, noarchive"/>
-
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/resources/favicon.ico">
-    <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/resources/favicon.ico">
-  </head>
-  <body>
-    {{ content }}
-  </body>
-</html>
+{% include footer.html %}
