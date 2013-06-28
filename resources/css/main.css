@@ -124,6 +124,8 @@ ul > li {
 }
 
 .darkstripe {
+  position: relative;
+  z-index: 10;
   width: 100%;
   background-color: #0097E0;
   height: 100px;
@@ -175,6 +177,7 @@ ul > li {
 }
 
 .splash {
+  margin-top: -6px;
   background: url({{ site.baseurl }}/resources/img/panorama.jpg) no-repeat right top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
