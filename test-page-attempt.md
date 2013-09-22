@@ -3,8 +3,6 @@ layout: page
 title: this is a test page!
 ---
 
-Oh yeah, I totally forgot the content
+<span class="blurb"></span>
 
-## Test bump! woot!
-
-How about now?
+yey

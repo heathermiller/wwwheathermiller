@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<div class="wrapper">
+  {% include navbar.html %}
+
+  <div class="greenstripe">&nbsp;</div>
+  <div class="graystripe">&nbsp;</div>
+
+  <div class="page-splash">
+    <div class="container">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+  <div class="bluegray" style="height: 100%">
+    <div class="container" style="height: 100%">
+        {{ content }}
+    </div>
+  </div>
+  <div class="push"></div>
+</div>
+
+<div class="footer-wrap">
+  <div class="greenstripe" style="height: 6px;">&nbsp;</div>
+  {% include darkgray-footer.html %}
+</div>
+
+
+{% include footer.html %}

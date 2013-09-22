@@ -7,13 +7,35 @@ layout: default
 <div class="darkstripe">
   <div class="container">
     <div class="profile-pic">&nbsp;</div>
-    <div class="name">Heather Miller</div>
-    <div class="epfl-logo">&nbsp;</div>
+    <div class="namebox">
+      <div class="name">Heather Miller</div>
+      <div class="title">
+        PhD Student @ EPFL
+        <!-- <span style="font-family: MuseoSlab-500; letter-spacing: 0px;">Advisor:</span> Prof. Martin Odersky -->
+      </div>
+    </div>
+    <div class="identitites">
+      <div class="identity">Programming Languages</div>
+      <div class="identity">Member of the Scala Team</div>
+      <div class="identity main"></div>
+    </div>
+    <div class="scala-circle">&nbsp;</div>
+    <div class="social-icon"><a href="http://twitter.com/heathercmiller"><img src="{{ site.baseurl }}/resources/img/twitter.png"/></a></div>
+  <div class="social-icon"><a href="mailto:heather.miller@epfl.ch"><img src="{{ site.baseurl }}/resources/img/mail.png"/></a></div>
   </div>
 </div>
-<div class="splash"><div class="splash-overlay">&nbsp</div></div>
+<div class="nav-stripe">
+  <!-- Navigation -->
+</div>
 <div class="container">
-  {{ content }}
+  <div class="span12">
+    {{ content }}
+  </div>
 </div>
 
 {% include footer.html %}
+
+<!-- cs phd student
+programming languages, machine learning, signal processing, neuroscience
+designer
+scala team -->

@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-  background-color: #fff;
+  background-color: #E5E5E5;
   text-align: left;
   font-family: Helvetica,Arial,Verdana,sans-serif;
   font-size: 15px;
@@ -128,31 +128,119 @@ ul > li {
   position: relative;
   z-index: 10;
   width: 100%;
-  background-color: #0097E0;
+  /*background-color: #253847;*/
+  background-color: #ffffff;
   height: 100px;
+}
+
+.namebox {
+  position: relative;
+  float: left;
+  width: 215px;
 }
 
 .name {
   position: relative;
   float: left;
-  margin-top: 50px;
-  font-family: 'Raleway', sans-serif;
-  color: #fff;
-  font-size: 48px;
+  margin-top: 24px;
+  /*font-family: MuseoSlab-700Italic, sans-serif;*/
+  font-family: Bree-Thin, sans-serif;
+  color: #000;
+  font-size: 36px;
   text-rendering: optimizeLegibility;
 }
+
+.title {
+  position: relative;
+  float: left;
+  font-family: MuseoSlab-100, sans-serif;
+  letter-spacing: 0px;
+  font-size: 18px;
+  margin-top: 6px;
+  color: #F05A29;
+}
+
+.identitites {
+  position: relative;
+  float: left;
+  border-left: solid 1px #F05A29; /*another color, 8CA82F*/
+  margin-top: 20px;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.identity {
+  font-family: Bree-Thin, sans-serif;
+  font-weight: 100;
+  margin-left: 2px;
+  font-size: 24px;
+  line-height: 0.9em;
+  color: rgba(135, 145, 150, 0.5);
+  margin-bottom: 6px;
+}
+
+.main:first-child {
+  margin-top: 0px;
+}
+
+.main {
+  color: #F05A29; /*another color, 8CA82F or 88cf49*/
+  margin-top: 4px;
+}
+
+.social-icon {
+  margin: 30px;
+  margin-right: 0px;
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  float: right;
+  border: 0px;
+}
+
+.social-icon > a {
+  border: 0px;
+}
+
+.scala-circle {
+  margin: 30px;
+  margin-left: 16px;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  float: right;
+  background: url("{{ site.baseurl }}/resources/img/scala-circle.png") no-repeat;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .scala-circle {
+    background-image: url("{{ site.baseurl }}/resources/img/scala-circle@2x.png");
+    background-size: 40px 40px;
+  }
+}
+
+.nav-stripe {
+  width: 100%;
+  height: 40px;
+  background-color: #F2F2F2;
+}
+
+
+
 
 .profile-pic {
   position: relative;
   float: left;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   margin-right: 20px;
   width: 100px;
   height: 100px;
-  border-radius: 50px;
+/*  border-radius: 50px;
   -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
+  -moz-border-radius: 50px;*/
   background: url("{{ site.baseurl }}/resources/img/profilepic.png") no-repeat;
+  border-bottom: 4px solid #hF05A29;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
@@ -162,7 +250,7 @@ ul > li {
   }
 }
 
-.epfl-logo {
+/*.epfl-logo {
   position: relative;
   float: right;
   margin-top: 30px;
@@ -195,13 +283,7 @@ ul > li {
     background-size: cover;
   }
 }
-
-.splash-overlay {
-  background-color: rgba(175, 175, 175, 0.25);
-  /*background-color: rgba(0, 150, 223, 0.25);*/
-  width: 100%;
-  height: 100%;
-}
+*/
 
 .bluestripe .container p {
   color: rgba(255, 255, 255, 0.9);
