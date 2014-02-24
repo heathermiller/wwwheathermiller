@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: front
 title: this is a test page!
 ---
 
