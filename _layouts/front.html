@@ -10,7 +10,7 @@ layout: default
       <div class="col-md-2">
         <div class="profile-pic centered">&nbsp;</div>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-6">
         <div class="profile visible-xs visible-sm centered">
           <div style="text-align: center;">
             <div class="first name">{{ site.first-name }}</div>
@@ -24,6 +24,20 @@ layout: default
           <div class="last name">{{ site.last-name }}</div>
           <div class="title">{{ site.job-title }}</div>
           <div class="blurb">{{ site.blurb-about-self }}</div>
+        </div>
+      </div>
+      <div class="col-md-4 visible-xs visible-sm" style="text-align: center;">
+        <span class="entypo mail"></span>
+        <span class="entypo-social twitter"></span>
+        <span class="entypo-social github"></span>
+        <span class="entypo location"></span>
+      </div>
+      <div class="col-md-4 visible-md visible-lg">
+        <div class="coordinates">
+          <span class="entypo mail"></span>&nbsp;<span class="coord"><a href="mailto:{{ site.email }}">{{ site.email }}</a></span><br/>
+          <span class="entypo-social twitter"></span>&nbsp;<span class="coord"><a href="https://twitter.com/{{ site.twitter }}">{{ site.twitter }}</a></span><br/>
+          <span class="entypo-social github"></span>&nbsp;<span class="coord"><a href="https://github.com/{{ site.github }}">{{ site.github }}</a></span><br/>
+          <span class="entypo location"></span>&nbsp;<span class="coord"><a href="{{ site.location-url }}">{{ site.location }}</a></span>
         </div>
       </div>
     </div>
