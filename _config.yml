@@ -1,7 +1,10 @@
 title: "Heather Miller"
 baseurl: ""
 
-name: 'Heather Miller'
+first-name: 'Heather'
+last-name: 'Miller'
+job-title: 'Computer Science PhD Student at EPFL'
+blurb-about-self: 'US NSF Graduate Research Fellow and PhD student working on the Scala programming language with Professor Martin Odersky.'
 profpic: '/resources/img/profilepic.png'
 profpic-retina: '/resources/img/profilepic@2x.png'
 twitter: heathercmiller
