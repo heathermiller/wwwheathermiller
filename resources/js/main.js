@@ -1,31 +1,24 @@
-// ---
-// ---
+---
+---
 
-/***************************
- * Document initialization
- **************************/
-$(document).ready(function(){
+// speaker deck viewcounts
+var futuresPromises = getSpeakerdeckStats("6cd6688b9e11a1f5e1dd19d711e87b98", "futures-promises-views");
 
-// get info from speakerdeck
-function getViewcount(url) {
-  var json = $.ajax(url)
-    .done(function() {
-      alert( "success" );
-    })
-    .fail(function() {
-      alert( "error" );
-    })
-    .always(function() {
-      alert( "complete" );
-    });
-//   // var osname = "Unknown OS";
-//   // if (navigator.appVersion.indexOf("Win") != -1) osname = "Windows";
-//   // if (navigator.appVersion.indexOf("Mac") != -1) osname = "Mac OS";
-//   // if (navigator.appVersion.indexOf("Linux") != -1) osname = "Linux";
-//   // if (navigator.appVersion.indexOf("X11") != -1) osname = "UNIX";
-//   // return osname;
-}
+function getSpeakerdeckStats(apiKey, id) {
+  var url = "http://www.kimonolabs.com/api/cv96bzz6?apikey=" + apiKey;
+  $.ajax({
+    "url": url,
+    "crossDomain": true,
+    "dataType": "jsonp",
+    success: function(json) {
+      onSuccessfulResponse(json, id);
+    }
+  });
+};
 
-getViewcount("http://www.kimonolabs.com/api/cv96bzz6?apikey=6cd6688b9e11a1f5e1dd19d711e87b98");
+function onSuccessfulResponse(json, id) {
+    var viewcount = json.results.collection1[0].viewcount;
+    // var starcount = json.results.collection1[0].starcount.text;
+    $("#"+id).text(viewcount);
+};
 
-});
