@@ -4,9 +4,11 @@ baseurl: ""
 first-name: 'Heather'
 last-name: 'Miller'
 job-title: 'Computer Science PhD Student at <a href="http://ic.epfl.ch/">EPFL</a>'
-blurb-about-self: '<a href="http://scala-lang.org">Scala programming language</a> with Professor <a href="http://lampwww.epfl.ch/~odersky/">Martin Odersky</a>. Language support for distributed and concurrent programming.'
+blurb-about-self: 'Advisor: <a style="font-weight: bold;" href="http://lampwww.epfl.ch/~odersky/">Martin Odersky</a>'
 profpic: '/resources/img/profilepic.png'
 profpic-retina: '/resources/img/profilepic@2x.png'
 twitter: heathercmiller
 
+# <a href="http://scala-lang.org">Scala programming language</a> with Professor
+# . Language support for distributed and concurrent programming.
 # <a href="http://www.nsfgrfp.org/">US NSF Graduate Research Fellow</a> and PhD student working on the Scala programming language with Professor Martin Odersky.

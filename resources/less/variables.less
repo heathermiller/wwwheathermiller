@@ -21,10 +21,10 @@
 
 //== Custom Colors
 
-@wetasphalt:   #34495E; // lighter dark blue
-@midnightblue: #2C3E50; // darker dark blue
-@white:        #ffffff;
-
+@wetasphalt:          #34495E; // lighter dark blue
+@midnightblue:        #2C3E50; // darker dark blue
+@white:               #ffffff;
+@translucentsilver:   rgba(189, 195, 199, 0.4);
 
 
 //== Scaffolding
@@ -360,8 +360,8 @@
 
 // Navbar toggle
 @navbar-default-toggle-hover-bg:           @wetasphalt; // #ddd;
-@navbar-default-toggle-icon-bar-bg:        #888;
-@navbar-default-toggle-border-color:       #ddd;
+@navbar-default-toggle-icon-bar-bg:        @translucentsilver; //#888;
+@navbar-default-toggle-border-color:       lighten(@wetasphalt, 2%); // #ddd;
 
 
 // Inverted navbar

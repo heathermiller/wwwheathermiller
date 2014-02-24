@@ -128,7 +128,7 @@ ul > li {
   padding: 20px;
   background-color: #34495E;
   width: 100%;
-  min-height: 190px;
+  min-height: 140px;
 }
 
 .navbar {
@@ -144,25 +144,24 @@ ul > li {
   /*position: relative;*/
   /*float: left;*/
   /*margin-top: 20px;*/
-  padding-right: 20px;
-  width: 150px;
-  height: 150px;
-  border-radius: 75px;
-  -webkit-border-radius: 75px;
-  -moz-border-radius: 75px;
+  /*padding-right: 20px;*/
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
   background: url('{{ site.baseurl }}{{ site.profpic }}') no-repeat;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .profile-pic {
     background-image: url('{{ site.baseurl }}{{ site.profpic-retina }}');
-    background-size: 150px 150px;
+    background-size: 120px 120px;
   }
 }
 
 .profile {
-  position: relative;
-  float: left;
+  display: block;
 }
 
 .name {
@@ -170,6 +169,7 @@ ul > li {
   font-size: 48px;
   color: #ffffff;
   line-height: 1em;
+  margin-bottom: 4px;
 }
 
 .first {
@@ -195,7 +195,7 @@ ul > li {
   font-style: normal;
   font-weight: 700;
   color: #1ABC9C;
-  font-size: 28px;
+  font-size: 22px;
   margin-bottom: 6px;
 }
 
@@ -211,7 +211,7 @@ ul > li {
   font-family: 'Lato', sans-serif;
   color: #ffffff;
   line-height: 1.2em;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 100;
 }
 
@@ -223,4 +223,16 @@ ul > li {
 .blurb > a:hover {
   color: #E74C3C;
   font-weight: 100;
+}
+
+.about-me {
+  background-color: #1ABC9C;
+  min-height: 140px;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  color: #34495E;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
