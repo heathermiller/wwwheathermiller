@@ -279,6 +279,11 @@ ul > li {
   /*color: #3498DB;*/
 }
 
+.collapsed-entypo > a:link, .collapsed-entypo > a:visited {
+  color: #ffffff;
+  border: 0;
+}
+
 .about-me {
   /*background-color: #1ABC9C;*/
   /*background-color: #F1C40F;*/

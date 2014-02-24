@@ -27,10 +27,12 @@ layout: default
         </div>
       </div>
       <div class="col-md-4 visible-xs visible-sm" style="text-align: center;">
-        <span class="entypo mail"></span>
-        <span class="entypo-social twitter"></span>
-        <span class="entypo-social github"></span>
-        <span class="entypo location"></span>
+        <div class="collapsed-entypo">
+          <a href="mailto:{{ site.email }}"><span class="entypo mail"></span></a>
+          <a href="https://twitter.com/{{ site.twitter }}"><span class="entypo-social twitter"></span></a>
+          <a href="https://github.com/{{ site.github }}"><span class="entypo-social github"></span></a>
+          <a href="{{ site.location-url }}"><span class="entypo location"></span></a>
+        </div>
       </div>
       <div class="col-md-4 visible-md visible-lg">
         <div class="coordinates">
