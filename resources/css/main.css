@@ -173,6 +173,7 @@ ul > li {
 
 .profile {
   display: block;
+  margin-top: 6px;
 }
 
 .name {
@@ -206,12 +207,14 @@ ul > li {
   font-style: normal;
   font-weight: 700;
   color: #1ABC9C;
+  /*color: #E44B3C;*/
   font-size: 22px;
   margin-bottom: 6px;
 }
 
 .title > a:link, .title > a:visited {
   color: #1ABC9C;
+  /*color: #E44B3C;*/
 }
 
 .title > a:hover {
