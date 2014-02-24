@@ -32,6 +32,11 @@ body {
     overflow: hidden;
 }*/
 
+.centered {
+  margin-left:auto;
+  margin-right:auto;
+}
+
 a:link, a:visited {
   text-decoration: none;
   color: #3498DB;
@@ -115,7 +120,7 @@ ul {
 
 ul > li {
  color: #ffffff;
- text-shadow: 0 1px 1px #000;
+ /*text-shadow: 0 1px 1px #000;*/
  margin-left: 24px;
 }
 
@@ -133,10 +138,13 @@ ul > li {
 }
 
 .profile-pic {
-  position: relative;
-  float: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*position: relative;*/
+  /*float: left;*/
   /*margin-top: 20px;*/
-  /*margin-right: 20px;*/
+  padding-right: 20px;
   width: 150px;
   height: 150px;
   border-radius: 75px;
@@ -150,6 +158,11 @@ ul > li {
     background-image: url('{{ site.baseurl }}{{ site.profpic-retina }}');
     background-size: 150px 150px;
   }
+}
+
+.profile {
+  position: relative;
+  float: left;
 }
 
 .name {
@@ -197,7 +210,7 @@ ul > li {
 .blurb {
   font-family: 'Lato', sans-serif;
   color: #ffffff;
-  line-height: 1.1em;
+  line-height: 1.2em;
   font-size: 24px;
   font-weight: 100;
 }
