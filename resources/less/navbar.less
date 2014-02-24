@@ -12,10 +12,15 @@
   position: relative;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
-  border: 1px solid transparent;
+  border: 0px solid transparent;
+  font-family: 'Lato', sans-serif;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
+  &:link {
+    font-weight: 100;
+    color: #ffffff
+  }
 
   @media (min-width: @grid-float-breakpoint) {
     border-radius: @navbar-border-radius;

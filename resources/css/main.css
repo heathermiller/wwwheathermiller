@@ -14,7 +14,6 @@ html, body {
 body {
   background-color: #fff;
   text-align: left;
-  /*font-family: "proxima-nova", sans-serif;*/
   font-family: Helvetica,Arial,Verdana,sans-serif;
   font-size: 15px;
   line-height: 22px;
@@ -24,12 +23,20 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/*[class*="col-"]{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+.row{
+    overflow: hidden;
+}*/
+
 a:link, a:visited {
   text-decoration: none;
-  /*color: #444;*/
-  color: #41B7D8;
+  color: #3498DB;
   font-weight: 600;
-  border-bottom: 2px solid #dcdcdc;
+  border-bottom: 2px solid rgba(189, 195, 199, 0.3);
   -webkit-transition: color .1s ease-in;
   -moz-transition: color .1s ease-in;
   -ms-transition: color .1s ease-in;
@@ -39,7 +46,7 @@ a:link, a:visited {
 
 a:hover {
   text-decoration: none;
-  color: #E16147;
+  color: #E74C3C;
   -webkit-transition: color .2s ease-in;
   -moz-transition: color .2s ease-in;
   -ms-transition: color .2s ease-in;
@@ -121,8 +128,8 @@ ul > li {
 
 .navbar {
   background-color: #2B3E51;
-  width: 100%;
-  height: 70px;
+  /*width: 100%;*/
+  /*height: 70px;*/
 }
 
 .profile-pic {
@@ -179,10 +186,28 @@ ul > li {
   margin-bottom: 6px;
 }
 
+.title > a:link, .title > a:visited {
+  color: #1ABC9C;
+}
+
+.title > a:hover {
+  color: #E74C3C;
+}
+
 .blurb {
   font-family: 'Lato', sans-serif;
   color: #ffffff;
   line-height: 1.1em;
   font-size: 24px;
+  font-weight: 100;
+}
+
+.blurb > a:link, .blurb > a:visited {
+  color: #ffffff;
+  font-weight: 100;
+}
+
+.blurb > a:hover {
+  color: #E74C3C;
   font-weight: 100;
 }
