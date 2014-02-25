@@ -311,10 +311,6 @@ ul > li {
   font-weight: bold;
 }
 
-.publication > .info {
-  padding-bottom: 28px;
-}
-
 .publication > .info > .title {
   font-size: 17px;
   line-height: 1.3em;
