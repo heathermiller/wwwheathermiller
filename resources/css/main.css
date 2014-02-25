@@ -313,8 +313,12 @@ ul > li {
 .publication > .info > .title,
 .publication > .info > .author,
 .publication > .info > .conference,
-.publication > .info > .abbrv,
 .publication > .info > .location,
-.publication > .info > .note {
+.publication > .info > .note,
+.publication > .abbrv {
   display: inline;
+}
+
+.abbrv {
+  font-size: 16px;
 }
