@@ -283,10 +283,13 @@ ul > li {
   /*color: #3498DB;*/
 }
 
+.collapsed-entypo {
+  margin-top: 6px;
+}
+
 .collapsed-entypo > a:link, .collapsed-entypo > a:visited {
   color: #ffffff;
   border: 0;
-  margin-top: 4px;
 }
 
 .about-me {
