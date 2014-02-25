@@ -34,14 +34,14 @@ body {
   src: url({{ site.baseurl }}/resources/entypo-social.woff);
 }
 
-[class*="col-"]{
+/*[class*="col-"]{
     margin-bottom: -99999px;
     padding-bottom: 99999px;
 }
 
 .row{
     overflow: hidden;
-}
+}*/
 
 .centered {
   margin-left:auto;
@@ -199,7 +199,7 @@ ul > li {
   font-weight: 600;*/
 }
 
-.title {
+.profile > .title {
   display: block;
   /*font-family: "ff-enzo-web",sans-serif;*/
   font-family: 'Lato', sans-serif;
@@ -307,18 +307,42 @@ ul > li {
   font-weight: bold;
 }
 
-.publication {
-}
-
-.publication > .info > .title,
+/*.publication > .info > .title,
 .publication > .info > .author,
 .publication > .info > .conference,
 .publication > .info > .location,
 .publication > .info > .note,
 .publication > .abbrv {
   display: inline;
+}*/
+
+.publication > .info {
+  padding-bottom: 20px;
 }
+
+.publication > .info > .title {
+  font-size: 17px;
+  line-height: 1.3em;
+  margin-bottom: 4px;
+}
+
+.publication > .info > .author {
+  font-size: 16px;
+  line-height: 1.2em;
+  margin-bottom: 4px;
+}
+
 
 .abbrv {
   font-size: 16px;
 }
+
+.note, .conference {
+  font-family: "adelle",serif;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 16px;
+  color: #95A5A6;
+  line-height: 1.1em;
+}
+

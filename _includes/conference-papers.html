@@ -8,9 +8,9 @@
             {% endif %}
           </div> -->
           <div class="info col-md-9" style="padding-right: 0px;">
-            {% if post.pdf %}<div class="title"><a href="{{ post.pdf }}">{{ post.title }}</a></div>.
-            {% else %}<div class="title">{{ post.title }}</div>.{% endif %}
-            <div class="author">{{ post.authors }}</div>.
+            {% if post.pdf %}<div class="title"><a href="{{ post.pdf }}">{{ post.title }}</a></div>
+            {% else %}<div class="title">{{ post.title }}.</div>{% endif %}
+            <div class="author">{{ post.authors }}.</div>
             {% if post.undersubmission %}
             {% else %}<div class="conference">{{ post.conference }}.</div>
             {% endif %}
