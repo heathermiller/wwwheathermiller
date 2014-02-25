@@ -48,8 +48,8 @@ layout: front
 <div class="about-me">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 center" style="text-align: center;">
-        This should be centered.
+      <div class="col-md-12 center">
+        {% include about-me.html %}
       </div>
     </div>
   </div>
@@ -60,6 +60,17 @@ layout: front
   <div id="pickles-spores-scaladays"></div>
   <div id="spores-strangeloop"></div>
   <div id="instant-pickles-oopsla"></div>
+
+  <div class="row">
+    <div class="col-md-7">
+      Conference/Workshop Papers
+{% include conference-papers.html %}
+    </div>
+    <div class="col-md-5">
+      Talks
+    </div>
+  </div>
+
   {{ content }}
 </div>
 

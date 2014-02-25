@@ -1,0 +1,19 @@
+{% for post in site.posts %}
+  {% if post.isjournal %}
+  <div class="publication">
+      {% if post.pdf %}<div class="pdf"><a href="{{ post.pdf }}"><img src="{{ site.baseurl }}/resources/img/pdf.png"/></a></div>
+      {% else %}<div class="pdf"><img src="{{ site.baseurl }}/resources/img/no-pdf.png"/></div>{% endif %}
+      <div class="info">
+      {% if post.pdf %}<div class="title"><a href="{{ post.pdf }}">{{ post.title }}</a></div>.
+      {% else %}<div class="title">{{ post.title }}</div>.{% endif %}
+      <div class="author">{{ post.authors }}</div>.
+      <div class="conference">{{ post.conference }},</div>
+      {% if post.volume %}Volume {{ post.volume}},{% endif %}
+      {% if post.issue %}Issue {{ post.issue}}.{% endif %}
+      {% if date contains 'appear' %}<div class="date">{{ post.date }}.</div>
+      {% else %} <div class="date">{{ post.date | date: "%Y" }}.</div> {% endif %}
+      {% if post.pages %}pages {{ post.pages}}.{% endif %}
+      </div>
+  </div>
+  {% endif %}
+{% endfor %}

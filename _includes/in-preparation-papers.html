@@ -1,0 +1,13 @@
+{% for post in site.posts %}
+  {% if post.isinpreparation %}
+  <div class="publication">
+      {% if post.pdf %}<div class="pdf"><a href="{{ post.pdf }}"><img src="{{ site.baseurl }}/resources/img/pdf.png"/></a></div>
+      {% else %}<div class="pdf"><img src="{{ site.baseurl }}/resources/img/no-pdf.png"/></div>{% endif %}
+      <div class="info">
+      {% if post.pdf %}<div class="title"><a href="{{ post.pdf }}">{{ post.title }}</a>,</div>
+      {% else %}<div class="title">{{ post.title }},</div>{% endif %}
+      <div class="author">by {{ post.authors }}.</div>
+      </div>
+  </div>
+  {% endif %}
+{% endfor %}

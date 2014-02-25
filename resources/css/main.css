@@ -34,14 +34,14 @@ body {
   src: url({{ site.baseurl }}/resources/entypo-social.woff);
 }
 
-/*[class*="col-"]{
+[class*="col-"]{
     margin-bottom: -99999px;
     padding-bottom: 99999px;
 }
 
 .row{
     overflow: hidden;
-}*/
+}
 
 .centered {
   margin-left:auto;
@@ -298,6 +298,23 @@ ul > li {
   color: #34495E;
   font-weight: 400;
   font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.red {
+  color: #E74C3C;
+  font-weight: bold;
+}
+
+.publication {
+}
+
+.publication > .info > .title,
+.publication > .info > .author,
+.publication > .info > .conference,
+.publication > .info > .abbrv,
+.publication > .info > .location,
+.publication > .info > .note {
+  display: inline;
 }

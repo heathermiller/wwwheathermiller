@@ -1,0 +1,24 @@
+{% for post in site.posts %}
+  {% if post.isconference %}
+    <div class="row">
+      <div class="publication">
+<!--           <div class="pdf col-md-1">
+            {% if post.pdf %}<a href="{{ post.pdf }}"><img src="{{ site.baseurl }}/resources/img/pdf.png"/></a>
+            {% else %}<img src="{{ site.baseurl }}/resources/img/no-pdf.png"/>
+            {% endif %}
+          </div> -->
+          <div class="info col-md-10">
+            {% if post.pdf %}<div class="title"><a href="{{ post.pdf }}">{{ post.title }}</a></div>.
+            {% else %}<div class="title">{{ post.title }}</div>.{% endif %}
+            <div class="author">{{ post.authors }}</div>.
+            {% if post.abbrv %}<div class="conference">{{ post.conference }}</div>{% else %}<div class="conference">{{ post.conference }},</div>{% endif %}
+            <div class="location">{{ post.location }}, </div><div class="date">{{ post.date | date: "%B %Y" }}.</div>
+            {% if post.note %}<div class="note">{{ post.note }}</div>{% endif %}
+          </div>
+          <div class="abbr col-md-2">
+            {% if post.abbrv %}<div class="abbrv">({{ post.abbrv }} {{post.date | date: "%Y"}}),</div>{% endif %}
+          </div>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
