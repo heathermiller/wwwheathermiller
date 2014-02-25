@@ -286,6 +286,7 @@ ul > li {
 .collapsed-entypo > a:link, .collapsed-entypo > a:visited {
   color: #ffffff;
   border: 0;
+  margin-top: 4px;
 }
 
 .about-me {
@@ -307,17 +308,8 @@ ul > li {
   font-weight: bold;
 }
 
-/*.publication > .info > .title,
-.publication > .info > .author,
-.publication > .info > .conference,
-.publication > .info > .location,
-.publication > .info > .note,
-.publication > .abbrv {
-  display: inline;
-}*/
-
 .publication > .info {
-  padding-bottom: 20px;
+  padding-bottom: 28px;
 }
 
 .publication > .info > .title {
@@ -326,15 +318,27 @@ ul > li {
   margin-bottom: 4px;
 }
 
+/*.publication > .info > .title > a:link,
+.publication > .info > .title > a:visited {
+  color: #E74C3C;
+}
+
+.publication > .info > .title > a:hover {
+  color: #1ABC9C;
+}*/
+
 .publication > .info > .author {
   font-size: 16px;
   line-height: 1.2em;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  /*color: #2B3E51;*/
+  /*font-weight: 400;*/
 }
 
 
 .abbrv {
   font-size: 16px;
+  /*color: #2B3E51;*/
 }
 
 .note, .conference {
