@@ -8,7 +8,8 @@ _Types_ are an immensely important concept in programming language design and
 theory. 
 
 A type can be thought of as a _category_ that a value (typically at run-time)
-can fall into. For example, the concept of the number 12 would have type `Int` and and the value that  12.
+can fall into. For example, the number 12 would have type `Int`, and its
+corresponding value would be 12.
 
 ### Typing Disciplines: Static versus Dynamic, Strong versus Weak
 
@@ -17,8 +18,8 @@ on whether or not the language's design embraces types. A language can be
 "statically typed" versus "dynamically checked", or "strong" versus "weak".
 Intuitively, such typing disciplines:
 
-- dictate how, or whether or not, data is structured in memory (strong versus weak)
-- _when_ the work of structuring data in memory takes place (static versus dynamic)
+- dictate how, or whether or not, data in memory corresponds to types (strong versus weak)
+- _when_ the work of checking whether a type corresponds to data in memory takes place (static versus dynamic)
 
 Statically typed languages, which can have strong or weak typing, distinguish two
 phases; compile time and runtime. That is, code is compiled (during which it
@@ -46,16 +47,27 @@ location, which can lead to runtime errors.
 
 Dynamically checked languages can also have strong or weak typing. Languages
 like Python are strongly dynamically checked because they check for
-correctness at runtime, preventing a `String` from occupying an `Int`'s memory
-location for example, and in addition, these languages provide no way for the
-programmer to write to an arbitrary memory location. Assembly, on the other
-hand, is weak &mdash; that is, it runs dynamically (without any
-runtime checking whatsoever) and allows users to directly manipulate memory.
+correctness at runtime, preventing one from calling a method defined on a
+`String` for example on that of an `Int`. In addition, these languages provide
+no way for the programmer to write to an arbitrary memory location. Assembly,
+on the other hand, is weak with no typng &mdash; it's dynamic in that there is
+no static or runtime checking, and it allows users to directly manipulate
+memory.
 
 ### Scala is Strongly Statically Typed
 
 
 ----------- SCRATCH
+
+
+accessing a `String` as an `Int`
+
+Languages like Python are strongly dynamically checked because they check for
+correctness at runtime, preventing the use of an object of a given type `Person`, say, as an object of an unrelated type `Elevator`.
+
+
+`String` from occupying an `Int`'s memory
+location for example, and i
 
 Intuitively, the discipline of typing can be thought . Static typing and dynamic checking
 as well as  are all typing disciplines that:
