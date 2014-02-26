@@ -4,7 +4,73 @@ title: "Types in Scala"
 by: "Heather Miller and Philipp Haller"
 ---
 
-Types
+_Types_ are an immensely important concept in programming language design and
+theory. 
+
+A type can be thought of as a _category_ that a value (typically at
+run-time) can fall into.
+
+### Typing Disciplines: Static versus Dynamic, Strong versus Weak
+
+Languages can be categorized into at least four camps, based on how deeply, or
+on whether or not the language's design embraces types. A language can be
+"statically typed" versus "dynamically checked", or "strong" versus "weak".
+Intuitively, such typing disciplines:
+
+- dictate how, or whether or not, data is structured in memory (strong versus weak)
+- _when_ the work of structuring data in memory takes place (static versus dynamic)
+
+Statically typed languages, which can be strong or weak, distinguish two
+phases; compile time and runtime. That is, code is compiled (during which it
+is checked for correctness) once, and then it can be run multiple times.
+
+Dynamically checked languages, which can also be strong or weak, don't have
+such a distinction. Instead, code is parsed and run (often with runtime checks
+for correctness each time its run) all always at the same time.
+
+A language is considered strong or weak depending on whether or not its
+correctness checks (either compile time or runtime) agree with what is
+actually held in memory. 
+
+For example, a strong statically typed language like Scala statically (at
+compile time) ensures that a certain value with type `Int` is correctly used
+throughout the program, and that at runtime, nothing else other than an `Int`
+can be held in that value's memory location.
+
+On the other hand, weak statically typed languages like C statically ensures
+that a certain value with type `Int` is correctly used throughout the program,
+but at runtime, it _can't_ ensure that nothing other than an `Int` will be
+held in that value's memory location. Pointer arithmetic makes this guarantee
+impossible – a programmer can easily place a `String` in that `Int`'s memory
+location, which can lead to runtime errors.
+
+Dynamically checked languages can also be . Langauges like Pythong are strongly dynamically checked because 
+
+ how it structures data in
+memory. Strong, statically typed languages use types to _prove_ 
+
+### 
+
+
+
+
+Intuitively, the discipline of typing can be thought . Static typing and dynamic checking
+as well as  are all typing disciplines that:
+
+In statically typed languages, 
+
+strong static
+weak static
+strong dynamic
+weak dynamic
+
+
+
+and _type systems_ 
+
+Relate this strong etc to the size of programs.
+
+
 Type System
 
 
