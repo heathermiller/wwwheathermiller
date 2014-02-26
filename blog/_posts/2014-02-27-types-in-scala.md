@@ -7,8 +7,8 @@ by: "Heather Miller and Philipp Haller"
 _Types_ are an immensely important concept in programming language design and
 theory. 
 
-A type can be thought of as a _category_ that a value (typically at
-run-time) can fall into.
+A type can be thought of as a _category_ that a value (typically at run-time)
+can fall into. For example, the number 12 would have type `Int` and value 12.
 
 ### Typing Disciplines: Static versus Dynamic, Strong versus Weak
 
@@ -37,22 +37,25 @@ compile time) ensures that a certain value with type `Int` is correctly used
 throughout the program, and that at runtime, nothing else other than an `Int`
 can be held in that value's memory location.
 
-On the other hand, weak statically typed languages like C statically ensures
+On the other hand, weak statically typed languages like C statically ensure
 that a certain value with type `Int` is correctly used throughout the program,
 but at runtime, it _can't_ ensure that nothing other than an `Int` will be
 held in that value's memory location. Pointer arithmetic makes this guarantee
 impossible – a programmer can easily place a `String` in that `Int`'s memory
 location, which can lead to runtime errors.
 
-Dynamically checked languages can also be . Langauges like Pythong are strongly dynamically checked because 
+Dynamically checked languages can also be considered strong or weak. Languages
+like Python are strongly dynamically checked because they check for
+correctness at runtime, preventing a `String` from occupying an `Int`'s memory
+location for example, and in addition, these languages provide no way for the
+programmer to write to an arbitrary memory location. Assembly, on the other
+hand, is weak – that is, it runs dynamically (without any
+runtime checking whatsoever) and allows users to directly manipulate memory.
 
- how it structures data in
-memory. Strong, statically typed languages use types to _prove_ 
-
-### 
+### Scala is Strongly Statically Typed
 
 
-
+----------- SCRATCH
 
 Intuitively, the discipline of typing can be thought . Static typing and dynamic checking
 as well as  are all typing disciplines that:
