@@ -115,13 +115,194 @@ suffers due to the rigidity of static type systems. -->
 ## Types in Scala
 
 Scala is strongly statically typed, but it additionally stands out amongst
-other statically typed languages as having an advanced type system.
+other statically typed languages as having a particularly advanced advanced
+type system.
 
 A helpful way to think about Scala's type system is to approach it as if types
 are boundaries that you erect for yourself to safeguard against wrong
 behavior. The more you understand and know how to use Scala's type system, the
 more you can get the type system to do for you, that is, the more expressive you 
 can make it, all meanwhile retaining the same level of protection<sup>[<a href="#1">1</a>]</sup>.
+
+We'll start by covering most basic types that come predefined in Scala that
+all programmers should know. Afterwards, we'll see how to define your own
+types in Scala. Finally, we'll cover the more advanced constructs of Scala's
+type system that allow programmers to
+
+1. Basic Types
+2. Defining your own types in Scala
+3. Customizing typechecking using advanced type system constructs
+
+### Basic Types
+
+Every type defined in a Scala program is essentially made up of a combination
+of Scala's basic types. A hierarchy of all of Scala's predefined and most
+basic types is shown below.
+
+[figure here]
+
+<!-- 
+Types we all know: Boolean, Int, Long, ...
+x: Int means x "has type" Int (":" is a relation)
+Special types: Any, AnyRef, AnyVal, Nothing, Null
+The special types are in a subtype relationship with other types
+Example: Int <: AnyVal
+generally: if A <: B then forall x. x:A -> x:B (if x has type A then it also has type B)
+for example a variable of type Int is also of type AnyVal
+This subtyping relationship gives rise to a type hierarchy
+Show partial type hierarchy with all types seen so far filled in
+ -->
+
+### Defining Your Own Types in Scala
+### Customizing Typechecking Using Advanced Type System Constructs
+
+Types such as existential types or refinement types are combinations of
+existing types; they define new types, but without giving them a name
+
+#### Abstract Types
+
+#### Existential Types
+
+Intuitively, an existential type is a type where some parts of it are unknown.
+
+An existential type includes references to type variables that are unknown. For example, `Array[T] forSome { type T }` is an existential type. It is an array of `T`, where `T` is some completely unknown type. All that is assumed about `T` is that it exists at all. This assumption is weak, but it means at least that an `Array[T] forSome { type T}` is indeed an array and not a banana.
+
+So even though technically the underscore stands for two different things in a pattern match and in a type parameter of a method call, in essence the meaning is the same; it lets you label something that is unknown. 
+
+Why Scala has existential types. Java interop, wildcards and raw types.
+
+Wilcards.
+
+There are two things at play:
+the concept of existential abstraction which is important
+the specific form of existential types that exist in Scala 2.x
+The important point is that abstract type members in Scala can be used for existential abstraction in most (all?) important cases. This means that it is often not necessary to use existential types to achieve the conceptual task of existential abstraction. In fact, Dotty does not have existential types any more, because they mostly add complexity, whereas type members support the important things.
+
+Questions (for Martin):
+is there any use case that existential types support that abstract type members don't support? Do Dotty's abstract type members completely subsume the existential types of Scala 2.x?
+
+This example shows how existential types make it easier to write code that works for many different implementations of the same abstract class. Here, our goal is to make a functional counter that can be incremented, and can the value in its underlying representation, and convert the underlying representation to an Int.
+
+    abstract class Counter[T] {
+      def inc: Counter[T]
+      def get: T
+      def convert(x: T): Int
+    }
+
+    class LongCounter(count: Long = 0L) extends Counter[Long] {
+      def inc: Counter[Long] = new LongCounter(count+1)
+      def get: Long = count
+      def convert(x: Long): Int = x.toInt
+    }
+
+    // want to define a function that can work on any type of counter
+    // we cannot express this as a Counter[Any] bc Counter[Int] is not a subtype of Counter[Any]
+    def fun(c: Counter[t] forSome { type t }): Int = c match {
+      case cnt: Counter[a] => cnt.convert(cnt.inc.inc.get)
+    }
+
+    scala> new LongCounter
+    res2: LongCounter = LongCounter@6c7fd3e4
+
+    scala> fun(res2)
+    res3: Int = 2
+
+    def fun(c: Counter[t] forSome { type t }): Int =
+      c.inc.inc.get
+
+    scala> new LongCounter
+    res0: LongCounter = LongCounter@a779ab4
+
+    scala> fun(res0)
+    res1: Int = 2
+
+
+#### Refinement Types
+
+
+
+
+## Powerful Ways to Use Scala's Type System
+
+**Type-level programming.**
+
+### Typeclasses
+
+Typeclasses are a popular language feature of Haskell. In Scala, one can
+_simulate_ typeclasses, that is, typeclasses are a pattern rather than
+explicitly built into the language.
+
+One reason why Scala's type system is considered to be powerful.
+
+On a high level, typeclasses allow retrofitting types with interfaces (even
+predefined types like Int).
+
+Typeclasses are a language feature in Haskell.
+
+In Scala, typeclasses are a type-based pattern based on implicits that is
+becoming more and more common.
+
+To become familiar with the key terminology of typeclasses, it is helpful to
+think about typeclasses to be completely different from Java-style classes.
+
+In the context of Scala, a typeclass is a generic trait. Example:
+
+    trait Ordering[T] {
+      def compare(x: T, y: T): Int  // abstract
+      ...
+    }
+
+Concrete implementations of a typeclass are defined as _implicits_. Example:
+
+    implicit object intOrdering extends Ordering[Int] {
+      def compare(x: T, y: T): Int = x - y
+    }
+
+These concrete implementations are called typeclass instances.
+
+The fact that they are defined as implicits is a fundamental aspect of the
+typeclass pattern. It allows _simultaneously expressing constraints and making_
+_suitable implementations available_. Example:
+
+    /* @return a sorted sequence with the same elements as `s` */
+    def sort[T](s: Seq[T])(implicit ev: Ordering[T]): Seq[T] = ...
+
+Calling the above `sort` method only type-checks if an implicit value of type
+`Ordering[T]` can be found.
+
+Moreover, within the body of `sort`, the witness `ev` (or "evidence
+parameter") provides a concrete implementation of the required typeclass
+instance for type `T`.
+
+Since this pattern is so common, it can be abbreviated using a context bound
+on the type parameter `T`:
+
+    /* @return a sorted sequence with the same elements as `s` */
+    def sort[T: Ordering](s: Seq[T]): Seq[T] = ...
+
+(Note that we wrote `Ordering` without specifying a type argument; a context
+(bound requires that the bound is a _type constructor_.)
+
+How do we get access to the witness (the concrete implementation of
+`Ordering[T]`) in this case?
+
+The method `implicitly` defined in the `Predef` singleton object gives us
+access:
+
+    def sort[T: Ordering](s: Seq[T]): Seq[T] = {
+      val ordering = implicitly[Ordering[T]]
+      ...
+    }
+
+The `implicitly` method looks like magic, but it has a very simple definition:
+
+    def implicitly[T](implicit e: T) = e
+
+(Remember that you can always pass explicit type arguments to polymorphic methods!)
+
+
+
+
 
 ## _References_
 
