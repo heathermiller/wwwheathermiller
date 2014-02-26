@@ -4,6 +4,8 @@ title: "Types in Scala"
 by: "Heather Miller and Philipp Haller"
 ---
 
+## Types 
+
 _Types_ are an immensely important concept in programming language design and
 theory. 
 
@@ -91,7 +93,7 @@ inconsistencies at the level of types.
 The degree to which programmers are satisfied, however, tends to depend on the
 expressiveness of the type system they're using. This is important to note,
 because later on, we will see how Scala's advanced type system makes it
-possible to retain considerable expressivity meanwhile enabling users to 
+possible to retain expressivity meanwhile enabling users to 
 _make typechecking more precise_.
 
 However, static type systems aren't without their drawbacks.
@@ -110,10 +112,39 @@ come into play to catch these errors.
 outweighed by the inflexibility of a static type system; that is, expressivity
 suffers due to the rigidity of static type systems. -->
 
+## Types in Scala
+
+Scala is strongly statically typed, and has an advanced type system. 
+
+To use an analogy originated by Josh Suereth in his book, _Scala in Depth_,
 
 
 
+<!--
 ----------- SCRATCH
+
+**Type systems**, use Josh's example here.
+The type system allows us to create all sorts of interesting walls around ourselves, known as types. These walls help prevent us from accidentally writing improper code. This is done through the compiler tracking information about variables, methods, and classes.The more you know about Scala's type system, the more information you can give the compiler, and the type walls become less restrictive while still providing the same protection.
+
+You don't need to know everything about Scala's type system in order to be an effective power-user of Scala. 
+
+The _type system_ does is good for:
+
+- _memory safety_: prevents things like dangling pointers and buffer overflows (note: the type system of C is not strong enough to prevent these kinds of runtime errors; Scala, Java, and Rust are examples for memory-safe languages)
+- _type safety_: well-typed programs "do not go wrong": if a program type-checks, it will not produce a runtime error when executed (Java is type-safe up to type casts)
+
+Types are also good for performance. Checking happens at compile time, rather
+than runtime. Enables a bunch of optimizations.
+
+In this guide, we'll progress from. In a language with an advanced type system like Scala, 
+
+1. Scala's standard types
+2. Defining your own types in Scala
+3. Customizing type checking using advanced type system constructs
+
+Common types include primitive types (strings and numbers), container types (lists/arrays and dictionaries/hashes), and user-defined types (classes). In Python, everything is an object, and every object has a type. In other words, functions, modules, and XYZ are also types.
+
+
 
 the hands of the need to excessively ascribe types.
 
@@ -158,27 +189,6 @@ Types are particularly useful for "programming in the large" – when you have a
 very large-scale program, types help you organize the program and make changes
 to it reliably.
 
-**Type systems**, use Josh's example here.
-The type system allows us to create all sorts of interesting walls around ourselves, known as types. These walls help prevent us from accidentally writing improper code. This is done through the compiler tracking information about variables, methods, and classes.The more you know about Scala's type system, the more information you can give the compiler, and the type walls become less restrictive while still providing the same protection.
-
-You don't need to know everything about Scala's type system in order to be an effective power-user of Scala. 
-
-The _type system_ does is good for:
-
-- _memory safety_: prevents things like dangling pointers and buffer overflows (note: the type system of C is not strong enough to prevent these kinds of runtime errors; Scala, Java, and Rust are examples for memory-safe languages)
-- _type safety_: well-typed programs "do not go wrong": if a program type-checks, it will not produce a runtime error when executed (Java is type-safe up to type casts)
-
-Types are also good for performance. Checking happens at compile time, rather
-than runtime. Enables a bunch of optimizations.
-
-In this guide, we'll progress from. In a language with an advanced type system like Scala, 
-
-1. Scala's standard types
-2. Defining your own types in Scala
-3. Customizing type checking using advanced type system constructs
-
-Common types include primitive types (strings and numbers), container types (lists/arrays and dictionaries/hashes), and user-defined types (classes). In Python, everything is an object, and every object has a type. In other words, functions, modules, and XYZ are also types.
-
 "I'm not against types, but I don't know of any type systems that aren't a
 complete pain, so I still like dynamic typing."
 
@@ -203,6 +213,7 @@ John C. Reynolds, _Theories of Programming Languages_, 1998
 Martin Odersky, Lex Spoon, Bill Venners, _Programming in Scala_, 2011
 Josh Suereth, _Scala in Depth_, 2012
 
+-->
 
 ## Types in Scala
 
@@ -218,29 +229,3 @@ Josh Suereth, _Scala in Depth_, 2012
   - Predefined types
   - Types that programs define
   - Combining types
-
-
-accessing a `String` as an `Int`
-
-Languages like Python are strongly dynamically checked because they check for
-correctness at runtime, preventing the use of an object of a given type `Person`, say, as an object of an unrelated type `Elevator`.
-
-
-`String` from occupying an `Int`'s memory
-location for example, and i
-
-Intuitively, the discipline of typing can be thought . Static typing and dynamic checking
-as well as  are all typing disciplines that:
-
-In statically typed languages, 
-
-strong static
-weak static
-strong dynamic
-weak dynamic
-
-
-
-and _type systems_ 
-
-Relate this strong etc to the size of programs.
