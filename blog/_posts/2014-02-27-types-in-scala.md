@@ -41,7 +41,7 @@ On the other hand, weak statically typed languages like C statically ensure
 that a certain value with type `Int` is correctly used throughout the program,
 but at runtime, it _can't_ ensure that nothing other than an `Int` will be
 held in that value's memory location. Pointer arithmetic makes this guarantee
-impossible – a programmer can easily place a `String` in that `Int`'s memory
+impossible &mdash; a programmer can easily place a `String` in that `Int`'s memory
 location, which can lead to runtime errors.
 
 Dynamically checked languages can also be considered strong or weak. Languages
@@ -49,7 +49,7 @@ like Python are strongly dynamically checked because they check for
 correctness at runtime, preventing a `String` from occupying an `Int`'s memory
 location for example, and in addition, these languages provide no way for the
 programmer to write to an arbitrary memory location. Assembly, on the other
-hand, is weak – that is, it runs dynamically (without any
+hand, is weak &mdash; that is, it runs dynamically (without any
 runtime checking whatsoever) and allows users to directly manipulate memory.
 
 ### Scala is Strongly Statically Typed
