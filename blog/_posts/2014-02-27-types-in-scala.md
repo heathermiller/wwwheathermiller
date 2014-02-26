@@ -8,7 +8,7 @@ _Types_ are an immensely important concept in programming language design and
 theory. 
 
 A type can be thought of as a _category_ that a value (typically at run-time)
-can fall into. For example, the number 12 would have type `Int` and value 12.
+can fall into. For example, the concept of the number 12 would have type `Int` and and the value that  12.
 
 ### Typing Disciplines: Static versus Dynamic, Strong versus Weak
 
@@ -20,15 +20,15 @@ Intuitively, such typing disciplines:
 - dictate how, or whether or not, data is structured in memory (strong versus weak)
 - _when_ the work of structuring data in memory takes place (static versus dynamic)
 
-Statically typed languages, which can be strong or weak, distinguish two
+Statically typed languages, which can have strong or weak typing, distinguish two
 phases; compile time and runtime. That is, code is compiled (during which it
 is checked for correctness) once, and then it can be run multiple times.
 
-Dynamically checked languages, which can also be strong or weak, don't have
+Dynamically checked languages, which can also have strong or weak typing, don't have
 such a distinction. Instead, code is parsed and run (often with runtime checks
-for correctness each time its run) all always at the same time.
+for correctness each time it's run) all always at the same time.
 
-A language is considered strong or weak depending on whether or not its
+A language is considered to have strong or weak typing depending on whether or not its
 correctness checks (either compile time or runtime) agree with what is
 actually held in memory. 
 
@@ -44,7 +44,7 @@ held in that value's memory location. Pointer arithmetic makes this guarantee
 impossible &mdash; a programmer can easily place a `String` in that `Int`'s memory
 location, which can lead to runtime errors.
 
-Dynamically checked languages can also be considered strong or weak. Languages
+Dynamically checked languages can also have strong or weak typing. Languages
 like Python are strongly dynamically checked because they check for
 correctness at runtime, preventing a `String` from occupying an `Int`'s memory
 location for example, and in addition, these languages provide no way for the
