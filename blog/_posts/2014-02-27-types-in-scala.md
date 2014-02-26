@@ -71,7 +71,7 @@ Strong static typing has many benefits,
 In line with scalability, in his monograph entitled _Typeful Programming_,
 Luca Cardelli remarks,
 
-> "Types provide a way of controlling evolution, by partially verifying  programs at each stage."
+> "Types are essential for the ordered evolution of large software systems. Types provide a way of controlling evolution, by partially verifying  programs at each stage."
 
 > &mdash; _Luca Cardelli, Typeful Programming, 1993_
 
@@ -79,8 +79,8 @@ Luca Cardelli remarks,
 
 The most widely heralded benefit of static typechecking is that it enables the
 early detection of some programming errors. By catching errors at compile
-time, programmers are free from worrying about stumbling across errors in a
-running application.
+time, programmers are free from worrying about stumbling across certain errors
+in a running application.
 
 In fact, many programmers happily remark that their programs "just work" after
 passing the typechecker. This is likely due to the fact that such a type
@@ -114,10 +114,27 @@ suffers due to the rigidity of static type systems. -->
 
 ## Types in Scala
 
-Scala is strongly statically typed, and has an advanced type system. 
+Scala is strongly statically typed, but it additionally stands out amongst
+other statically typed languages as having an advanced type system.
 
-To use an analogy originated by Josh Suereth in his book, _Scala in Depth_,
+A helpful way to think about Scala's type system is to approach it as if types
+are boundaries that you erect for yourself to safeguard against wrong
+behavior. The more you understand and know how to use Scala's type system, the
+more you can get the type system to do for you, that is, the more expressive you 
+can make it, all meanwhile retaining the same level of protection<sup>[<a href="#1">1</a>]</sup>.
 
+## _References_
+
+- Luca Cardelli and Peter Wegner, _On Understanding Types, Data Abstraction, and Polymorphism_, 1985
+- Luca Cardelli, _Typeful Programming_, 1993
+- Benjamin Pierce, _Types and Programming Languages_, 2002
+- Robert Harper, _Practical Foundations for Programming Languages_, 2013
+- John C. Reynolds, _Theories of Programming Languages_, 1998
+- Martin Odersky, Lex Spoon, Bill Venners, _Programming in Scala_, 2011
+- Josh Suereth, _Scala in Depth_, 2012
+
+<hr/>
+<span style="font-size: 8pt;" id="1">[1] Analogy from Josh Suereth's excellent book, <i>Scala in Depth</i>.</span>
 
 
 <!--
@@ -204,16 +221,6 @@ complete pain, so I still like dynamic typing."
 Static type systems can prove the absence of certain run-time errors. For instance, they can prove properties like: booleans are never added to integers; private variables are not accessed from outside their class; functions are applied to the right number of arguments; only strings are ever added to a set of strings.
 Other kinds of errors are not detected by today's static type systems. For instance, they will usually not detect non-terminating functions, array bounds violations, or divisions by zero. They will also not detect that your program does not conform to its specification (assuming there is a spec, that is!). Static type systems have therefore been dismissed by some as not being very useful. The argument goes that since such type systems can only detect simple errors, whereas unit tests provide more extensive coverage, why bother with static types at all? We believe that these arguments miss the point. Although a static type system certainly cannot replace unit testing, it can reduce the number of unit tests needed by taking care of some properties that would otherwise need to be tested. Likewise, unit testing can not replace static typing. After all, as Edsger Dijkstra said, testing can only prove the presence of errors, never their absence.14 So the guarantees that static typing gives may be simple, but they are real guarantees of a form no amount of testing can deliver.
 
-References:
-Luca Cardelli and Peter Wegner, _On Understanding Types, Data Abstraction, and Polymorphism_, 1985
-Luca Cardelli, _Typeful Programming_, 1993
-Benjamin Pierce, _Types and Programming Languages_, 2002
-Robert Harper, _Practical Foundations for Programming Languages_, 2013
-John C. Reynolds, _Theories of Programming Languages_, 1998
-Martin Odersky, Lex Spoon, Bill Venners, _Programming in Scala_, 2011
-Josh Suereth, _Scala in Depth_, 2012
-
--->
 
 ## Types in Scala
 
@@ -229,3 +236,6 @@ Josh Suereth, _Scala in Depth_, 2012
   - Predefined types
   - Types that programs define
   - Combining types
+
+
+-->
