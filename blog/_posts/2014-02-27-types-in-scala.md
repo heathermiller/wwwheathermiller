@@ -54,37 +54,68 @@ on the other hand, is weak with no typng &mdash; it's dynamic in that there is
 no static or runtime checking, and it allows users to directly manipulate
 memory.
 
-### Scala is Strongly Statically Typed
+### Strong Static Typing
+
+> "A type system can be regarded as calculating a kind of static approximation to the run-time behaviors of the terms in a program"
+
+> &mdash; _Benjamin Pierce, Types and Programming Languages, 2002_
+
+Strong static typing has many benefits,
+
+- **Correctness**. Well-typed programs "do not go wrong"; if a program type-checks, it will not produce a runtime error when executed (Java is type-safe up to type casts).
+- **Performance**. Checking happens statically, which means that widespread runtime checking can't slow down your application (one reason dynamically checked languages are considered slow).
+- **Scalability**. Evolving software, especially large applications with many developers, can change in subtle or significant ways, potentially causing breakage. Types help by ensuring correctness across arbitrarily large applications and teams of developers.
+
+In line with scalability, in his monograph entitled _Typeful Programming_,
+Luca Cardelli remarks,
+
+> "Types provide a way of controlling evolution, by partially verifying  programs at each stage."
+
+> &mdash; _Luca Cardelli, Typeful Programming, 1993_
+
+#### Correctness
+
+The most widely heralded benefit of static typechecking is that it enables the
+early detection of some programming errors. By catching errors at compile
+time, programmers are free from worrying about stumbling across errors in a
+running application.
+
+In fact, many programmers happily remark that their programs "just work" after
+passing the typechecker. This is likely due to the fact that such a type
+system tends to catch simple errors, such as forgetting to convert a string to
+a numeric type before doing a numerical operation on it, as well as complex
+errors, such as neglecting a boundary condition in a complex case analysis.
+The common theme here is that all of these errors manifest themselves as
+inconsistencies at the level of types.
+
+The degree to which programmers are satisfied, however, tends to depend on the
+expressiveness of the type system they're using. This is important to note,
+because later on, we will see how Scala's advanced type system makes it
+possible to retain considerable expressivity meanwhile enabling users to 
+_make typechecking more precise_.
+
+However, static type systems aren't without their drawbacks.
+
+> "Being static, type systems are necessarily also conservative: they can categorically prove the absence of some bad program behaviors, but they cannot prove their presence, and hence they must also sometimes reject programs that actually behave well at runtime."
+
+> &mdash; _Benjamin Pierce, Types and Programming Languages, 2002_
+
+Additionally, there are varieties of errors that _can't_ be detected by
+conventional type systems. For instance, divisions by zero, non-termination,
+or array bound violations. It is here that unit testing (orthogonal to static
+typechecking), or dependent types (typechecking that depends on values) can
+come into play to catch these errors.
+
+<!-- Furthermore, opponents of strong static typing attest that these benefits are
+outweighed by the inflexibility of a static type system; that is, expressivity
+suffers due to the rigidity of static type systems. -->
+
+
 
 
 ----------- SCRATCH
 
-
-accessing a `String` as an `Int`
-
-Languages like Python are strongly dynamically checked because they check for
-correctness at runtime, preventing the use of an object of a given type `Person`, say, as an object of an unrelated type `Elevator`.
-
-
-`String` from occupying an `Int`'s memory
-location for example, and i
-
-Intuitively, the discipline of typing can be thought . Static typing and dynamic checking
-as well as  are all typing disciplines that:
-
-In statically typed languages, 
-
-strong static
-weak static
-strong dynamic
-weak dynamic
-
-
-
-and _type systems_ 
-
-Relate this strong etc to the size of programs.
-
+the hands of the need to excessively ascribe types.
 
 Type System
 
@@ -187,3 +218,29 @@ Josh Suereth, _Scala in Depth_, 2012
   - Predefined types
   - Types that programs define
   - Combining types
+
+
+accessing a `String` as an `Int`
+
+Languages like Python are strongly dynamically checked because they check for
+correctness at runtime, preventing the use of an object of a given type `Person`, say, as an object of an unrelated type `Elevator`.
+
+
+`String` from occupying an `Int`'s memory
+location for example, and i
+
+Intuitively, the discipline of typing can be thought . Static typing and dynamic checking
+as well as  are all typing disciplines that:
+
+In statically typed languages, 
+
+strong static
+weak static
+strong dynamic
+weak dynamic
+
+
+
+and _type systems_ 
+
+Relate this strong etc to the size of programs.
