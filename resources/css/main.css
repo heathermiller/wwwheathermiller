@@ -276,8 +276,8 @@ ul > li {
 
 .coordinates > .entypo, .coordinates > .entypo-social {
   font-size: 36px;
-  color: #1ABC9C;
-  /*color: #E74C3C;*/
+  /*color: #1ABC9C;*/
+  color: #E74C3C;
 
   /*color: #7F8C8D;*/
   /*color: #3498DB;*/
@@ -317,14 +317,14 @@ ul > li {
   margin-bottom: 4px;
 }
 
-/*.publication > .info > .title > a:link,
+.publication > .info > .title > a:link,
 .publication > .info > .title > a:visited {
   color: #E74C3C;
 }
 
 .publication > .info > .title > a:hover {
   color: #1ABC9C;
-}*/
+}
 
 .publication > .info > .author {
   font-size: 16px;
