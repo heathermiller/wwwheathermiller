@@ -159,11 +159,16 @@ Show partial type hierarchy with all types seen so far filled in
 Types such as existential types or refinement types are combinations of
 existing types; they define new types, but without giving them a name
 
-#### Abstract Types
-
 #### Existential Types
 
 Intuitively, an existential type is a type where some parts of it are unknown.
+
+Existential types, or "existentially quantified types", are the dual of so-called
+"universally quantified types", or generic types. To understand how,
+first consider the following generic (universal) type; `Foo[A]`, parameterized
+on generic type  parameter `A`, is valid _for all_ types `A`. Existential are
+the dual in that, instead of being valid for all types, existentials are valid
+_for some_ type.
 
 An existential type includes references to type variables that are unknown. For example, `Array[T] forSome { type T }` is an existential type. It is an array of `T`, where `T` is some completely unknown type. All that is assumed about `T` is that it exists at all. This assumption is weak, but it means at least that an `Array[T] forSome { type T}` is indeed an array and not a banana.
 
@@ -216,11 +221,15 @@ This example shows how existential types make it easier to write code that works
     scala> fun(res0)
     res1: Int = 2
 
+#### Abstract Types
 
 #### Refinement Types
 
+#### Structural Types
 
+#### Higher-Kinded Types
 
+#### Compound Types
 
 ## Powerful Ways to Use Scala's Type System
 
