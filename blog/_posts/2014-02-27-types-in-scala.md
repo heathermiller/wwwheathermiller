@@ -139,7 +139,7 @@ Every type defined in a Scala program is essentially made up of a combination
 of Scala's basic types. A hierarchy of all of Scala's predefined and most
 basic types is shown below.
 
-[figure here]
+figure here
 
 <!-- 
 Types we all know: Boolean, Int, Long, ...
@@ -159,34 +159,57 @@ Show partial type hierarchy with all types seen so far filled in
 Types such as existential types or refinement types are combinations of
 existing types; they define new types, but without giving them a name
 
+#### Abstract Types
+
 #### Existential Types
 
-Intuitively, an existential type is a type where some parts of it are unknown.
+Intuitively, an existential type is a type with some unknown parts in it.
 
-Existential types, or "existentially quantified types", are the dual of so-called
-"universally quantified types", or generic types. To understand how,
-first consider the following generic (universal) type; `Foo[A]`, parameterized
-on generic type  parameter `A`, is valid _for all_ types `A`. Existential are
-the dual in that, instead of being valid for all types, existentials are valid
-_for some_ type.
+Formally, existential types, or "existentially quantified types," are the dual
+of so-called "universally quantified types," or generic types. 
 
-An existential type includes references to type variables that are unknown. For example, `Array[T] forSome { type T }` is an existential type. It is an array of `T`, where `T` is some completely unknown type. All that is assumed about `T` is that it exists at all. This assumption is weak, but it means at least that an `Array[T] forSome { type T}` is indeed an array and not a banana.
+To understand how, first consider the following generic (universal) type;
+`Wombit[T]`, parameterized on generic type  parameter `T`, is valid _for all_
+types `T`. An existential type is the dual; `Wombit[T] forSome { type T }`
+means _there exists_  some type `T` for which `Wombit[T]` can be constructed.
+Thus, rather than `Wombit[T]` being able to be constructed _for any_ `T`, as
+is the case for universal types, an existential `Wombit[T]` can be constructed
+_for some_ `T`, not necessarily all.
 
-So even though technically the underscore stands for two different things in a pattern match and in a type parameter of a method call, in essence the meaning is the same; it lets you label something that is unknown. 
+    Wombit[T] forSome { type T }
 
-Why Scala has existential types. Java interop, wildcards and raw types.
+Importantly, an existential type includes references to abstract type members,
+or abstract `val`s _that we know exist, but whose concrete values/types we_
+_don't know_. For example, in the above, `T` is a type we don't know
+concretely, but that we know exists.
 
-Wilcards.
+_Note that the above can be written in shorthand, `Wombit[_]`, which desugars_
+_to `Wombit[T] forSome { type T }`._
 
-There are two things at play:
-the concept of existential abstraction which is important
-the specific form of existential types that exist in Scala 2.x
-The important point is that abstract type members in Scala can be used for existential abstraction in most (all?) important cases. This means that it is often not necessary to use existential types to achieve the conceptual task of existential abstraction. In fact, Dotty does not have existential types any more, because they mostly add complexity, whereas type members support the important things.
+In his book, _Theories of Programming Languages_, John C. Reynolds remarks of
+the utility of existential types,
 
-Questions (for Martin):
-is there any use case that existential types support that abstract type members don't support? Do Dotty's abstract type members completely subsume the existential types of Scala 2.x?
+> "Existential types are useful in their own right. In particular, a program using an unimplemented abstract type can be realized by a function that accepts an argument, of existential type, that describes an implementation of the abstract type; then the program can be executed with different implementations by applying the function to different arguments"
 
-This example shows how existential types make it easier to write code that works for many different implementations of the same abstract class. Here, our goal is to make a functional counter that can be incremented, and can the value in its underlying representation, and convert the underlying representation to an Int.
+> &mdash; _John C. Reynolds, Theories of Programming Languages, 1998_
+
+The key notion to hold on to here is that, _existential types make it possible_
+_to leave some parts of your program unknown, while still being able to execute_
+_it with different implementations._
+
+Note the similarity here to the utility of abstract type members. Often,
+abstract type members are used to achieve the same purpose &mdash; to "hide"
+or otherwise avoid concretely specifying some types until later. As we will
+later see, existential types can actually be more naturally modeled using
+abstract type members.
+
+Let's first consider an example which seeks to use existential types to make
+it easier to write code that works for many different implementations of the
+same abstract class.
+
+In this example, we seek to make a functional counter that can be incremented,
+that can get the value in its underlying representation, and that can convert
+the underlying representation to an `Int`.
 
     abstract class Counter[T] {
       def inc: Counter[T]
@@ -221,7 +244,46 @@ This example shows how existential types make it easier to write code that works
     scala> fun(res0)
     res1: Int = 2
 
-#### Abstract Types
+Abstract type members also make it possible to hide the internal type of an
+abstraction. For example,
+
+    trait Fruit {
+      type T
+      val weight: Int
+      val tooRipe: T => Boolean
+    }
+
+    class Farm {
+      val fruit = new ArrayBuffer[Fruit]
+    }
+
+    ...
+
+As compared to,
+
+    case class Fruit[T](val weight: Int, val tooRupe: T => Boolean)
+
+    class Farm {
+      val fruit = new ArrayBuffer[Fruit[T] forSome { type T }]
+    }
+
+    ...
+
+Both code examples behave the same. In fact, one might argue that the example
+using abstract type members over existential types is less error-prone. This
+arises due to the fact that the existential type is _unnamed_. Thus if we had
+wanted to reuse the existential type elsewhere to construct some other data
+structure, we would need to reorganize our code to use abstract types instead
+of existentials.
+
+Given then, that abstract types can be used more naturally more often than
+existential types to achieve the same purpose, one might ask why they exist at
+all in Scala. 
+
+The answer is Java interoperability. Java constructs like wildcards (types such
+as `Person<?>`) and raw types (types such as `List` which omit type
+parameters) are modeled using existential types.
+
 
 #### Refinement Types
 
@@ -311,7 +373,12 @@ The `implicitly` method looks like magic, but it has a very simple definition:
 
 
 
+## Dependent Types
 
+### Full Spectrum Dependent Types
+
+In a full-spectrum language, types can contain arbitrary terms. For example,
+in Coq, you can attach a predicate to a type, for example.
 
 ## _References_
 
@@ -426,6 +493,20 @@ Other kinds of errors are not detected by today's static type systems. For insta
   - Predefined types
   - Types that programs define
   - Combining types
+
+Wilcards.
+
+There are two things at play:
+the concept of existential abstraction which is important
+the specific form of existential types that exist in Scala 2.x
+The important point is that abstract type members in Scala can be used for existential abstraction in most (all?) important cases. This means that it is often not necessary to use existential types to achieve the conceptual task of existential abstraction. In fact, Dotty does not have existential types any more, because they mostly add complexity, whereas type members support the important things.
+
+Questions (for Martin):
+is there any use case that existential types support that abstract type members don't support? Do Dotty's abstract type members completely subsume the existential types of Scala 2.x?
+
+So even though technically the underscore stands for two different things in a pattern match and in a type parameter of a method call, in essence the meaning is the same; it lets you label something that is unknown. 
+
+Why Scala has existential types. Java interop, wildcards and raw types.
 
 
 -->
