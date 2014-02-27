@@ -295,7 +295,10 @@ parameters) are modeled using existential types.
 
 ## Powerful Ways to Use Scala's Type System
 
-**Type-level programming.**
+### Type-Level Programming
+
+Build something out of this http://stackoverflow.com/questions/4415511/scala-type-programming-resources
+<br/>The structure they adopt is quite useful!
 
 ### Typeclasses
 
