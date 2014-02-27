@@ -178,10 +178,10 @@ _for some_ `T`, not necessarily all.
 
     Wombit[T] forSome { type T }
 
-Importantly, an existential type includes references to abstract type members,
-or abstract `val`s _that we know exist, but whose concrete values/types we_
-_don't know_. For example, in the above, `T` is a type we don't know
-concretely, but that we know exists.
+Importantly, an existential type includes references to abstract type members
+_that we know exist, but whose concrete values/types we don't know_. For
+example, in the above, `T` is a type we don't know concretely, but that we
+know exists.
 
 _Note that the above can be written in shorthand, `Wombit[_]`, which desugars_
 _to `Wombit[T] forSome { type T }`._
@@ -194,7 +194,7 @@ the utility of existential types,
 > &mdash; _John C. Reynolds, Theories of Programming Languages, 1998_
 
 The key notion to hold on to here is that, _existential types make it possible_
-_to leave some parts of your program unknown, while still being able to execute_
+_to leave some parts of your program unknown, while still being able to typecheck_
 _it with different implementations for those unknown parts._
 
 Note the similarity here to the utility of abstract type members. Often,
