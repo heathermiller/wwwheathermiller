@@ -313,17 +313,21 @@ ul > li {
 
 .publication > .info > .title {
   font-size: 17px;
-  line-height: 1.3em;
+  line-height: 1.2em;
   margin-bottom: 4px;
 }
 
 .publication > .info > .title > a:link,
 .publication > .info > .title > a:visited {
-  color: #E74C3C;
+  /*color: #E74C3C;*/
+  border: 0;
+  color: #34495E;
+  font-weight: 900;
 }
 
 .publication > .info > .title > a:hover {
-  color: #1ABC9C;
+  /*color: #1ABC9C;*/
+  color: #E74C3C;
 }
 
 .publication > .info > .author {
@@ -338,6 +342,7 @@ ul > li {
 .abbrv {
   font-size: 16px;
   /*color: #2B3E51;*/
+  color: #95A5A6;
 }
 
 .note, .conference {
