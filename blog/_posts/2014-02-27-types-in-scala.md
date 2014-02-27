@@ -195,7 +195,7 @@ the utility of existential types,
 
 The key notion to hold on to here is that, _existential types make it possible_
 _to leave some parts of your program unknown, while still being able to execute_
-_it with different implementations._
+_it with different implementations for those unknown parts._
 
 Note the similarity here to the utility of abstract type members. Often,
 abstract type members are used to achieve the same purpose &mdash; to "hide"
