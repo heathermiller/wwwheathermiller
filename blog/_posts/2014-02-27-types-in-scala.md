@@ -1,13 +1,14 @@
 ---
 layout: blog
+category: blog
 title: "Types in Scala"
 by: "Heather Miller and Philipp Haller"
 ---
 
-## Types 
+## Types
 
 _Types_ are an immensely important concept in programming language design and
-theory. 
+theory.
 
 A type can be thought of as a _category_ that a value (typically at run-time)
 can fall into. For example, the number 12 would have type `Int`, and its
@@ -33,7 +34,7 @@ for correctness each time it's run) all always at the same time.
 
 A language is considered to have strong or weak typing depending on whether or not its
 correctness checks (either compile time or runtime) agree with what is
-actually held in memory. 
+actually held in memory.
 
 For example, a strong statically typed language like Scala statically (at
 compile time) ensures that a certain value with type `Int` is correctly used
@@ -93,7 +94,7 @@ inconsistencies at the level of types.
 The degree to which programmers are satisfied, however, tends to depend on the
 expressiveness of the type system they're using. This is important to note,
 because later on, we will see how Scala's advanced type system makes it
-possible to retain expressivity meanwhile enabling users to 
+possible to retain expressivity meanwhile enabling users to
 _make typechecking more precise_.
 
 However, static type systems aren't without their drawbacks.
@@ -121,7 +122,7 @@ type system.
 A helpful way to think about Scala's type system is to approach it as if types
 are boundaries that you erect for yourself to safeguard against wrong
 behavior. The more you understand and know how to use Scala's type system, the
-more you can get the type system to do for you, that is, the more expressive you 
+more you can get the type system to do for you, that is, the more expressive you
 can make it, all meanwhile retaining the same level of protection<sup>[<a href="#1">1</a>]</sup>.
 
 We'll start by covering most basic types that come predefined in Scala that
@@ -141,7 +142,7 @@ basic types is shown below.
 
 figure here
 
-<!-- 
+<!--
 Types we all know: Boolean, Int, Long, ...
 x: Int means x "has type" Int (":" is a relation)
 Special types: Any, AnyRef, AnyVal, Nothing, Null
@@ -166,7 +167,7 @@ existing types; they define new types, but without giving them a name
 Intuitively, an existential type is a type with some unknown parts in it.
 
 Formally, existential types, or "existentially quantified types," are the dual
-of so-called "universally quantified types," or generic types. 
+of so-called "universally quantified types," or generic types.
 
 To understand how, first consider the following generic (universal) type;
 `Wombit[T]`, parameterized on generic type  parameter `T`, is valid _for all_
@@ -278,7 +279,7 @@ of existentials.
 
 Given then, that abstract types can be used more naturally more often than
 existential types to achieve the same purpose, one might ask why they exist at
-all in Scala. 
+all in Scala.
 
 The answer is Java interoperability. Java constructs like wildcards (types such
 as `Person<?>`) and raw types (types such as `List` which omit type
@@ -403,7 +404,7 @@ in Coq, you can attach a predicate to a type, for example.
 **Type systems**, use Josh's example here.
 The type system allows us to create all sorts of interesting walls around ourselves, known as types. These walls help prevent us from accidentally writing improper code. This is done through the compiler tracking information about variables, methods, and classes.The more you know about Scala's type system, the more information you can give the compiler, and the type walls become less restrictive while still providing the same protection.
 
-You don't need to know everything about Scala's type system in order to be an effective power-user of Scala. 
+You don't need to know everything about Scala's type system in order to be an effective power-user of Scala.
 
 The _type system_ does is good for:
 
@@ -413,7 +414,7 @@ The _type system_ does is good for:
 Types are also good for performance. Checking happens at compile time, rather
 than runtime. Enables a bunch of optimizations.
 
-In this guide, we'll progress from. In a language with an advanced type system like Scala, 
+In this guide, we'll progress from. In a language with an advanced type system like Scala,
 
 1. Scala's standard types
 2. Defining your own types in Scala
@@ -446,7 +447,7 @@ naturally."
 
 – Luca Cardelli
 
-"Types provide a way of controlling evolution, by partially verifying 
+"Types provide a way of controlling evolution, by partially verifying
 programs at each stage."
 
 – Luca Cardelli
@@ -507,7 +508,7 @@ The important point is that abstract type members in Scala can be used for exist
 Questions (for Martin):
 is there any use case that existential types support that abstract type members don't support? Do Dotty's abstract type members completely subsume the existential types of Scala 2.x?
 
-So even though technically the underscore stands for two different things in a pattern match and in a type parameter of a method call, in essence the meaning is the same; it lets you label something that is unknown. 
+So even though technically the underscore stands for two different things in a pattern match and in a type parameter of a method call, in essence the meaning is the same; it lets you label something that is unknown.
 
 Why Scala has existential types. Java interop, wildcards and raw types.
 

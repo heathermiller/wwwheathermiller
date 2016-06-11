@@ -1,4 +1,5 @@
 ---
+category: publications
 isconference: true
 title: "Parallelizing Machine Learning-- Functionally: A Framework and Abstractions for Parallel Graph Processing"
 authors: "Philipp Haller and Heather Miller"

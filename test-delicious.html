@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<div class="col-sm-3 col-xs-6">
+    <h4>Morsels</h4>
+
+    <p>Some delicious bookmarks.</p>
+    <ul class="delicious"></ul>
+    <p>Enjoy!</p>
+    <script>
+        jQuery(function ($)
+        {
+            $.ajax({
+                url:'//feeds.delicious.com/v2/json/heathercmiller',
+                dataType: 'jsonp',
+                success: function (feed)
+                {
+                    $.each(feed, function ()
+                    {
+                        $('<li><a target="_new" title="added ' + this.dt.replace('T', ' ') + '" href="' + this.u + '">' + this.d + '</a></li>').appendTo('ul.delicious');
+                    });
+                }
+            });
+        });
+    </script>
+</div>
+
+</body>
+</html>

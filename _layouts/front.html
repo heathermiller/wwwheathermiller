@@ -7,21 +7,19 @@ layout: front
 <div class="jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-md-2">
-        <div class="profile-pic centered">&nbsp;</div>
-      </div>
-      <div class="col-md-6">
+      <div class="col-md-2"></div>
+      <div class="col-md-5">
         <div class="profile visible-xs visible-sm centered">
           <div style="text-align: center;">
-            <div class="first name">{{ site.first-name }}</div>
-            <div class="last name">{{ site.last-name }}</div>
+            <div class="white first name">{{ site.first-name }}</div>
+            <div class="white last name">{{ site.last-name }}</div>
           </div>
           <div class="title" style="text-align: center;">{{ site.job-title }}</div>
           <div class="blurb" style="text-align: center">{{ site.blurb-about-self }}</div>
         </div>
         <div class="profile visible-md visible-lg">
-          <div class="first name">{{ site.first-name }}</div>
-          <div class="last name">{{ site.last-name }}</div>
+          <div class="white first name">{{ site.first-name }}</div>
+          <div class="white last name">{{ site.last-name }}</div>
           <div class="title">{{ site.job-title }}</div>
           <div class="blurb">{{ site.blurb-about-self }}</div>
         </div>
@@ -36,12 +34,16 @@ layout: front
       </div>
       <div class="col-md-4 visible-md visible-lg">
         <div class="coordinates">
+          <div style="padding-bottom: 4px;">
+            <div style="float:left; width: 90px;"><img src="resources/img/epfl-logo-red.png"></div>
+            <div class="location" style="line-height: 1em; float:left;"></span>&nbsp;<span class="coord" style="font-size: 13px;"><a href="{{ site.location-url }}">EPFL<br/>INR 329,<br/>Lausanne, Switzerland</a></div>
+          </div><br/><br/>
           <span class="entypo mail"></span>&nbsp;<span class="coord"><a href="mailto:{{ site.email }}">{{ site.email }}</a></span><br/>
           <span class="entypo-social twitter"></span>&nbsp;<span class="coord"><a href="https://twitter.com/{{ site.twitter }}">{{ site.twitter }}</a></span><br/>
-          <span class="entypo-social github"></span>&nbsp;<span class="coord"><a href="https://github.com/{{ site.github }}">{{ site.github }}</a></span><br/>
-          <span class="entypo location"></span>&nbsp;<span class="coord"><a href="{{ site.location-url }}">{{ site.location }}</a></span>
+          <span class="entypo-social github"></span>&nbsp;<span class="coord"><a href="https://github.com/{{ site.github }}">{{ site.github }}</a></span>
         </div>
       </div>
+      <div class="col-md-1"></div>
     </div>
   </div>
 </div>
@@ -62,13 +64,12 @@ layout: front
   <!-- <div id="instant-pickles-oopsla"></div> -->
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
       Conference/Workshop Papers
 {% include conference-papers.html %}
     </div>
-    <div class="col-md-5">
-      Talks
-    </div>
+    <div class="col-md-2"></div>
   </div>
 
 <!-- <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">

@@ -1,6 +1,10 @@
 ---
 ---
 
+$(document).ready(function() {
+  styleCode();
+});
+
 // speaker deck viewcounts
 var futuresPromises = getSpeakerdeckStats("cv96bzz6", "futures-promises-views");
 var picklesSporesScaladays = getSpeakerdeckStats("5gabjggm", "pickles-spores-scaladays");
@@ -25,3 +29,14 @@ function onSuccessfulResponse(json, id) {
     $("#"+id).text(viewcount);
 };
 
+function styleCode() {
+    if (typeof disableStyleCode != "undefined") { return; }
+    var a = false;
+    $("pre code").each(function() {
+        if (!$(this).hasClass("prettyprint lang-{{ site.primarylanguage }}")) {
+            $(this).addClass("prettyprint lang-{{ site.primarylanguage }}");
+            a = true
+        }
+    });
+    if (a) { prettyPrint() }
+}

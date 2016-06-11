@@ -3,8 +3,8 @@ baseurl: ""
 
 first-name: 'Heather'
 last-name: 'Miller'
-job-title: 'Computer Science PhD Student at <a href="http://ic.epfl.ch/">EPFL</a>'
-blurb-about-self: 'Advisor: <a style="font-weight: bold;" href="http://lampwww.epfl.ch/~odersky/">Martin Odersky</a>'
+job-title: 'Research Scientist at <a href="http://ic.epfl.ch/">EPFL</a><br/>Executive Director of the <a href="http://scala.epfl.ch/">Scala Center</a>'
+# blurb-about-self: 'Advisor: <a style="font-weight: bold;" href="http://lampwww.epfl.ch/~odersky/">Martin Odersky</a>'
 profpic: '/resources/img/profilepic.png'
 profpic-retina: '/resources/img/profilepic@2x.png'
 twitter: heathercmiller
@@ -13,6 +13,24 @@ github: 'heathermiller'
 location: 'EPFL, INR 329, Lausanne Switzerland'
 location-url: "https://www.google.com/maps/place/46%C2%B031'06.3%22N+6%C2%B033'44.6%22E/@46.5188495,6.5633963,18z/data=!4m2!3m1!1s0x0:0x0"
 
-# <a href="http://scala-lang.org">Scala programming language</a> with Professor
-# . Language support for distributed and concurrent programming.
-# <a href="http://www.nsfgrfp.org/">US NSF Graduate Research Fellow</a> and PhD student working on the Scala programming language with Professor Martin Odersky.
+# For syntax highlighting, the primary programming langauge you intend to use in
+# blog articles. By default, Google's prettify will be used for this programming
+# language, as per the instructions here: https://github.com/google/code-prettify
+# For example, if I indicate `scala`, all pre/code blocks will have the `lang-scala`
+# class added to the markup, triggering prettify to highlight the syntax as Scala.
+primarylanguage: scala
+# To sidestep the default language for syntax highlighting set here, you can be
+# explicit in your blog articles with the langauge you'd prefer to use. E.g.,
+# <pre>
+#   <code class="prettyprint lang-ruby">
+#    ..ruby code here...
+#   </code>
+# </pre>
+
+# categories:
+#   blog:
+#     permalink: /blog/:title.html
+
+permalink: /:categories/:title.html
+markdown: redcarpet
+highlighter: null

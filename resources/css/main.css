@@ -81,26 +81,31 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  color: #fff;
-  text-transform: uppercase;
-  text-shadow: 0px 2px 1px rgba(0,0,0,0.4);
+  color: #34495E;
 }
 
 h2 {
-  color: #5a5a5a;
-  text-transform: uppercase;
-  text-shadow: 0 1px 1px #fff;
+  color: #34495E;
+  font-weight: 900;
+  letter-spacing: -1px;
+  padding-top: 10px;
+  padding-bottom: 6px;
 }
 
 h3 {
   color: #5A5A5A;
-  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -1px;
+  padding-top: 10px;
+  padding-bottom: 6px;
 }
 
 h4 {
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-  /*color: #888888;*/
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  color: #888888;
+  font-size: 20px;
+  padding-top: 6px;
 }
 
 h5 {
@@ -114,6 +119,7 @@ p {
   margin-after: 1em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
+  margin-bottom: 1.2em;
 }
 
 li {
@@ -127,10 +133,10 @@ li {
 
 ul {
   list-style-image: url({{ site.baseurl }}/resources/img/arrow.png);
+  margin-bottom: 1.2em;
 }
 
 ul > li {
- color: #ffffff;
  /*text-shadow: 0 1px 1px #000;*/
  margin-left: 24px;
 }
@@ -140,6 +146,41 @@ ul > li {
   background-color: #34495E;
   width: 100%;
   min-height: 140px;
+}
+
+.white-background {
+  background-color: #ffffff;
+}
+
+.light-grey {
+   color: rgba(86, 103, 110, 0.2);
+}
+
+.blog-header > a {
+  border: none;
+}
+
+.blog-header > a:link > .name,
+.blog-header > a:visited > .name{
+  color: rgba(86, 103, 110, 0.2);
+  -webkit-transition: color .1s ease-in;
+  -moz-transition: color .1s ease-in;
+  -ms-transition: color .1s ease-in;
+  -o-transition: color .1s ease-in;
+  transition: color .1s ease-in;
+}
+
+.blog-header:hover a > .name {
+  color: #E74C3C;
+  -webkit-transition: color .2s ease-in;
+  -moz-transition: color .2s ease-in;
+  -ms-transition: color .2s ease-in;
+  -o-transition: color .2s ease-in;
+  transition: color .2s ease-in;
+}
+
+.white {
+  color: #ffffff;
 }
 
 .navbar {
@@ -179,7 +220,7 @@ ul > li {
 .name {
   display: inline-block;
   font-size: 48px;
-  color: #ffffff;
+  /*color: #ffffff;*/
   line-height: 1em;
   margin-bottom: 4px;
 }
@@ -203,7 +244,7 @@ ul > li {
   display: block;
   /*font-family: "ff-enzo-web",sans-serif;*/
   font-family: 'Lato', sans-serif;
-  line-height: 1em;
+  line-height: 1.3em;
   font-style: normal;
   font-weight: 700;
   color: #1ABC9C;
@@ -264,7 +305,7 @@ ul > li {
   /*color: rgba(255, 255, 255, 0.3);*/
   /*color: #ffffff;*/
   position: relative;
-  top: -3px;
+  top: -6px;
 }
 
 .entypo, .entypo-social {
@@ -352,5 +393,25 @@ ul > li {
   font-size: 16px;
   color: #95A5A6;
   line-height: 1.1em;
+}
+
+.blog {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  weight: 300;
+}
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('{{ site.baseurl }}/resources/glyphs/Consolas.eot?#iefix') format('embedded-opentype'),  url('{{ site.baseurl }}/resources/glyphs/Consolas.woff') format('woff'), url('{{ site.baseurl }}/resources/glyphs/Consolas.ttf')  format('truetype'), url('{{ site.baseurl }}/resources/glyphs/Consolas.svg#Consolas') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+code {
+  font-family: 'Consolas';
+  color: rgba(25, 95, 145, 1);
+  background-color: rgba(245, 245, 245, 0.8);
 }
 

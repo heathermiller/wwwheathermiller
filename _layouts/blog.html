@@ -1,3 +1,51 @@
-<div style="width: 600px; margin-left:auto; margin-right:auto;">
-  {{ content }}
+---
+layout: blog
+---
+{% include header.html %}
+
+<div class="jumbotron white-background">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-5">
+        <div class="profile visible-xs visible-sm centered">
+          <div class="blog-header" style="text-align: center;">
+            <a href="{{ site.baseurl }}">
+              <div class="first name light-grey">{{ site.first-name }}</div>
+              <div class="last name light-grey">{{ site.last-name }}</div>
+            </a>
+          </div>
+        </div>
+        <div class="profile visible-md visible-lg">
+          <div class="blog-header">
+            <a href="{{ site.baseurl }}">
+              <div class="light-grey first name">{{ site.first-name }}</div>
+              <div class="light-grey last name">{{ site.last-name }}</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 visible-xs visible-sm" style="text-align: center;">
+        <div class="collapsed-entypo">
+          <a href="mailto:{{ site.email }}"><span class="entypo mail"></span></a>
+          <a href="https://twitter.com/{{ site.twitter }}"><span class="entypo-social twitter"></span></a>
+          <a href="https://github.com/{{ site.github }}"><span class="entypo-social github"></span></a>
+          <a href="{{ site.location-url }}"><span class="entypo location"></span></a>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
 </div>
+
+<div class="container blog">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      {{ content }}
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
+
+{% include footer.html %}
