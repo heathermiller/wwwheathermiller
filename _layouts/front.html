@@ -34,7 +34,7 @@ layout: front
       </div>
       <div class="col-md-4 visible-md visible-lg">
         <div class="coordinates">
-          <div style="padding-bottom: 4px;">
+          <div style="padding-bottom: 12px;">
             <div style="float:left; width: 90px;"><img src="resources/img/epfl-logo-red.png"></div>
             <div class="location" style="line-height: 1em; float:left;"></span>&nbsp;<span class="coord" style="font-size: 13px;"><a href="{{ site.location-url }}">EPFL<br/>INR 329,<br/>Lausanne, Switzerland</a></div>
           </div><br/><br/>
@@ -50,9 +50,11 @@ layout: front
 <div class="about-me">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 center">
+      <div class="col-md-2 center"></div>
+      <div class="col-md-8 center">
         {% include about-me.html %}
       </div>
+      <div class="col-md-2 center"></div>
     </div>
   </div>
 </div>
@@ -65,11 +67,11 @@ layout: front
 
   <div class="row">
     <div class="col-md-2"></div>
-    <div class="col-md-8">
+    <div class="col-md-6">
       Conference/Workshop Papers
 {% include conference-papers.html %}
     </div>
-    <div class="col-md-2"></div>
+    <div class="col-md-4"></div>
   </div>
 
 <!-- <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">

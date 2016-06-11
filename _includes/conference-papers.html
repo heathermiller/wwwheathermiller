@@ -1,5 +1,7 @@
+{% assign count = 0 %}
 {% for post in site.posts %}
   {% if post.isconference %}
+  {% assign count = count | plus: 1 %}
     <div class="row" style="padding-bottom: 28px;">
       <div class="publication">
 <!--           <div class="pdf col-md-1">
@@ -18,10 +20,13 @@
             <!-- <div class="date">{{ post.date | date: "%B %Y" }}.</div> -->
             {% if post.undersubmission %}<div class="note">Under Submission.</div>{% endif %}
             {% if post.abstract %}
-            {% endif %}
-            <div class="abstract">
-              <span class="entypo chevron-right"></span>abstract
+            <span class="abstract collapsed" data-toggle="collapse" data-target="#abstract-{{ count }}">
+              <div class="entypo"></div>abstract
+            </span>
+            <div id="abstract-{{ count }}" class="collapse abstract-text">
+              {{ post.abstract }}
             </div>
+            {% endif %}
           </div>
           <div class="abbr col-md-3">
             {% if post.undersubmission %}
