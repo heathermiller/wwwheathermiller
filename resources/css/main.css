@@ -370,6 +370,17 @@ ul > li {
   line-height: 1.4em;
 }
 
+.publication .icon {
+  color: rgba(149, 165, 166, 0.8);
+  vertical-align: middle;
+  border: none;
+  margin-left: 4px;
+}
+
+.publication .icon:hover {
+  color: #E74C3C;
+}
+
 .coordinates > .entypo, .coordinates > .entypo-social {
   font-size: 36px;
   /*color: #1ABC9C;*/
@@ -477,3 +488,48 @@ code {
   background-color: rgba(245, 245, 245, 0.8);
 }
 
+@font-face {
+    font-family: 'icomoon';
+    src:    url('{{ site.baseurl }}/resources/glyphs/icomoon.eot?e3cy15');
+    src:    url('{{ site.baseurl }}/resources/glyphs/icomoon.eot?e3cy15#iefix') format('embedded-opentype'),
+        url('{{ site.baseurl }}/resources/glyphs/icomoon.ttf?e3cy15') format('truetype'),
+        url('{{ site.baseurl }}/resources/glyphs/icomoon.woff?e3cy15') format('woff'),
+        url('{{ site.baseurl }}/resources/glyphs/icomoon.svg?e3cy15#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-file-pdf2:before {
+    content: "\e901";
+}
+.icon-file-pdf3:before {
+    content: "\e902";
+}
+.icon-presentation:before {
+    content: "\e900";
+}
+.icon-file-pdf:before {
+    content: "\eadf";
+}
+
+.tooltip.bottom .tooltip-inner {
+    background-color:rgba(52, 73, 94, 1);
+}
+.tooltip.bottom .tooltip-arrow {
+      border-bottom-color: rgba(52, 73, 94, 1);
+}

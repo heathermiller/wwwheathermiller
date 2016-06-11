@@ -23,9 +23,12 @@
             <span class="abstract collapsed" data-toggle="collapse" data-target="#abstract-{{ count }}">
               <div class="entypo"></div>abstract
             </span>
+            {% if post.pdf %}<a href="{{ post.pdf }}" class="icon blue-tooltip" data-toggle="tooltip" data-placement="bottom" title="Paper PDF"><span class="icon-file-pdf" data-toggle="tooltip" data-placement="bottom"></span></a>{% endif %}
+            {% if post.slides %}<a href="{{ post.slides }}" class="icon blue-tooltip" data-toggle="tooltip" data-placement="bottom" title="Slides"><span class="icon-presentation"></span></a>{% endif %}
             <div id="abstract-{{ count }}" class="collapse abstract-text">
               {{ post.abstract }}
             </div>
+
             {% endif %}
           </div>
           <div class="abbr col-md-3">

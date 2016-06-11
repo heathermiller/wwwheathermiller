@@ -3,6 +3,11 @@
 
 $(document).ready(function() {
   styleCode();
+
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
 });
 
 // speaker deck viewcounts
