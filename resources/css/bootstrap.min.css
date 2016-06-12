@@ -181,7 +181,7 @@ th {
 @media print {
   * {
     text-shadow: none !important;
-    color: #000 !important;
+    /*color: #000 !important;*/
     background: transparent !important;
     box-shadow: none !important;
   }
@@ -201,7 +201,7 @@ th {
   }
   pre,
   blockquote {
-    border: 1px solid #999;
+    /*border: 1px solid #999;*/
     page-break-inside: avoid;
   }
   thead {

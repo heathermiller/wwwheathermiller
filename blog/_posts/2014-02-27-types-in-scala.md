@@ -266,7 +266,7 @@ As compared to,
     case class Fruit[T](val weight: Int, val tooRupe: T => Boolean)
 
     class Farm {
-      val fruit = new ArrayBuffer[Fruit[T] forSome { type T }]
+      val fruit = new ArrayBuffer[Fruit[T] forSome { type T }] val fruit = new ArrayBuffer[Fruit[T] forSome { type T }]
     }
 
     ...

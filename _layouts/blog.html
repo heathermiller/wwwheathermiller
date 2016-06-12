@@ -3,11 +3,11 @@ layout: blog
 ---
 {% include header.html %}
 
-<div class="jumbotron white-background">
+<div class="jumbotron white-background hidden-print">
   <div class="container">
     <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-5">
+      <div class="col-md-2"></div>
+      <div class="col-md-6">
         <div class="profile visible-xs visible-sm centered">
           <div class="blog-header" style="text-align: center;">
             <a href="{{ site.baseurl }}">
@@ -40,18 +40,43 @@ layout: blog
 
 <div class="container blog">
   <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-6">
       {{ content }}
     </div>
-    <div class="col-md-3">
-      <nav id="toc" data-spy="affix" data-toggle="toc"><div class="toc-header" data-spy="affix"><span class="toc-contents">Contents</span></div><span class="toc-hide">Hide</span><span class="toc-expand">Expand</span></nav>
+    <div class="col-sm-3">
+      <nav id="toc" class="hidden-print hidden-xs" data-spy="affix" data-toggle="toc"><div class="toc-header" data-spy="affix"><span class="toc-contents">Contents</span></div><span class="toc-hide">Hide</span><span class="toc-expand">Expand</span></nav>
     </div>
+    <div class="col-sm-1"></div>
   </div>
   <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
       <span class="typo"><a href="https://github.com/heathermiller/wwwheathermiller/blob/master/{{ page.path }}">Typo? Suggest a fix.</a></span>
+      {% for category in site.categories %}
+          {% assign catg_name = category.first %}
+          {% if catg_name == page.category %}
+              {% assign catg_posts = category.last %}
+          {% endif %}
+      {% endfor %}
+      {% for post in catg_posts %}
+          {% if post.title == page.title %}
+              {% unless forloop.last %}
+                  {% assign next = catg_posts[forloop.index] %}
+                  <a href="{{ site.baseurl }}{{ next.url }}">&larr;{{ next.title }}</a>
+              {% endunless %}
+              {% unless forloop.first %}
+                  <a href="{{ site.baseurl }}{{ prev.url }}">{{ prev.title }}&rarr;</a>
+              {% endunless %}
+          {% endif %}
+          {% assign prev = post %}
+      {% endfor %}
+      {% if site.categories.blog.size > 5 %}
+        {% assign random = site.time | date: "%s%N" | modulo: site.posts.size %}
+        Random post: <a href="{{ site.baseurl }}{{ site.categories.blog[random].url }}">{{ site.categories.blog[random].title }}</a>
+      {% endif %}
+
+      <!-- {{ site.categories.blog.size > 3}} -->
     </div>
     <div class="col-md-3"></div>
   </div>
