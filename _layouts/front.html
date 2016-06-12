@@ -68,18 +68,23 @@ layout: front
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-6">
-      Conference/Workshop Papers
+      <div class="publications">
+        <h1>Publications</h1>
+      </div>
 {% include conference-papers.html %}
+      <div class="publications">
+        <h1>PhD Thesis</h1>
+{% include phd-thesis.html %}
+      </div>
     </div>
-    <div class="col-md-4"></div>
+    <div class="col-md-3">
+      <!-- <div class="selected-talks">
+        <h1>Selected Talks</h1>
+        Some selected talks here. Some selected talks here. Some selected talks here. Some selected talks here. Some selected talks here. Some selected talks here.
+      </div> -->
+    </div>
+    <div class="col-md-1"></div>
   </div>
-
-<!-- <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">
-  simple collapsible
-</button>
- -->
-<span class="entypo chevron-right" data-toggle="collapse" data-target="#demo"></span>no?
-<div id="demo" class="collapse">THIS IS MY CONTENT YAYS</div>
 
 <br/><br/><br/><br/>
   {{ content }}

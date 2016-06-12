@@ -3,6 +3,7 @@ layout: blog
 category: blog
 title: "Types in Scala"
 by: "Heather Miller and Philipp Haller"
+excerpt: "test"
 ---
 
 ## Types

@@ -44,8 +44,47 @@ layout: blog
     <div class="col-md-6">
       {{ content }}
     </div>
+    <div class="col-md-3">
+      <nav id="toc" data-spy="affix" data-toggle="toc"><div class="toc-header" data-spy="affix"><span class="toc-contents">Contents</span></div><span class="toc-hide">Hide</span><span class="toc-expand">Expand</span></nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <span class="typo"><a href="https://github.com/heathermiller/wwwheathermiller/blob/master/{{ page.path }}">Typo? Suggest a fix.</a></span>
+    </div>
     <div class="col-md-3"></div>
   </div>
 </div>
 
+
+
 {% include footer.html %}
+
+<script>
+    $( ".toc-hide" ).click(function() {
+      // $( this ).toggleClass( "gray-bg" );
+      $(".toc-contents").toggleClass( "lighter" );
+
+      if ($(this).text() == 'Hide') {
+        $(this).text("Show");
+      } else {
+        $(this).text("Hide");
+      }
+      // toggle visibility of contents, and expand button
+      $(".nav").toggle();
+      $(".toc-expand").toggle();
+    });
+
+    $( ".toc-expand" ).click(function() {
+      // $( this ).toggleClass( "gray-bg" );
+
+      if ($(this).text() == 'Expand') {
+        $(this).text("Compact");
+        $(".nav").css('display', 'block');
+      } else {
+        $(this).text("Expand");
+        $(".nav .nav").css('display', 'none');
+      }
+    });
+</script>

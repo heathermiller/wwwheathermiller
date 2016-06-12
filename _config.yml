@@ -31,6 +31,11 @@ primarylanguage: scala
 #   blog:
 #     permalink: /blog/:title.html
 
+# Settings for blog RSS feed
+name: "Heather Miller Blog"
+description: ""
+url: "http://heather.miller.am"
+
 permalink: /:categories/:title.html
 markdown: redcarpet
 highlighter: null

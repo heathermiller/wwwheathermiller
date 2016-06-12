@@ -1,0 +1,35 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>{{ site.name | xml_escape }}</title>
+		<description>All updates, blog articles, publications, etc. Showing the 10 most recent.</description>
+		<link>{{ site.url }}</link>
+		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
+		{% for post in site.posts limit:10 %}
+			<item>
+				{% if post.category == 'publications' %}
+				<title>New publication: {{ post.title | xml_escape }}</title>
+				{% elsif post.category == 'blog' %}
+				<title>New blog article: {{ post.title | xml_escape }}</title>
+				{% elsif post.category == 'news' %}
+				<title>News: {{ post.title | xml_escape }}</title>
+				{% endif %}
+				{% if post.excerpt %}
+					<description>{{ post.excerpt | xml_escape }}</description>
+				{% else %}
+					<description>{{ post.content | xml_escape }}</description>
+				{% endif %}
+				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+				{% if post.category == 'publications' || post.category == 'news' %}
+				<link>{{ site.url }}</link>
+				<guid isPermaLink="true">{{ site.url }}</guid>
+				{% else %}
+				<link>{{ site.url }}{{ post.url }}</link>
+				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+				{% endif %}
+			</item>
+		{% endfor %}
+	</channel>
+</rss>

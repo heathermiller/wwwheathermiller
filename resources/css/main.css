@@ -132,7 +132,7 @@ li {
 }
 
 ul {
-  list-style-image: url({{ site.baseurl }}/resources/img/arrow.png);
+  /*list-style-image: url({{ site.baseurl }}/resources/img/arrow.png);*/
   margin-bottom: 1.2em;
 }
 
@@ -405,7 +405,7 @@ ul > li {
   background-color: #ECF0F1;
   min-height: 140px;
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'adelle', serif;
   color: #34495E;
   font-weight: 400;
   font-size: 20px;
@@ -514,14 +514,20 @@ code {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-file-pdf2:before {
+.icon-github2:before {
     content: "\e901";
-}
-.icon-file-pdf3:before {
-    content: "\e902";
 }
 .icon-presentation:before {
     content: "\e900";
+}
+.icon-play:before {
+    content: "\e912";
+}
+.icon-code:before {
+    content: "\ea80";
+}
+.icon-github:before {
+    content: "\eab0";
 }
 .icon-file-pdf:before {
     content: "\eadf";
@@ -533,3 +539,162 @@ code {
 .tooltip.bottom .tooltip-arrow {
       border-bottom-color: rgba(52, 73, 94, 1);
 }
+.publications > h1,
+.selected-talks > h1 {
+  font-family: "adelle", sans-serif;
+  color: #E74C3C;
+  margin-bottom: 16px;
+}
+
+nav[data-toggle='toc'] {
+  margin-top: 30px;
+}
+
+/* small screens */
+@media (max-width: 768px) {
+  /* override the Affix plugin so that the navigation isn't sticky */
+  nav.affix[data-toggle='toc'] {
+    position: static;
+  }
+
+  /* PICK ONE */
+  /* don't expand nested items, which pushes down the rest of the page when navigating */
+  /*nav[data-toggle='toc'] .nav .active .nav {
+    display: none;
+  }*/
+  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
+  /*nav[data-toggle='toc'] .nav .nav {
+    display: block;
+  }*/
+}
+
+/* sidebar */
+#toc {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  /*padding-left: 20px;*/
+  margin-top: 50px;
+  /*margin-bottom: 20px;  */
+}
+
+#toc a:link {
+  font-weight: 300;
+}
+
+#toc ul li {
+  margin-bottom: 0px;
+}
+
+
+#toc .nav>li {
+  margin-left: none;
+}
+
+/* all links */
+#toc .nav>li>a {
+    color: #999;
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 400;
+    border-bottom: none;
+    line-height: 1.6em;
+}
+
+/* nested links */
+#toc .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 36px;
+    font-size: 12px;
+}
+
+/* active & hover links */
+#toc .nav>.active>a,
+#toc .nav>li>a:hover,
+#toc .nav>li>a:focus {
+    /*color: #563d7c;*/
+    color: #34495e;
+    text-decoration: none;
+    background-color: transparent;
+    /*border-left-color: #563d7c;*/
+    border-left-color: #34495e;
+    margin-left: 0px;
+}
+/* all active links */
+#toc .nav>.active>a,
+#toc .nav>.active:hover>a,
+#toc .nav>.active:focus>a {
+    font-weight: 700;
+}
+/* nested active links */
+#toc .nav .nav>.active>a,
+#toc .nav .nav>.active:hover>a,
+#toc .nav .nav>.active:focus>a {
+    font-weight: 500;
+}
+
+/* hide inactive nested list */
+#toc .nav ul.nav {
+    display: none;
+    margin-left: -24px;
+}
+/* show active nested list */
+#toc .nav>.active>ul.nav {
+    display: block;
+}
+
+.toc-header {
+  margin-left: 24px;
+  color: #999;
+  font-style: italic;
+}
+
+.toc-hide,
+.toc-expand {
+  font-size: 9px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(153, 153, 153, 0.4);
+  padding: 3px 4px;
+  /*background-color: rgba(149, 165, 166, 0.08);*/
+  /*padding: 4px;*/
+  /*padding-right: 10px;*/
+  border-radius: 2px 2px 2px 2px;
+  margin-right: 4px;
+  -webkit-transition: color .1s ease-in;
+  -moz-transition: color .1s ease-in;
+  -ms-transition: color .1s ease-in;
+  -o-transition: color .1s ease-in;
+  transition: color .1s ease-in;
+}
+
+.toc-hide:hover,
+.toc-expand:hover {
+  background-color: #E74C3C;
+  -webkit-transition: color .2s ease-in;
+  -moz-transition: color .2s ease-in;
+  -ms-transition: color .2s ease-in;
+  -o-transition: color .2s ease-in;
+  transition: color .2s ease-in;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.toc-hide {
+  margin-left: 100px;
+}
+
+.toc-contents {
+  font-family: "Merriweather", serif;
+}
+
+.lighter {
+  color: rgba(153, 153, 153, 0.3);
+}
+
+.gray-bg {
+  background-color: rgba(149, 165, 166, 0.11);
+}
+
