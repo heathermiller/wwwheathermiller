@@ -1,92 +1,146 @@
 ---
 layout: blog
 ---
-{% include header.html %}
+{% include header-blog.html %}
 
-<div class="jumbotron white-background hidden-print">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-6">
-        <div class="profile visible-xs visible-sm centered">
-          <div class="blog-header" style="text-align: center;">
-            <a href="{{ site.baseurl }}">
-              <div class="first name light-grey">{{ site.first-name }}</div>
-              <div class="last name light-grey">{{ site.last-name }}</div>
-            </a>
+<nav id="menu" class="menu">
+  <a href="https://github.com/mango/slideout" target="_blank">
+    <header class="menu-header">
+      <span class="menu-header-title">View on Github</span>
+    </header>
+  </a>
+
+  <section class="menu-section">
+    <h3 class="menu-section-title">Docs</h3>
+    <ul class="menu-section-list">
+      <li><a href="https://github.com/mango/slideout#installation" target="_blank">Installation</a></li>
+      <li><a href="https://github.com/mango/slideout#usage" target="_blank">Usage</a></li>
+      <li><a href="https://github.com/mango/slideout#api" target="_blank">API</a></li>
+      <li><a href="https://github.com/mango/slideout#npm-scripts" target="_blank">npm-scripts</a></li>
+    </ul>
+  </section>
+
+  <section class="menu-section">
+    <h3 class="menu-section-title">Slideout</h3>
+    <ul class="menu-section-list">
+      <li><a href="https://github.com/mango/slideout" target="_blank">Fork it</a></li>
+      <li><a href="https://github.com/mango/slideout/issues/new" target="_blank">Create an issue</a></li>
+      <li><a href="https://github.com/mango/slideout/releases/">Download</a></li>
+    </ul>
+  </section>
+
+  <section class="menu-section">
+    <h3 class="menu-section-title">Mango</h3>
+    <ul class="menu-section-list">
+      <li><a href="https://getmango.com" target="_blank">About Mango</a></li>
+      <li><a href="https://twitter.com/getmango" target="_blank">Follow Us</a></li>
+    </ul>
+  </section>
+</nav>
+
+<main id="panel">
+  <header>
+    <div class="jumbotron-blog hidden-print">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"><button class="light-grey toggle-button">☰</button></div>
+          <div class="col-md-6">
+            <div class="profile visible-xs visible-sm centered">
+              <div class="blog-header" style="text-align: center;">
+                <a href="/">
+                  <div class="first name light-grey">{{ site.first-name }}</div>
+                  <div class="last name light-grey">{{ site.last-name }}</div>
+                </a>
+              </div>
+            </div>
+            <div class="profile visible-md visible-lg">
+              <div class="blog-header">
+                <a href="{{ site.baseurl }}">
+                  <div class="light-grey first name">{{ site.first-name }}</div>
+                  <div class="light-grey last name">{{ site.last-name }}</div>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="profile visible-md visible-lg">
-          <div class="blog-header">
-            <a href="{{ site.baseurl }}">
-              <div class="light-grey first name">{{ site.first-name }}</div>
-              <div class="light-grey last name">{{ site.last-name }}</div>
-            </a>
+          <div class="col-md-4 visible-xs visible-sm" style="text-align: center;">
+            <div class="collapsed-entypo">
+              <a href="mailto:{{ site.email }}"><span class="entypo mail"></span></a>
+              <a href="https://twitter.com/{{ site.twitter }}"><span class="entypo-social twitter"></span></a>
+              <a href="https://github.com/{{ site.github }}"><span class="entypo-social github"></span></a>
+              <a href="{{ site.location-url }}"><span class="entypo location"></span></a>
+            </div>
           </div>
+          <div class="col-md-3"></div>
         </div>
       </div>
-      <div class="col-md-4 visible-xs visible-sm" style="text-align: center;">
-        <div class="collapsed-entypo">
-          <a href="mailto:{{ site.email }}"><span class="entypo mail"></span></a>
-          <a href="https://twitter.com/{{ site.twitter }}"><span class="entypo-social twitter"></span></a>
-          <a href="https://github.com/{{ site.github }}"><span class="entypo-social github"></span></a>
-          <a href="{{ site.location-url }}"><span class="entypo location"></span></a>
-        </div>
+    </div>
+  </header>
+
+  <div class="container blog">
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-6">
+        {{ content }}
+      </div>
+      <div class="col-sm-3">
+        <nav id="toc" class="hidden-print hidden-xs" data-spy="affix" data-toggle="toc"><div class="toc-header" data-spy="affix"><span class="toc-contents">Contents</span></div><span class="toc-hide">Hide</span><span class="toc-expand">Expand</span></nav>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <span class="typo"><a href="https://github.com/heathermiller/wwwheathermiller/blob/master/{{ page.path }}">Typo? Suggest a fix.</a></span>
+        {% for category in site.categories %}
+            {% assign catg_name = category.first %}
+            {% if catg_name == page.category %}
+                {% assign catg_posts = category.last %}
+            {% endif %}
+        {% endfor %}
+        {% for post in catg_posts %}
+            {% if post.title == page.title %}
+                {% unless forloop.last %}
+                    {% assign next = catg_posts[forloop.index] %}
+                    <a href="{{ site.baseurl }}{{ next.url }}">&larr;{{ next.title }}</a>
+                {% endunless %}
+                {% unless forloop.first %}
+                    <a href="{{ site.baseurl }}{{ prev.url }}">{{ prev.title }}&rarr;</a>
+                {% endunless %}
+            {% endif %}
+            {% assign prev = post %}
+        {% endfor %}
+        {% if site.categories.blog.size > 5 %}
+          {% assign random = site.time | date: "%s%N" | modulo: site.posts.size %}
+          Random post: <a href="{{ site.baseurl }}{{ site.categories.blog[random].url }}">{{ site.categories.blog[random].title }}</a>
+        {% endif %}
+
+        <!-- {{ site.categories.blog.size > 3}} -->
       </div>
       <div class="col-md-3"></div>
     </div>
   </div>
-</div>
 
-<div class="container blog">
-  <div class="row">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-6">
-      {{ content }}
-    </div>
-    <div class="col-sm-3">
-      <nav id="toc" class="hidden-print hidden-xs" data-spy="affix" data-toggle="toc"><div class="toc-header" data-spy="affix"><span class="toc-contents">Contents</span></div><span class="toc-hide">Hide</span><span class="toc-expand">Expand</span></nav>
-    </div>
-    <div class="col-sm-1"></div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
-      <span class="typo"><a href="https://github.com/heathermiller/wwwheathermiller/blob/master/{{ page.path }}">Typo? Suggest a fix.</a></span>
-      {% for category in site.categories %}
-          {% assign catg_name = category.first %}
-          {% if catg_name == page.category %}
-              {% assign catg_posts = category.last %}
-          {% endif %}
-      {% endfor %}
-      {% for post in catg_posts %}
-          {% if post.title == page.title %}
-              {% unless forloop.last %}
-                  {% assign next = catg_posts[forloop.index] %}
-                  <a href="{{ site.baseurl }}{{ next.url }}">&larr;{{ next.title }}</a>
-              {% endunless %}
-              {% unless forloop.first %}
-                  <a href="{{ site.baseurl }}{{ prev.url }}">{{ prev.title }}&rarr;</a>
-              {% endunless %}
-          {% endif %}
-          {% assign prev = post %}
-      {% endfor %}
-      {% if site.categories.blog.size > 5 %}
-        {% assign random = site.time | date: "%s%N" | modulo: site.posts.size %}
-        Random post: <a href="{{ site.baseurl }}{{ site.categories.blog[random].url }}">{{ site.categories.blog[random].title }}</a>
-      {% endif %}
-
-      <!-- {{ site.categories.blog.size > 3}} -->
-    </div>
-    <div class="col-md-3"></div>
-  </div>
-</div>
-
-
+</main>
 
 {% include footer.html %}
 
 <script>
+    var slideout = new Slideout({
+      'panel': document.getElementById('panel'),
+      'menu': document.getElementById('menu'),
+      'padding': 256,
+      'tolerance': 70
+    });
+
+    // Toggle button
+    document.querySelector('.toggle-button').addEventListener('click', function() {
+      slideout.toggle();
+    });
+
+    document.querySelector('.menu').addEventListener('click', function(eve) {
+      if (eve.target.nodeName === 'A') { slideout.close(); }
+    });
+
     $( ".toc-hide" ).click(function() {
       // $( this ).toggleClass( "gray-bg" );
       $(".toc-contents").toggleClass( "lighter" );
