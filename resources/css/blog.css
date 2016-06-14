@@ -9,7 +9,7 @@
   margin: 0;
 }
 html, body {
-  height: 100%;
+  /*height: 100%;*/
 }
 
 body {
@@ -492,7 +492,7 @@ nav[data-toggle='toc'] {
     }
 
     .jumbotron {
-      display: none;
+      /*display: none;*/
     }
 }
 
@@ -514,6 +514,7 @@ nav[data-toggle='toc'] {
 }
 
 .slideout-panel {
+  overflow: hidden;
   position: relative;
   z-index: 1;
 }
@@ -529,7 +530,8 @@ nav[data-toggle='toc'] {
 }
 
 .menu a {
-  color: #fff;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
 }
 
 .menu a:hover {
@@ -537,9 +539,7 @@ nav[data-toggle='toc'] {
 }
 
 .menu-header {
-  border-bottom: 1px solid #2a2d2f;
   padding: 20px 0 20px 60px;
-  background: url('../assets/github.png') no-repeat 15px 15px;
   background-size: 32px;
 }
 
@@ -569,14 +569,29 @@ nav[data-toggle='toc'] {
   list-style:none;
 }
 
+.menu-section-list > li {
+  margin-left: 0px;
+}
+
 .menu-section-list a {
   display: block;
   padding: 10px 20px;
+  border-bottom: 1px solid rgba(189, 195, 199, 0.1);
+  -webkit-transition: background-color .1s ease-in;
+  -moz-transition: background-color .1s ease-in;
+  -ms-transition: background-color .1s ease-in;
+  -o-transition: background-color .1s ease-in;
+  transition: background-color .1s ease-in;
 }
 
 .menu-section-list a:hover {
   background-color: rgba(255, 255, 255, 0.1);
   text-decoration: none;
+  -webkit-transition: background-color .2s ease-in;
+  -moz-transition: background-color .2s ease-in;
+  -ms-transition: background-color .2s ease-in;
+  -o-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
 }
 
 #panel {
@@ -585,5 +600,5 @@ nav[data-toggle='toc'] {
 
 .menu {
   background-color: #1D1F20;
-  background-image: linear-gradient(145deg, #1D1F20, #404348);
+  background-image: linear-gradient(145deg, #243446, #4d4d4d);
 }
