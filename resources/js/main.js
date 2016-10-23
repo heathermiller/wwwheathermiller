@@ -8,6 +8,17 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip()
   })
 
+  // current page, links with active class
+  $("[href]").each(function() {
+  if (this.href == window.location.href) {
+      $(this).addClass("active");
+      }
+  });
+
+  $('#burger').click(function(){
+		$(this).toggleClass('open');
+	});
+
 });
 
 // speaker deck viewcounts

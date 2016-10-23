@@ -15,6 +15,7 @@ html, body {
 body {
   width: 100%;
   height: 100%;
+  color: #000;
 }
 
 /*body {
@@ -63,33 +64,36 @@ a:hover {
 
 h1, h2, h3, h4, h5 {
   margin-top: 1em;
-  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-  color: #34495E;
+  font-family: 'Sentinel', serif;
+  color: #572d4c;
+  font-size: 3em;
+  font-weight: 600;
 }
 
 h2 {
-  color: #34495E;
-  font-weight: 900;
-  letter-spacing: -1px;
+  font-family: 'BentonSans', sans-serif;
+  /*color: #572d4c;*/
+  font-weight: 600;
   padding-top: 10px;
   padding-bottom: 6px;
 }
 
 h3 {
-  color: #5A5A5A;
-  font-weight: 900;
-  letter-spacing: -1px;
+  font-family: 'BentonSans', sans-serif;
+  /*color: #a1676a;*/
+  font-weight: 600;
   padding-top: 10px;
   padding-bottom: 6px;
 }
 
 h4 {
-  font-family: 'Merriweather', serif;
-  font-weight: bold;
-  color: #888888;
+  font-family: 'BentonSans', sans-serif;
+  /*font-family: 'Merriweather', serif;*/
+  font-weight: 600;
+  color: #7B7263;
   font-size: 20px;
   padding-top: 6px;
 }
@@ -111,7 +115,7 @@ p {
 li {
   line-height: 1.5em;
   /*margin-bottom: 6px;*/
-  color: #57676e;
+  /*color: #57676e;*/
   margin-bottom: 0.5em;
   -webkit-margin-start: 6px;
   -webkit-margin-end: 0px;
@@ -206,9 +210,10 @@ ul > li {
 }
 
 .blog {
-  font-family: 'Merriweather', serif;
+  font-family: 'BentonSans', sans-serif;
+  /*font-family: 'Merriweather', serif;*/
   font-size: 16px;
-  line-height: 1.6em;
+  line-height: 1.4em;
   weight: 300;
 }
 
@@ -217,6 +222,15 @@ ul > li {
   src: url('{{ site.baseurl }}/resources/glyphs/Consolas.eot?#iefix') format('embedded-opentype'),  url('{{ site.baseurl }}/resources/glyphs/Consolas.woff') format('woff'), url('{{ site.baseurl }}/resources/glyphs/Consolas.ttf')  format('truetype'), url('{{ site.baseurl }}/resources/glyphs/Consolas.svg#Consolas') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+pre, code {
+  font-family: 'Consolas';
+}
+
+code {
+  color: #562e4b;
+  background: #F7F0EF;
 }
 
 pre {
@@ -296,7 +310,7 @@ nav[data-toggle='toc'] {
 
 /* sidebar */
 #toc {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'BentonSans', sans-serif;
   font-weight: 300;
   font-size: 16px;
   /*padding-left: 20px;*/
@@ -320,7 +334,8 @@ nav[data-toggle='toc'] {
 
 /* all links */
 #toc .nav>li>a {
-    color: #999;
+    /*color: #999;*/
+    color: #7B7263;
     border-left: 2px solid transparent;
     padding: 4px 20px;
     font-size: 13px;
@@ -347,11 +362,13 @@ nav[data-toggle='toc'] {
 #toc .nav>li>a:hover,
 #toc .nav>li>a:focus {
     /*color: #563d7c;*/
-    color: #34495e;
+    /*color: #34495e;*/
+    color: #572d4c;
     text-decoration: none;
     background-color: transparent;
     /*border-left-color: #563d7c;*/
-    border-left-color: #34495e;
+    /*border-left-color: #34495e;*/
+    border-left-color: #572d4c;
     margin-left: 0px;
 }
 /* all active links */
@@ -379,7 +396,8 @@ nav[data-toggle='toc'] {
 
 .toc-header {
   margin-left: 24px;
-  color: #999;
+  /*color: #8B8480;*/
+  color: #7B7263;
   font-style: italic;
 }
 
@@ -404,7 +422,7 @@ nav[data-toggle='toc'] {
 
 .toc-hide:hover,
 .toc-expand:hover {
-  background-color: #E74C3C;
+  background-color: #572d4c;
   -webkit-transition: color .2s ease-in;
   -moz-transition: color .2s ease-in;
   -ms-transition: color .2s ease-in;
@@ -419,7 +437,8 @@ nav[data-toggle='toc'] {
 }
 
 .toc-contents {
-  font-family: "Merriweather", serif;
+  font-family: "Sentinel", serif;
+  font-size: 18px;
 }
 
 .lighter {
@@ -531,7 +550,7 @@ nav[data-toggle='toc'] {
 
 .menu a {
   color: rgba(255, 255, 255, 1);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'BentonSans', sans-serif;
 }
 
 .menu a:hover {
@@ -601,4 +620,149 @@ nav[data-toggle='toc'] {
 .menu {
   background-color: #1D1F20;
   background-image: linear-gradient(145deg, #243446, #4d4d4d);
+}
+
+.thin-top-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #572d4c;
+}
+
+.footer-strip {
+  width: 100%;
+  height: 50px;
+  background-color: #572d4c;
+}
+
+.gray-bar {
+  width: 100%;
+  height: 60px;
+  background-color: #f2f3f3;
+}
+
+.footer-gray {
+  width: 100%;
+  min-height: 100px;
+  background-color: #f2f3f3;
+}
+
+.logo-wrap {
+
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 6px;
+  /*margin-right: 100px;*/
+  overflow: hidden;
+}
+
+.navbar > li {
+  display: inline;
+  float: left;
+}
+
+.navbar > li a {
+    display: block;
+    text-align: center;
+    margin: 14px 16px;
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #000;
+    padding-bottom: 2px;
+}
+
+.navbar > li a:hover {
+    color: #562e4b;
+    border-bottom: 2px solid #c5c763;
+}
+
+.navbar > li a.active {
+  color: #562e4b;
+  border-bottom: 2px solid #c5c763;
+}
+
+.navbar-wrap {
+  float: right;
+}
+
+#burger {
+  width: 24px; /*60*/
+  height: 18px; /*45*/
+  position: relative;
+  margin: 20px auto; /*50*/
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#burger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  /*background: #562e4b;*/
+  background: #7b7264;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#burger span:nth-child(1) {
+  top: 0px;
+}
+
+#burger span:nth-child(2),#burger span:nth-child(3) {
+  top: 7px; /*18*/
+}
+
+#burger span:nth-child(4) {
+  top: 14px; /*36*/
+}
+
+#burger.open span:nth-child(1) {
+  top: 7px; /*18*/
+  width: 0%;
+  left: 50%;
+}
+
+#burger.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#burger.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#burger.open span:nth-child(4) {
+  top: 7px; /*18*/
+  width: 0%;
+  left: 50%;
 }

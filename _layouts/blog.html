@@ -10,7 +10,7 @@ layout: blog
     </header>
   </a>
 
-  <section class="menu-section">
+  <!-- <section class="menu-section">
     <h3 class="menu-section-title">Home</h3>
     <ul class="menu-section-list">
       <li><a href="https://github.com/mango/slideout#installation" target="_blank">Publications</a></li>
@@ -18,10 +18,10 @@ layout: blog
       <li><a href="https://github.com/mango/slideout#api" target="_blank">Service</a></li>
       <li><a href="https://github.com/mango/slideout#npm-scripts" target="_blank">Teaching</a></li>
     </ul>
-  </section>
+  </section> -->
 
   <section class="menu-section">
-    <h3 class="menu-section-title">Blog</h3>
+    <!-- <h3 class="menu-section-title">Blog</h3> -->
     <ul class="menu-section-list">
       <li><a href="https://github.com/mango/slideout" target="_blank">Article Index</a></li>
       <li><a href="https://github.com/mango/slideout/issues/new" target="_blank">Previous</a></li>
@@ -33,37 +33,30 @@ layout: blog
 
 <main id="panel">
   <header>
-    <div class="jumbotron-blog hidden-print">
+    <div class="thin-top-bar"></div>
+    <div class="gray-bar">
       <div class="container">
         <div class="row">
-          <div class="col-md-2"><button class="light-grey toggle-button">☰</button></div>
-          <div class="col-md-6">
-            <div class="profile visible-xs visible-sm centered">
-              <div class="blog-header" style="text-align: center;">
-                <a href="/">
-                  <div class="first name light-grey">{{ site.first-name }}</div>
-                  <div class="last name light-grey">{{ site.last-name }}</div>
-                </a>
-              </div>
-            </div>
-            <div class="profile visible-md visible-lg">
-              <div class="blog-header">
-                <a href="{{ site.baseurl }}">
-                  <div class="light-grey first name">{{ site.first-name }}</div>
-                  <div class="light-grey last name">{{ site.last-name }}</div>
-                </a>
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/resources/img/emblem.png" /></a>
+          </div>
+          <div class="col-md-8 visible-md visible-lg">
+            <div class="navbar-wrap">
+              <ul class="navbar">
+                <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+                <li><a href="{{ site.baseurl }}/publications">Publications</a></li>
+                <li><a href="{{ site.baseurl }}/about">About</a></li>
+              </ul>
+              <div id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
             </div>
           </div>
-          <div class="col-md-4 visible-xs visible-sm" style="text-align: center;">
-            <div class="collapsed-entypo">
-              <a href="mailto:{{ site.email }}"><span class="entypo mail"></span></a>
-              <a href="https://twitter.com/{{ site.twitter }}"><span class="entypo-social twitter"></span></a>
-              <a href="https://github.com/{{ site.github }}"><span class="entypo-social github"></span></a>
-              <a href="{{ site.location-url }}"><span class="entypo location"></span></a>
-            </div>
-          </div>
-          <div class="col-md-3"></div>
+          <div class="col-md-1"></div>
         </div>
       </div>
     </div>
@@ -73,6 +66,9 @@ layout: blog
     <div class="row">
       <div class="col-sm-2"></div>
       <div class="col-sm-6">
+        {% assign words = content | number_of_words %}
+        {{ words | divided_by:180 }} min read<br/>
+        <h1>{{ page.title }}</h1>
         {{ content }}
       </div>
       <div class="col-sm-3">
