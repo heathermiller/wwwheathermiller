@@ -3,60 +3,44 @@ layout: blog
 ---
 {% include header-blog.html %}
 
-<nav id="menu" class="menu">
-  <a href="https://github.com/mango/slideout" target="_blank">
-    <header class="menu-header">
-      <!-- <span class="menu-header-title">View on Github</span> -->
-    </header>
-  </a>
-
-  <!-- <section class="menu-section">
-    <h3 class="menu-section-title">Home</h3>
-    <ul class="menu-section-list">
-      <li><a href="https://github.com/mango/slideout#installation" target="_blank">Publications</a></li>
-      <li><a href="https://github.com/mango/slideout#usage" target="_blank">Speaking</a></li>
-      <li><a href="https://github.com/mango/slideout#api" target="_blank">Service</a></li>
-      <li><a href="https://github.com/mango/slideout#npm-scripts" target="_blank">Teaching</a></li>
-    </ul>
-  </section> -->
-
-  <section class="menu-section">
-    <!-- <h3 class="menu-section-title">Blog</h3> -->
-    <ul class="menu-section-list">
-      <li><a href="https://github.com/mango/slideout" target="_blank">Article Index</a></li>
-      <li><a href="https://github.com/mango/slideout/issues/new" target="_blank">Previous</a></li>
-      <li><a href="https://github.com/mango/slideout/releases/">Next</a></li>
-      <li><a href="https://github.com/mango/slideout/releases/">Random</a></li>
-    </ul>
-  </section>
-</nav>
-
 <main id="panel">
   <header>
     <div class="thin-top-bar"></div>
     <div class="gray-bar">
       <div class="container">
         <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-10">
-            <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/resources/img/emblem.png" /></a>
-          <!-- </div> -->
-          <!-- <div class="col-md-8 visible-md visible-lg"> -->
+          <div class="col-sm-1"></div>
+          <div class="col-sm-2">
+            <div class="logo-wrap">
+              <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/resources/img/emblem.png" /></a>
+            </div>
+          </div>
+          <div class="col-sm-8 visible-md visible-lg">
             <div class="navbar-wrap">
               <ul class="navbar">
                 <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
                 <li><a href="{{ site.baseurl }}/publications">Publications</a></li>
                 <li><a href="{{ site.baseurl }}/about">About</a></li>
               </ul>
-              <!-- <div id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div> -->
             </div>
           </div>
-          <div class="col-md-1"></div>
+          <div class="col-sm-8 visible-sm visible-xs">
+            <div id="burger" data-toggle="collapse" data-target="#navbar-responsive-wrap">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="navbar-responsive-wrap navbar-static-top navbar-collapse collapse" id="navbar-responsive-wrap">
+              <ul class="navbar-responsive">
+                <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+                <li><a href="{{ site.baseurl }}/publications">Publications</a></li>
+                <li><a href="{{ site.baseurl }}/about">About</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-1">
+          </div>
         </div>
       </div>
     </div>
@@ -105,7 +89,7 @@ layout: blog
 
         <!-- {{ site.categories.blog.size > 3}} -->
       </div>
-      <div class="col-md-3"></div>
+      <div class="col-sm-3"></div>
     </div>
   </div>
 
@@ -114,21 +98,6 @@ layout: blog
 {% include footer.html %}
 
 <script>
-    var slideout = new Slideout({
-      'panel': document.getElementById('panel'),
-      'menu': document.getElementById('menu'),
-      'padding': 256,
-      'tolerance': 70
-    });
-
-    // Toggle button
-    document.querySelector('.toggle-button').addEventListener('click', function() {
-      slideout.toggle();
-    });
-
-    document.querySelector('.menu').addEventListener('click', function(eve) {
-      if (eve.target.nodeName === 'A') { slideout.close(); }
-    });
 
     $( ".toc-hide" ).click(function() {
       // $( this ).toggleClass( "gray-bg" );

@@ -210,11 +210,13 @@ ul > li {
 }
 
 .blog {
+  /*float: left;*/
   font-family: 'BentonSans', sans-serif;
   /*font-family: 'Merriweather', serif;*/
   font-size: 16px;
   line-height: 1.4em;
   weight: 300;
+  padding-top: 45px;
 }
 
 @font-face {
@@ -647,7 +649,8 @@ nav[data-toggle='toc'] {
 }
 
 .logo-wrap {
-
+  position: absolute;
+  z-index: 100;
 }
 
 .navbar {
@@ -677,6 +680,7 @@ nav[data-toggle='toc'] {
     text-transform: uppercase;
     color: #000;
     padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
 }
 
 .navbar > li a:hover {
@@ -694,6 +698,7 @@ nav[data-toggle='toc'] {
 }
 
 #burger {
+  float: right;
   width: 24px; /*60*/
   height: 18px; /*45*/
   position: relative;
@@ -766,3 +771,50 @@ nav[data-toggle='toc'] {
   width: 0%;
   left: 50%;
 }
+
+.navbar-responsive-wrap {
+  width: 100%;
+  position: absolute;
+  z-index: 90;
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+  margin-left: -15px;
+}
+
+.navbar-responsive  {
+  width: 100%;
+  background: #562e4b;
+  text-align: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-responsive > li {
+  margin: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 16px;
+}
+
+.navbar-responsive > li:hover {
+  background: #c5c763;
+}
+
+.navbar-responsive > li > a {
+  color: #000;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  /*font-size: 11px;*/
+}
+
+.navbar-responsive > li > a:hover {
+    color: #562e4b;
+    border-bottom: 2px solid #562e4b;
+}
+
