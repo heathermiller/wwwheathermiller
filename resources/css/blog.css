@@ -804,7 +804,7 @@ nav[data-toggle='toc'] {
 }
 
 .navbar-responsive > li > a {
-  color: #000;
+  color: #fff;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
   text-transform: uppercase;
@@ -814,7 +814,7 @@ nav[data-toggle='toc'] {
 }
 
 .navbar-responsive > li > a:hover {
-    color: #562e4b;
+    color: #000;
     border-bottom: 2px solid #562e4b;
 }
 
