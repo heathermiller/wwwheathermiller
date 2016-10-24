@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-family: 'Sentinel', serif;
+  font-family: 'SN', serif;
   color: #572d4c;
   font-size: 3em;
   font-weight: 600;
@@ -439,7 +439,7 @@ nav[data-toggle='toc'] {
 }
 
 .toc-contents {
-  font-family: "Sentinel", serif;
+  font-family: "SN", serif;
   font-size: 18px;
 }
 
@@ -865,5 +865,54 @@ nav[data-toggle='toc'] {
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
+
+@font-face {
+    font-family: 'SN';
+    src: url('SN-Book.eot'); /* IE9 Compat Modes */
+    src: url('SN-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('SN-Book.woff') format('woff'), /* Modern Browsers */
+         url('SN-Book.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('SN-Book.svg#SN-Book') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'SN';
+    src: url('SN-Semibold.eot'); /* IE9 Compat Modes */
+    src: url('SN-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('SN-Semibold.woff') format('woff'), /* Modern Browsers */
+         url('SN-Semibold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('SN-Semibold.svg#SN-Semibold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'SN';
+    src: url('SN-SemiboldItalic.eot'); /* IE9 Compat Modes */
+    src: url('SN-SemiboldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('SN-SemiboldItalic.woff') format('woff'), /* Modern Browsers */
+         url('SN-SemiboldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('SN-SemiboldItalic.svg#SN-SemiboldItalic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'SN';
+    src: url('SN-BookItalic.eot'); /* IE9 Compat Modes */
+    src: url('SN-BookItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('SN-BookItalic.woff') format('woff'), /* Modern Browsers */
+         url('SN-BookItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('SN-BookItalic.svg#SN-BookItalic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
 
 
