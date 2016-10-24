@@ -955,3 +955,26 @@ nav[data-toggle='toc'] {
   color: #7b7264;
   font-style: italic;
 }
+
+.footer-links {
+  text-align: center;
+  font-family: "BS", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-links > a:link, .typo > a:link {
+  border-bottom: 2px solid transparent;
+  color: #000;
+  /*font-weight: 300;*/
+}
+
+.footer-links > a:hover,
+.typo > a:hover {
+  color: #562e4b;
+  border-bottom: 2px solid #c5c763;
+}
+
+.typo {
+  margin-bottom: 12px;
+}

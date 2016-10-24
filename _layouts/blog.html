@@ -67,35 +67,36 @@ layout: blog
       <div class="col-sm-1"></div>
     </div>
     <div class="row">
-      <div class="col-sm-3"></div>
+      <div class="col-sm-2"></div>
       <div class="col-sm-6">
-        <span class="typo"><a href="https://github.com/heathermiller/wwwheathermiller/blob/master/{{ page.path }}">Typo? Suggest a fix.</a></span>
-        {% for category in site.categories %}
-            {% assign catg_name = category.first %}
-            {% if catg_name == page.category %}
-                {% assign catg_posts = category.last %}
-            {% endif %}
-        {% endfor %}
-        {% for post in catg_posts %}
-            {% if post.title == page.title %}
-                {% unless forloop.last %}
-                    {% assign next = catg_posts[forloop.index] %}
-                    <a href="{{ site.baseurl }}{{ next.url }}">&larr;{{ next.title }}</a>
-                {% endunless %}
-                {% unless forloop.first %}
-                    <a href="{{ site.baseurl }}{{ prev.url }}">{{ prev.title }}&rarr;</a>
-                {% endunless %}
-            {% endif %}
-            {% assign prev = post %}
-        {% endfor %}
-        {% if site.categories.blog.size > 5 %}
-          {% assign random = site.time | date: "%s%N" | modulo: site.posts.size %}
-          Random post: <a href="{{ site.baseurl }}{{ site.categories.blog[random].url }}">{{ site.categories.blog[random].title }}</a>
-        {% endif %}
-
+        <div class="footer-links">
+          <div class="typo"><a href="https://github.com/heathermiller/wwwheathermiller/blob/master/{{ page.path }}">Typo? Suggest a fix.</a></div>
+          {% for category in site.categories %}
+              {% assign catg_name = category.first %}
+              {% if catg_name == page.category %}
+                  {% assign catg_posts = category.last %}
+              {% endif %}
+          {% endfor %}
+          {% for post in catg_posts %}
+              {% if post.title == page.title %}
+                  {% unless forloop.last %}
+                      {% assign next = catg_posts[forloop.index] %}
+                      <a href="{{ site.baseurl }}{{ next.url }}">&larr;{{ next.title }}</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                  {% endunless %}
+                  {% unless forloop.first %}
+                      <a href="{{ site.baseurl }}{{ prev.url }}">{{ prev.title }}&rarr;</a>
+                  {% endunless %}
+              {% endif %}
+              {% assign prev = post %}
+          {% endfor %}
+          {% if site.categories.blog.size > 5 %}
+            {% assign random = site.time | date: "%s%N" | modulo: site.posts.size %}
+            Random post: <a href="{{ site.baseurl }}{{ site.categories.blog[random].url }}">{{ site.categories.blog[random].title }}</a>
+          {% endif %}
+        </div>
         <!-- {{ site.categories.blog.size > 3}} -->
       </div>
-      <div class="col-sm-3"></div>
+      <div class="col-sm-4"></div>
     </div>
   </div>
 
