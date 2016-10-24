@@ -74,7 +74,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'BentonSans', sans-serif;
+  font-family: 'BS', sans-serif;
   /*color: #572d4c;*/
   font-weight: 600;
   padding-top: 10px;
@@ -82,7 +82,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'BentonSans', sans-serif;
+  font-family: 'BS', sans-serif;
   /*color: #a1676a;*/
   font-weight: 600;
   padding-top: 10px;
@@ -90,7 +90,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'BentonSans', sans-serif;
+  font-family: 'BS', sans-serif;
   /*font-family: 'Merriweather', serif;*/
   font-weight: 600;
   color: #7B7263;
@@ -211,7 +211,7 @@ ul > li {
 
 .blog {
   /*float: left;*/
-  font-family: 'BentonSans', sans-serif;
+  font-family: 'BS', sans-serif;
   /*font-family: 'Merriweather', serif;*/
   font-size: 16px;
   line-height: 1.4em;
@@ -312,7 +312,7 @@ nav[data-toggle='toc'] {
 
 /* sidebar */
 #toc {
-  font-family: 'BentonSans', sans-serif;
+  font-family: 'BS', sans-serif;
   font-weight: 300;
   font-size: 16px;
   /*padding-left: 20px;*/
@@ -552,7 +552,7 @@ nav[data-toggle='toc'] {
 
 .menu a {
   color: rgba(255, 255, 255, 1);
-  font-family: 'BentonSans', sans-serif;
+  font-family: 'BS', sans-serif;
 }
 
 .menu a:hover {
@@ -817,4 +817,53 @@ nav[data-toggle='toc'] {
     color: #000;
     border-bottom: 2px solid #562e4b;
 }
+
+@font-face {
+    font-family: 'BS';
+    src: url('{{ site.baseurl }}/resources/glyphs/BS-Regular.eot'); /* IE9 Compat Modes */
+    src: url('{{ site.baseurl }}/resources/glyphs/BS-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('{{ site.baseurl }}/resources/glyphs/BS-Regular.woff') format('woff'), /* Modern Browsers */
+         url('{{ site.baseurl }}/resources/glyphs/BS-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('{{ site.baseurl }}/resources/glyphs/BS-Regular.svg#BS-Regular') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'BS';
+    src: url('{{ site.baseurl }}/resources/glyphs/BS-Bold.eot'); /* IE9 Compat Modes */
+    src: url('{{ site.baseurl }}/resources/glyphs/BS-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('{{ site.baseurl }}/resources/glyphs/BS-Bold.woff') format('woff'), /* Modern Browsers */
+         url('{{ site.baseurl }}/resources/glyphs/BS-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('{{ site.baseurl }}/resources/glyphs/BS-Bold.svg#BS-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'BS';
+    src: url('{{ site.baseurl }}/resources/glyphs/BS-BoldItalic.eot'); /* IE9 Compat Modes */
+    src: url('{{ site.baseurl }}/resources/glyphs/BS-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('{{ site.baseurl }}/resources/glyphs/BS-BoldItalic.woff') format('woff'), /* Modern Browsers */
+         url('{{ site.baseurl }}/resources/glyphs/BS-BoldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('{{ site.baseurl }}/resources/glyphs/BS-BoldItalic.svg#BS-BoldItalic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'BS';
+    src: url('{{ site.baseurl }}/resources/glyphs/BS-RegularItalic.eot'); /* IE9 Compat Modes */
+    src: url('{{ site.baseurl }}/resources/glyphs/BS-RegularItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('{{ site.baseurl }}/resources/glyphs/BS-RegularItalic.woff') format('woff'), /* Modern Browsers */
+         url('{{ site.baseurl }}/resources/glyphs/BS-RegularItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('{{ site.baseurl }}/resources/glyphs/BS-RegularItalic.svg#BS-RegularItalic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
 
