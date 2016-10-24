@@ -1,3 +1,5 @@
 ---
-layout: front
+layout: front2
 ---
+
+

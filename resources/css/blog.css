@@ -146,7 +146,7 @@ ul > li {
   border: none;
 }
 
-.blog-header > a:link > .name,
+/*.blog-header > a:link > .name,
 .blog-header > a:visited > .name{
   color: rgba(86, 103, 110, 0.2);
   -webkit-transition: color .1s ease-in;
@@ -163,20 +163,20 @@ ul > li {
   -ms-transition: color .2s ease-in;
   -o-transition: color .2s ease-in;
   transition: color .2s ease-in;
-}
+}*/
 
 .profile {
   display: block;
   margin-top: 6px;
 }
 
-.name {
+/*.name {
   display: inline-block;
   font-size: 36px;
   line-height: 1em;
   margin-bottom: 4px;
   vertical-align: middle;
-}
+}*/
 
 .first {
   font-family: "adelle",serif;
@@ -977,4 +977,13 @@ nav[data-toggle='toc'] {
 
 .typo {
   margin-bottom: 12px;
+}
+
+.name {
+  position: absolute;
+  color: #562e4b;
+  margin-top: 15px;
+  margin-left: 105px;
+  font-family: "BS", sans-serif;
+  font-size: 20px;
 }

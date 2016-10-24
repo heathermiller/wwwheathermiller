@@ -18,9 +18,7 @@ layout: blog
           <div class="col-sm-8 visible-md visible-lg">
             <div class="navbar-wrap">
               <ul class="navbar">
-                <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-                <li><a href="{{ site.baseurl }}/publications">Publications</a></li>
-                <li><a href="{{ site.baseurl }}/about">About</a></li>
+                {% include navbar-links.html %}
               </ul>
             </div>
           </div>
@@ -33,9 +31,7 @@ layout: blog
             </div>
             <div class="navbar-responsive-wrap navbar-static-top navbar-collapse collapse" id="navbar-responsive-wrap">
               <ul class="navbar-responsive">
-                <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-                <li><a href="{{ site.baseurl }}/publications">Publications</a></li>
-                <li><a href="{{ site.baseurl }}/about">About</a></li>
+                {% include navbar-links.html %}
               </ul>
             </div>
           </div>
@@ -54,9 +50,11 @@ layout: blog
         <div class="category">{{ page.tag }}</div>
         <h1 class="page-title">{{ page.title }}</h1>
         <div class="subtitle">{{ page.subtitle }}
-          {{ if minutes < 5 }} <!--print nothing-->
-          {{ else }} <span class="minutes">({{ minutes }} min read)</span>
-          {{ endif }}
+          {% if minutes <= 5 %}
+            <!-- do nothing -->
+          {% else %}
+            <span class="minutes">({{ minutes }} min read)</span>
+          {% endif %}
         </div>
         <div class="dash">—</div>
         {{ content }}
