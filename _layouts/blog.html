@@ -50,9 +50,15 @@ layout: blog
     <div class="row">
       <div class="col-sm-2"></div>
       <div class="col-sm-6">
-        {% assign words = content | number_of_words %}
-        {{ words | divided_by:180 }} min read<br/>
-        <h1>{{ page.title }}</h1>
+        {% assign minutes = content | number_of_words | divided_by:180 %}
+        <div class="category">{{ page.tag }}</div>
+        <h1 class="page-title">{{ page.title }}</h1>
+        <div class="subtitle">{{ page.subtitle }}
+          {{ if minutes < 5 }} <!--print nothing-->
+          {{ else }} <span class="minutes">({{ minutes }} min read)</span>
+          {{ endif }}
+        </div>
+        <div class="dash">—</div>
         {{ content }}
       </div>
       <div class="col-sm-3">
@@ -124,4 +130,8 @@ layout: blog
         $(".nav .nav").css('display', 'none');
       }
     });
+
+    // get current year and put it in span
+    var currYear = new Date().getFullYear()
+    $(".current-year").text(currYear);
 </script>

@@ -1,9 +1,10 @@
 ---
 layout: blog
 category: blog
+tag: "types"
 title: "Types in Scala"
 by: "Heather Miller and Philipp Haller"
-excerpt: "test"
+subtitle: "Types are an immensely important concept in programming language design and theory."
 ---
 
 ## Types
