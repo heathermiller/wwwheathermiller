@@ -1,6 +1,3 @@
----
----
-
 $(document).ready(function() {
   styleCode();
 
@@ -48,8 +45,8 @@ $(document).ready(function() {
 function styleCode() {
     if (typeof disableStyleCode != "undefined") { return; }
     $("pre code").each(function() {
-        if (!$(this).hasClass("prettyprint lang-{{ site.primarylanguage }}")) {
-            $(this).addClass("prettyprint lang-{{ site.primarylanguage }}");
+        if (!$(this).hasClass("prettyprint lang-scala")) {
+            $(this).addClass("prettyprint lang-scala");
         }
     });
 }
