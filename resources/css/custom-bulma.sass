@@ -1,0 +1,62 @@
+---
+---
+
+// 1. Import the initial variables
+@import utilities/initial-variables
+@import utilities/functions
+
+// Responsiveness
+
+// Limit max width to "widescreen" or 1152px
+$fullhd: $widescreen
+
+// $family-primary: "Univers LT Pro"
+// $family-primary: "franklin-gothic-urw"
+// $family-primary: "Fira Sans"
+// $family-primary: "Roboto"
+$family-primary: "Source Sans Pro"
+
+$weight-light: 100
+$weight-normal: 100
+$weight-medium: 400
+$weight-semibold: 600
+$weight-bold: 700
+
+// 2. Set your own initial variables
+// Update blue
+// $blue: #72d0eb
+
+// Add pink and its invert
+$pink: #ffb3b3
+$pink-invert: #fff
+
+// Add a serif family
+//$family-serif: "Merriweather", "Georgia", serif
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink
+$primary-invert: $pink-invert
+
+// Use the existing orange as the danger color
+$danger: $orange
+
+// Use the new serif family
+//$family-primary: $family-serif
+
+// 4. Setup your Custom Colors
+$linkedin: #0077B5
+$linkedin-invert: findColorInvert($linkedin)
+$twitter: #1DA1F2
+$twitter-invert: findColorInvert($twitter)
+$github: #222222
+$github-invert: findColorInvert($github)
+
+// 5. Add new color variables to the color map.
+@import utilities/derived-variables.sass
+
+$addColors: ("twitter": ($twitter, $twitter-invert), "linkedin": ($linkedin, $linkedin-invert), "github": ($github, $github-invert))
+$colors: map-merge($colors, $addColors)
+
+// 6. Import the rest of Bulma
+@import bulma

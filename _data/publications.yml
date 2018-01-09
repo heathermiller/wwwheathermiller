@@ -1,0 +1,197 @@
+books:
+  pubs:
+  - title: "Distributed Programming"
+    authors: "H. Miller, N. Dempkowski, J. Larisch, C. Meiklejohn, P. Haller"
+    source: "https://github.com/heathermiller/dist-prog-book"
+    thumbnail: "http://heather.miller.am/resources/img/distprog.png"
+    abstract: "A textbook about the building blocks we use to build distributed systems. These range
+from the small, RPC, futures, actors, to the large; systems built up of these components
+like MapReduce and Spark. We explore issues and concerns central to distributed systems
+like consistency, availability, and fault tolerance, from the lens of the programming
+models and frameworks that the programmer uses to build these systems."
+
+refereed:
+  pubs:
+  - title: "A Programming Model and Foundation for Lineage-Based Distributed Computation"
+    authors: P. Haller, H. Miller, N. Müller
+    pdf: "https://infoscience.epfl.ch/record/230304"
+    abbrv: JFP
+    journal: "Journal of Functional Programming, to appear"
+    year: 2018
+
+  - title: "Simplicitly: Foundations and Applications of Implicit Function Types"
+    authors: M. Odersky, O. Blanvillain, F. Liu, A. Biboudis, H. Miller, S. Stucki
+    pdf: "https://infoscience.epfl.ch/record/229878"
+    acmdl: "https://dl.acm.org/citation.cfm?doid=3177123.3158130"
+    abbrv: POPL
+    conference-full: ACM SIGPLAN Symposium on Principles of Programming Languages
+    year: 2018
+    location: Los Angeles, CA, USA
+
+  - title: "Function Passing: A Model for Typed, Distributed Functional Programming"
+    authors: H. Miller, P. Haller, N. Müller, and J. Boullier
+    pdf: "https://infoscience.epfl.ch/record/205822"
+    acmdl: "https://dl.acm.org/citation.cfm?id=2986014&CFID=979034943&CFTOKEN=67460629"
+    abbrv: SPLASH
+    conference-full: "ACM SIGPLAN Systems, Programming, Languages and Applications: Software for Humanity, Onward!"
+    month: October
+    year: 2016
+    location: Amsterdam, Netherlands
+
+  - title: "Spores: A Type-Based Foundation for Closures in the Age of Concurrency and Distribution"
+    authors: H. Miller, P. Haller and M. Odersky
+    pdf: "https://infoscience.epfl.ch/record/191239"
+    acmdl: "https://dl.acm.org/citation.cfm?id=2945659&CFID=979034943&CFTOKEN=67460629"
+    abbrv: ECOOP
+    conference-full: European Conference on Object-Oriented Programming
+    month: July
+    year: 2014
+    location: Uppsala, Sweden
+
+  - title: "Functional Programming For All! Scaling a MOOC for Students and Professionals Alike"
+    authors: H. Miller, P. Haller, L. Rytz and M. Odersky
+    pdf: "https://infoscience.epfl.ch/record/191239"
+    acmdl: "https://dl.acm.org/citation.cfm?id=2945659&CFID=979034943&CFTOKEN=67460629"
+    abbrv: ICSE
+    conference-full: 36th International Conference on Software Engineering, SEET Track
+    month: June
+    year: 2014
+    location: Hyderabad, India
+
+  - title: "Instant Pickles: Generating Object-Oriented Pickler Combinators for Fast and Extensible Serialization"
+    authors: H. Miller, P. Haller, E. Burmako and M. Odersky
+    pdf: "https://infoscience.epfl.ch/record/195609"
+    acmdl: "https://dl.acm.org/citation.cfm?doid=2509136.2509547"
+    abbrv: OOPSLA
+    conference-full: "ACM SIGPLAN 2013 Conference on Object Oriented Programming, Systems, Languages and Applications"
+    month: October
+    year: 2013
+    location: Indianapolis, IN, USA
+
+workshops:
+  pubs:
+  - title: "Monotonicity Types for Distributed Dataflow"
+    authors: K. Clancy, H. Miller
+    pdf: "https://infoscience.epfl.ch/record/229896"
+    acmdl: "https://dl.acm.org/citation.cfm?id=3166090&CFID=979034943&CFTOKEN=67460629"
+    abbrv: PMLDC
+    conference-full: Programming Models and Languages for Distributed Computing
+    year: 2017
+    location: Barcelona, Spain
+
+  - title: "Distributed Programming via Safe Closure Passing"
+    authors: H. Miller, P. Haller and M. Odersky
+    pdf: "https://infoscience.epfl.ch/record/205039"
+    abbrv: PLACES
+    conference-full: Programming Language Approaches to Communication and Concurrency Centric Systems
+    month: April
+    year: 2015
+    location: London, UK
+
+  - title: "RAY: Integrating Rx and Async for Direct-Style Reactive Streams"
+    authors: P. Haller, H. Miller
+    pdf: "http://infoscience.epfl.ch/record/188383"
+    abbrv: REM
+    conference-full: "Reactivity, Events and Modularity"
+    month: October
+    year: 2013
+    location: Indianapolis, IN, USA
+
+  - title: "FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction"
+    authors: A. Prokopec, H. Miller, T. Schlatter, P. Haller, M. Odersky
+    pdf: "https://infoscience.epfl.ch/record/180265"
+    abbrv: LCPC
+    conference-full: "25th International Workshop on Languages and Compilers for Parallel Computing"
+    month: September
+    year: 2012
+    location: Tokyo, Japan
+
+# journals:
+#   pubs:
+#   - title: conf paper A
+#     authors: H. Miller etc
+#
+# conferences:
+#   pubs:
+#   - title: conf paper A
+#     authors: H. Miller etc
+
+
+in-preparation:
+  pubs:
+    - title: Monotonicity Types
+      authors: K. Clancy, H. Miller, C. Meiklejohn
+      pdf: "https://infoscience.epfl.ch/record/231867"
+
+    - title: The Essence of Coordination-Free Distributed Computation
+      authors: C. Meiklejohn, K. Clancy, H. Miller
+
+
+etc:
+  pubs:
+    - title: SIP-21 - Spores
+      authors: H. Miller, M. Odersky, P. Haller
+      url: "http://docs.scala-lang.org/sips/spores.html"
+      month: June
+      year: 2013
+
+    - title: "Functional Programming Principles in Scala: Impressions and Statistics"
+      authors: H. Miller, M. Odersky
+      url: "http://docs.scala-lang.org/news/functional-programming-principles-in-scala-impressions-and-statistics.html"
+      month: January
+      year: 2012
+
+    - title: SIP-14 – Futures and Promises
+      authors: P. Haller, A. Prokopec, H. Miller, V. Klang, R. Kuhn, V. Jovanovic
+      url: "http://docs.scala-lang.org/sips/futures-promises.html"
+      month: January
+      year: 2012
+
+tech-reports:
+  pubs:
+    - title: "The Function Passing Model: Types, Proofs, and Semantics"
+      authors: P. Haller, N. Müller, H. Miller
+      month: May
+      year: 2016
+      pdf: "https://infoscience.epfl.ch/record/221395"
+
+    - title: "Specialising Parsers for Queries"
+      authors: M. Jonnalagedda, J. Vicente Cantero, H. Miller, M. Odersky
+      month: April
+      year: 2016
+
+    - title: "Improving Human-Compiler Interaction Through Customizable Type Feedback"
+      authors: H. Plociniczak, H. Miller, M. Odersky
+      month: August
+      year: 2014
+      pdf: "https://infoscience.epfl.ch/record/197948"
+
+    - title: "Self-Assembly: Lightweight Language Extension and Datatype Generic Programming, All-in-One!"
+      authors: H. Miller, P. Haller, B. C. d. S. Oliveira
+      month: August
+      year: 2014
+      pdf: "https://infoscience.epfl.ch/record/199389"
+
+    - title: "Spores, Formally"
+      authors: H. Miller, P. Haller
+      month: December
+      year: 2013
+      pdf: "http://infoscience.epfl.ch/record/191240"
+
+    - title: "FlowPools: A Lock-Free Deterministic Concurrent Dataflow June 2012 Abstraction – Proofs"
+      authors: A. Prokopec, H. Miller, P. Haller
+      month: June
+      year: 2012
+      pdf: "http://infoscience.epfl.ch/record/181098"
+
+thesis:
+  pubs:
+    - title: "Language Support for Distributed Functional Programming"
+      authors: Heather Miller
+      thesis-type: Doctoral Thesis
+      director: Martin Odersky
+      committee: Matei Zaharia, Jan Vitek, Viktor Kuncak, James Larus
+      university: EPFL
+      month: October
+      year: 2015
+      pdf: "https://infoscience.epfl.ch/record/212934?ln=en"

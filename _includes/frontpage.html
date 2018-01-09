@@ -1,0 +1,416 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="slogan">
+          I'm an <span class="highlight"><span class="highlight__inner">Assistant Clinical Professor</span></span> at <a href="https://www.ccis.northeastern.edu/">Northeastern University</a>,
+          <br>and the <span class="highlight"><span class="highlight__inner">Executive Director</span></span> of the <a href="http://scala.epfl.ch">Scala Center</a> at <a href="http://epfl.ch">EPFL</a> where I am also a permanent research scientist.
+        </div>
+        <div class="news">
+          <b class="white">I'm going on the academic job market!</b> <i class="em em-tada"></i>
+          <br>Here are my application materials: <a href="https://github.com/heathermiller/cv/blob/master/cv.pdf?raw=true">CV</a> | <a href="resources/pdf/Research.pdf">Research Statement</a> | <a href="resources/pdf/Teaching.pdf">Teaching Statement</a>
+        </div>
+      </div>
+</section>
+
+<svg height="0" width="0">
+  <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:#e052a0;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#f15d40;stop-opacity:1" />
+  </linearGradient>
+</svg>
+
+<div class="lighter-blue-bg-bar">
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-fifth">
+          <div class="at-a-glance-header">
+            <i class="fas fa-flask"></i>
+            Research
+          </div>
+        </div>
+        <div class="column content research">
+          <p>
+            I'm interested in various flavors of distributed and concurrent
+            computation, often from the perspective of programming languages:
+          </p>
+          <ul>
+            <li>data-centric,</li>
+            <li>data-intensive (big data),</li>
+            <li>eventually-consistent (edge computing)</li>
+          </ul>
+          <p>
+            A major recurring theme in my work is <b class="white"><i>composability</b></i>. I seek to
+            enable the construction of complex distributed systems via the
+            composition of well-understood components that are correct by
+            construction.
+          </p>
+
+          <!-- I'm interested in programming language and compiler support for data-centric distributed programming. In particular, I'm interested in using type systems to facilitate the design of new, functional distributed systems. -->
+
+          <p>
+            Some of my projects include programming models and type systems to facilitate the
+            design of new, functional distributed systems, such as <a
+            href="https://speakerdeck.com/heathermiller/spores-distributable-functions-in-scala">distributable
+            closures</a>, <a
+            href="https://speakerdeck.com/heathermiller/instant-pickles-generating-object-oriented-pickler-combinators-for-fast-and-extensible-serialization">flexible,
+            extensible, and performant serialization</a>, asynchronous and
+            concurrent programming via <a
+            href="https://speakerdeck.com/heathermiller/futures-and-promises-in-scala-2-dot-10">futures
+            and promises</a>, and <a
+            href="https://github.com/heathermiller/scala-dataflow/raw/master/reports/lcpc-pres/lcpc-pres.pdf">deterministic
+            concurrent dataflow</a>.
+          </p>
+
+          <p>
+            I work on and around the <a href="http://scala-lang.org">Scala</a> programming language&nbsp;&nbsp;<img src="/resources/img/scala-sm-color.png">
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-fifth">
+        <div class="at-a-glance-header">
+          <i class="fas fa-file-alt"></i>
+          Publications
+        </div>
+      </div>
+      <div class="column">
+        <div class="publication-head">Recent Work</div>
+        <table class="table publications">
+          <tbody>
+            <tr>
+              <td>
+                <div class="pub-title">Simplicitly: Foundations and Applications of Implicit Function Types</div>
+                <div class="pub-authors">M. Odersky, O. Blanvillain, F. Liu, A. Biboudis, H. Miller, and S. Stucki</div>
+                <div class="pub-conf-journal-name">ACM SIGPLAN Symposium on Principles of Programming Languages (POPL'18)</div>
+                <div class="pub-meta"><a href="https://infoscience.epfl.ch/record/229878/files/simplicitly_1.pdf"><span class="tag pub-tag">PDF</span></a><a href=""></div>
+              </td>
+              <td nowrap><div class="pub-conf-abbrv">POPL 2018</div></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="pub-title"> A Programming Model and Foundation for Lineage-Based Distributed Computation</div>
+                <div class="pub-authors">P. Haller, H. Miller and N. Müller</div>
+                <div class="pub-conf-journal-name">Journal of Functional Programming (to appear)</div>
+              </td>
+              <td nowrap><div class="pub-conf-abbrv">JFP 2018</div></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="pub-title">Function Passing: A Model for Typed, Distributed Functional Programming</div>
+                <div class="pub-authors">H. Miller, P. Haller, N. Müller, and J. Boullier</div>
+                <div class="pub-conf-journal-name">ACM SIGPLAN Systems, Programming, Languages and Applications: Software for Humanity (SPLASH'16), Onward!</div>
+                <div class="pub-meta"><a href="https://infoscience.epfl.ch/record/205822/files/f-p.pdf"><span class="tag pub-tag">PDF</span></a><a href=""></div>
+              </td>
+              <td nowrap><div class="pub-conf-abbrv">SPLASH 2016</div></td>
+            </tr>
+          </tbody>
+        </table>
+        <a class="button publication-button" href="{{ site.baseurl }}/publications.html">Full Publication List</a>
+      </div>
+      <div class="column">
+        <div class="publication-head">Book</div>
+        <img style="height: 200px;" src="/resources/img/distprog.png">
+        <div class="book-title">Distributed Programming</div>
+        <div class="book-authors">Heather Miller, Nat Dempkowski, James Larisch, Christopher Meiklejohn</div>
+        <div class="book-text">A textbook about the building blocks we use to build distributed systems. These range from the small, RPC, futures, actors, to the large; systems built up of these components like MapReduce and Spark. We explore issues and concerns central to distributed systems like consistency, availability, and fault tolerance, from the lens of the programming models and frameworks that the programmer uses to build these systems.</div>
+        <div class="book-oa"><a href="https://github.com/heathermiller/dist-prog-book"><i class="fab fa-github"></i>&nbsp;&nbsp;Source</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="lighter-blue-bg-bar">
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-fifth"></div>
+        <!-- <i class="em em-family"></i>  -->
+        <div class="column">
+          <div class="at-a-glance-header">
+            <i class="fas fa-code"></i>
+            Open Source
+          </div>
+          <div class="columns">
+            <div class="column is-one-fifth">
+              <!-- <img style="height: 60px; width: 60px" src="/resources/img/weird-scala3.png"> -->
+              <div id="scala"></div>
+            </div>
+            <div class="column content work">
+              <p>
+                Most all of my work is realized in the context of open source <a href="http://scala-lang.prg">Scala</a>.
+              </a>
+              <p>Member of the Scala team since 2011.</p>
+              <p>I've worked on: Futures and Promises, Spores, Pickling, the Scala standard library, documentation, and a compiler fix here or there.</p>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column content work">
+              <p>I co-founded the <a href="http://scala.epfl.ch">Scala Center</a>.</p>
+              <p>
+                Our goal: Do The Right Thing<sup><i class="far fa-trademark"></i></sup> for open source Scala and its community.
+              <!-- <br>Dramatic consequences of the open source revolution. In short, we're building our businesses and research on a <i>hollow middle</i>. <a href="https://speakerdeck.com/heathermiller/the-dramatic-consequences-of-the-open-source-revolution">Slides</a> -->
+              <!-- <br>Scala Center is attempting to reverse this trend. Sustainability for successul community open source foundations like Scala. -->
+            </div>
+            <div class="column is-one-fifth">
+              <div id="scalacenter"></div>
+              <!-- <img style="height: 60px;" src="/resources/img/scalacenter-spiral.png"> -->
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <!-- <i class="em em-factory"></i>  -->
+          <div class="at-a-glance-header">
+            <i class="fas fa-industry-alt"></i>
+            Academia ↔ Industry
+          </div>
+          <div class="columns">
+            <div class="column content work">
+                <p>I co-created the <a href="http://curry-on.org">Curry On</a> conference with Jan Vitek in 2015.</p>
+                <p>Our goal: Industry and academia should have a talk! Or rather, they just need to talk in general.</p>
+                <p>Curry On is held in a different European city year-to-year, and it will always be co-located with one of the top academic conferences in programming languages (ECOOP). So far we've done it in <a href="http://curry-on.org/2015/">Prague (2015)</a>, <a href="http://curry-on.org/2016/">Rome (2016)</a>, and <a href="http://curry-on.org/2017/">Barcelona (2017)</a>. Up next, Amsterdam!</p>
+            </div>
+            <div class="column is-one-third">
+              <img style="height: 100px;" src="/resources/img/curryon2.png">
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-fifth">
+        <div id="service" class="sec-head">
+          <span class="fa-layers fa-fw">
+            <i class="fas fa-hand-paper" style="color:rgba(121, 152, 175, 0.5);"></i>
+            <i id="service-heart" class="fa-inverse fas fa-heart" data-fa-transform="shrink-8 down-2 right-1"></i>
+          </span>
+          Service
+        </div>
+      </div>
+      <div class="column">
+        <span class="subsec-head">General and/or Program Chair</span>
+        <table class="table service-table">
+          <tbody>
+            <tr>
+              <th>Curry On</th>
+              <td nowrap><a href="http://curry-on.org/2015/">2015</a>, <a href="http://curry-on.org/2016/">2016</a>, <a href="http://curry-on.org/2017/">2017</a>, 2018</td>
+            </tr>
+            <tr>
+              <th>
+                TFPIE
+                <div class="abbrv">Trends in Functional Programming in Education</div>
+              </th>
+              <td nowrap><a href="http://www.ccs.neu.edu/home/heather/tfpie2018/">2018</a></td>
+            </tr>
+            <tr>
+              <th>Scala Symposium</th>
+              <td nowrap><a href="http://lampwww.epfl.ch/~hmiller/scala2013/">2013</a>, <a href="http://lampwww.epfl.ch/~hmiller/scala2014/">2014</a>, <a href="https://conf.researchr.org/track/scala-2017/scala-2017-papers">2017</a></td>
+            </tr>
+            <tr>
+              <th>
+                PMLDC
+                <div class="abbrv">Programming Models & Languages for Distributed Computation </div>
+              </th>
+              <td nowrap><a href="https://2016.ecoop.org/track/PMLDC-2016">2016</a>, <a href="https://2017.ecoop.org/track/pmldc-2017-papers">2017</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <span class="subsec-head">Organizing Committee Member</span>
+        <table class="table service-table">
+          <tbody>
+            <tr>
+              <th>
+                OOPSLA
+                <div class="abbrv">Object-Oriented Programming, Systems, Languages & Applications </div>
+              </th>
+              <td nowrap><a href="https://conf.researchr.org/track/splash-2018/splash-2018-OOPSLA">2018</a></td>
+            </tr>
+            <tr>
+              <th>
+                ECOOP
+                <div class="abbrv">European Conference on Object-Oriented Programming</div>
+              </th>
+              <td nowrap><a href="https://2015.ecoop.org/">2015</a>, <a href="https://2016.ecoop.org/">2016</a>, <a href="https://2017.ecoop.org">2017</a>, <a href="https://2018.ecoop.org">2018</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <span class="list-head">External Review Committee Member:</span>
+        <span class="ercs">
+          <a href="https://conf.researchr.org/home/pldi-2018">PLDI 2018</a>,
+          <a href="https://2016.ecoop.org/">ECOOP 2016</a>,
+          <a href="http://www.lirmm.fr/ecoop13/">ECOOP 2013</a>,
+          <a href="http://lampwww.epfl.ch/~hmiller/scala2013/">Scala 2013</a>
+        </span>
+      </div>
+      <div class="column">
+        <span class="subsec-head">Program Committee Member</span>
+        <table class="table service-table">
+          <tbody>
+            <tr>
+              <th>
+                ICFP
+                <div class="abbrv">International Conference on Functional Programming</div>
+              </th>
+              <td nowrap><a href="https://conf.researchr.org/home/icfp-2018">2018</a></td>
+            </tr>
+            <tr>
+              <th>
+                OOPSLA
+                <div class="abbrv">Object-Oriented Programming, Systems, Languages & Applications</div>
+              </th>
+              <td nowrap><a href="https://2017.splashcon.org/track/splash-2017-OOPSLA">2017</a></td>
+            </tr>
+            <tr>
+              <th>
+                TFP
+                <div class="abbrv">Symposium on Trends in Functional Programming</div>
+              </th>
+              <td nowrap><a href="https://tfp2016.org/">2016</a></td>
+            </tr>
+            <tr>
+              <th>
+                SLE
+                <div class="abbrv">International Conference on Software Language Engineering</div>
+              </th>
+              <td nowrap><a href="http://www.sleconf.org/2016/">2016</a></td>
+            </tr>
+            <tr>
+            <tr>
+              <th>
+                Scala
+                <div class="abbrv">Scala Symposium</div>
+              </th>
+              <td nowrap><a href="https://conf.researchr.org/track/scala-2016/scala-2016">2016</a></td>
+            </tr>
+            <tr>
+              <th>
+                OBT
+                <div class="abbrv">Off the Beaten Track</div>
+              </th>
+              <td nowrap><a href="https://popl18.sigplan.org/track/OBT-2018">2018</a></td>
+            </tr>
+            <tr>
+              <th>
+                PLE
+                <div class="abbrv">Programming Language Evolution</div>
+              </th>
+              <td nowrap><a href="https://2015.ecoop.org/track/PLE-2015-papers">2015</a></td>
+            </tr>
+            <tr>
+              <th>
+                DSLDI
+                <div class="abbrv">Domain-Specific Language Design and Implementation</div>
+              </th>
+              <td nowrap><a href="https://2015.ecoop.org/track/dsldi-2015-papers">2015</a></td>
+            </tr>
+            <tr>
+              <th>
+                SAC
+                <div class="abbrv">Symposium on Applied Computing</div>
+              </th>
+              <td nowrap><a href="https://www.sigapp.org/sac/sac2016/program.html">2016</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lighter-blue-bg-bar">
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-fifth">
+          <div id="teaching" class="at-a-glance-header">
+            <i class="fas fa-graduation-cap"></i>
+            Teaching
+          </div>
+        </div>
+        <div class="column">
+          <div class="teaching-head">Northeastern University</div>
+          <table class="table teaching">
+            <tbody>
+              <tr>
+                <th nowrap>CS4240</th>
+                <td>Large-Scale Parallel Data Processing</td>
+                <td nowrap>Spring 2018</td>
+              </tr>
+              <tr>
+                <th nowrap><a href="http://heather.miller.am/teaching/cs7680/">CS7680</a></th>
+                <td>Special Topics in Computer Systems: Programming Models for Distributed Computation</td>
+                <td nowrap>Fall 2016</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="teaching-head">EPFL</div>
+          <table class="table teaching">
+            <tbody>
+              <tr>
+                <th nowrap>CS 206</th>
+                <td>Parallelism and Concurrency</td>
+                <td nowrap>Spring 2016</td>
+              </tr>
+              <tr>
+                <th nowrap>CS 212</th>
+                <td>Reactive Programming and Parallelism</td>
+                <td nowrap>Spring 2015</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="column">
+          <!-- <img src="resources/img/coursera.svg"> -->
+          <!-- <div class="mooc-label">MOOC</div> -->
+          <div class="tag mooc-label">MOOC</div>
+          <div class="teaching-head">Big Data Analysis with Scala and Spark</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="columns collaborators">
+      <div class="column is-one-fifth large-white">I'm beyond fortunate to work with many folks at both EPFL and Northeastern who are far more talented than I:</div>
+      <div class="column">
+        <span class="list-head">EPFL Team (Scala Center)</span>
+        <br><a href="https://geirsson.com/">Ólafur Páll Geirsson</a>, <span class="job">Software Engineer</span>
+        <br>Jorge Vicente Cantero, <span class="job">Software Engineer</span>
+        <br>Guillaume Massé, <span class="job">Software Engineer</span>
+        <br><a href="http://julien.richard-foy.fr/">Julien Richard-Foy</a>, <span class="job">Senior Software Engineer</span>
+        <br>Martin Duhem, <span class="job">Software Engineer</span>
+        <br>Darja Jovanovic, <span class="job">Community/Communication Manager</span>
+        <br>Sylvie Jankow, <span class="job">Administrative Assitant</span>
+        <br>Fabien Salvi, <span class="job">System Administrator</span>
+        <br>Martin Odersky, <span class="job">Academic Director</span>
+      </div>
+      <div class="column">
+        <span class="list-head">Northeastern Team</span>
+        <br><a href="https://kevinclancy.github.io/">Kevin Clancy</a>, <span class="job">PhD Student</span>
+        <br><br>
+        <span class="list-head">Collaborators at Large</span>
+        <br><a href="http://christophermeiklejohn.com/">Christopher Meiklejohn</a>, <span class="job">IST, Portugal and UCL, Belgium</span>
+        <br><a href="https://natdempk.io/">Nat Dempkowski</a>, <span class="job">HubSpot</span>
+        <br><a href="http://jameslarisch.com/">James Larisch</a>, <span class="job">Harvard University</span>
+        <br><a href="http://www.csc.kth.se/~phaller/">Philipp Haller</a>, <span class="job">KTH Royal Institute of Technology</span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -37,5 +37,8 @@ description: ""
 url: "http://heather.miller.am"
 
 permalink: /:categories/:title.html
-markdown: redcarpet
+# markdown: redcarpet
 highlighter: null
+
+sass:
+  style: compressed

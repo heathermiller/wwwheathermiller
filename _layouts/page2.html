@@ -1,0 +1,31 @@
+---
+layout: page2
+---
+{% include header.html %}
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        First column
+      </div>
+      <div class="column">
+        Second column
+      </div>
+      <div class="column">
+        Third column
+      </div>
+      <div class="column">
+        Fourth column
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include footer.html %}
+
+<script>
+    // get current year and put it in span
+    var currYear = new Date().getFullYear()
+    $(".current-year").text(currYear);
+</script>

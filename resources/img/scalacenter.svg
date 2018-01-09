@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="147px" viewBox="0 0 102 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="109.160459%" y1="108.246873%" x2="83.1315413%" y2="18.972003%" id="linearGradient-1">
+            <stop stop-color="#F68320" offset="0%"></stop>
+            <stop stop-color="#F1592A" offset="71.4386319%"></stop>
+            <stop stop-color="#EE562A" offset="74.1285078%"></stop>
+            <stop stop-color="#DE4527" offset="79.9552963%"></stop>
+            <stop stop-color="#CE3424" offset="87.3512199%"></stop>
+            <stop stop-color="#9F041B" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="94.2608271%" x2="38.6626409%" y2="8.65568634%" id="linearGradient-2">
+            <stop stop-color="#F68321" offset="0%"></stop>
+            <stop stop-color="#F1592A" offset="52.0994987%"></stop>
+            <stop stop-color="#EE562A" offset="64.0770189%"></stop>
+            <stop stop-color="#DE4527" offset="86.0267586%"></stop>
+            <stop stop-color="#CE3424" offset="90.7957339%"></stop>
+            <stop stop-color="#9F041B" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="129.253644%" y1="72.4072218%" x2="0%" y2="70.4888909%" id="linearGradient-3">
+            <stop stop-color="#9F081A" offset="0%"></stop>
+            <stop stop-color="#F1592A" offset="38.8124415%"></stop>
+            <stop stop-color="#F1592A" offset="66.1159961%"></stop>
+            <stop stop-color="#F68320" offset="87.4345068%"></stop>
+            <stop stop-color="#F1592A" offset="97.7944553%"></stop>
+            <stop stop-color="#F6831F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Path-Copy-13-+-Path-Copy-12-+-path2572-copy-4-Copy-Copy-Copy-Copy-Copy-Copy-Copy-Copy" transform="translate(6.000000, 9.000000)">
+            <path d="M27.4218933,108.625906 C42.9883527,112.353688 85.7063339,120.649812 89.4204934,128.95453 C89.8918028,130.00836 89.5205671,93.058443 89.5205671,89.0821426 L89.5205671,86.2529333 C89.5205671,83.4363871 43.4431407,70.8644739 27.4218921,66.1371772 C5.49921696,59.6685809 2.905388,59.0014765 0.230695862,57.5253054 C0.230695847,57.5253053 0.230695865,99.7694392 0.230695862,99.7694378 C0.360412595,101.053404 11.9222427,104.483926 27.4218933,108.625906 Z" id="Path-Copy-13" fill="url(#linearGradient-1)"></path>
+            <path d="M89.2463668,71.4828062 C89.7176762,72.5366359 89.3464405,35.5867189 89.3464405,31.6104184 L89.3464405,28.7812091 C89.3464405,25.964663 46.7694328,15.6140257 28.1380044,11.459058 C9.50657594,7.30409032 2.73126139,1.52975238 0.0565692519,0.053581214 C0.0565692375,0.0535812061 0.0565692548,41.1794513 0.0565692519,41.17945 C-0.638697889,51.7468853 85.5322073,63.1780879 89.2463668,71.4828062 Z" id="Path-Copy-12" fill="url(#linearGradient-2)" transform="translate(44.768867, 35.779249) scale(-1, -1) translate(-44.768867, -35.779249) "></path>
+            <path d="M89.5408135,30.0349605 L89.5408144,71.5410203 C89.5408144,89.2570707 0.231689452,95.9391506 0.231689452,99.7146022 L0.14154028,57.367676 C0.14154028,53.8249699 89.5408135,47.7510109 89.5408135,30.0349605 Z" id="path2572-copy-4" fill="url(#linearGradient-3)"></path>
+        </g>
+    </g>
+</svg>
