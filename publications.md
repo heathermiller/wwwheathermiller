@@ -46,6 +46,7 @@ title: Publications
     {% endif %}
     <div class="year">{{ pub.year }}</div>
     {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
+    {% if pub.acmdl %}<a class="button lil-pub-button" href="{{ pub.acmdl }}">ACM DL</a>{% endif %}
   </div>
   <div class="column publication"><div class="abbrv">{{ pub.abbrv }} {{ pub.year }}</div></div>
 </div>
@@ -65,6 +66,7 @@ title: Publications
     {% endif %}
     <div class="year">{{ pub.year }}</div>
     {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
+    {% if pub.acmdl %}<a class="button lil-pub-button" href="{{ pub.acmdl }}">ACM DL</a>{% endif %}
   </div>
   <div class="column publication"><div class="abbrv">{{ pub.abbrv }} {{ pub.year }}</div></div>
 </div>

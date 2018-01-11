@@ -789,7 +789,8 @@ $scala-sm-height: 22px;
     font-weight: $weight-bold;
     color: $dark-pink;
   }
-  .article a {
+  .article a,
+  .source a {
     text-transform: uppercase;
     color: $dark-pink;
     font-size: .75rem;
@@ -797,6 +798,10 @@ $scala-sm-height: 22px;
     &:hover {
       color: $gator-orange;
     }
+  }
+  .abstract {
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
 
