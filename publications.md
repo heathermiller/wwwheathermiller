@@ -27,7 +27,7 @@ title: Publications
   <div class="column publication">
     <div class="title">{{ pub.title }}</div>
     <div class="authors">{{ pub.authors }}</div>
-    {% if pub.pdf %}<a href="{{ pub.pdf }}"><i class="fas fa-file-pdf"></i> PDF</a>{% endif %}
+    {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
   </div>
 </div>
 {% endfor %}
@@ -45,9 +45,9 @@ title: Publications
       <div class="venue">{{ pub.journal }}</div>
     {% endif %}
     <div class="year">{{ pub.year }}</div>
-    {% if pub.pdf %}<a href="{{ pub.pdf }}"><i class="fas fa-file-pdf"></i> PDF</a>{% endif %}
+    {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
   </div>
-  <div class="column"><div class="abbrv">{{ pub.abbrv }} {{ pub.year }}</div></div>
+  <div class="column publication"><div class="abbrv">{{ pub.abbrv }} {{ pub.year }}</div></div>
 </div>
 {% endfor %}
 
@@ -64,9 +64,9 @@ title: Publications
       <div class="venue">{{ pub.journal }}</div>
     {% endif %}
     <div class="year">{{ pub.year }}</div>
-    {% if pub.pdf %}<a href="{{ pub.pdf }}"><i class="fas fa-file-pdf"></i> PDF</a>{% endif %}
+    {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
   </div>
-  <div class="column"><div class="abbrv">{{ pub.abbrv }} {{ pub.year }}</div></div>
+  <div class="column publication"><div class="abbrv">{{ pub.abbrv }} {{ pub.year }}</div></div>
 </div>
 {% endfor %}
 
@@ -78,8 +78,8 @@ title: Publications
   <div class="column publication">
     <div class="title">{{ pub.title }}</div>
     <div class="authors">{{ pub.authors }}</div>
-    {% if pub.url %}<a href="{{ pub.url }}"><i class="fas fa-link"></i> article</a>{% endif %}
     <div class="year">{{ pub.month }} {{ pub.year }}</div>
+    {% if pub.url %}<div class="article"><a href="{{ pub.url }}">article&nbsp;<i class="fas fa-external-link-square-alt"></i></a></div>{% endif %}
   </div>
 </div>
 {% endfor %}
@@ -92,7 +92,7 @@ title: Publications
     <div class="title">{{ pub.title }}</div>
     <div class="authors">{{ pub.authors }}</div>
     <div class="year">{{ pub.month }} {{ pub.year }}</div>
-    {% if pub.pdf %}<a href="{{ pub.pdf }}"><i class="fas fa-file-pdf"></i> PDF</a>{% endif %}
+    {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
   </div>
 </div>
 {% endfor %}
@@ -110,7 +110,7 @@ title: Publications
     <div class="committee">{{ pub.committee }}</div>
     <div class="university">{{ pub.university }}</div>
     <div class="year">{{ pub.month }} {{ pub.year }}</div>
-    {% if pub.pdf %}<a href="{{ pub.pdf }}"><i class="fas fa-file-pdf"></i> PDF</a>{% endif %}
+    {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
   </div>
 </div>
 {% endfor %}

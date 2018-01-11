@@ -548,17 +548,18 @@ body {
   a {
     border-bottom: 0px;
   }
-  .tag.pub-tag {
-    color: $white;
-    font-weight: bold;
-    background-color: $dark-pink;
-    height: 1.3em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-    margin-right: 0.25em;
-    &:hover {
-      background-color: $gator-orange;
-    }
+}
+
+.tag.pub-tag {
+  color: $white;
+  font-weight: bold;
+  background-color: $dark-pink;
+  height: 1.3em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  margin-right: 0.25em;
+  &:hover {
+    background-color: $gator-orange;
   }
 }
 
@@ -784,4 +785,38 @@ $scala-sm-height: 22px;
   .venue {
     font-style: italic;
   }
+  .abbrv {
+    font-weight: $weight-bold;
+    color: $dark-pink;
+  }
+  .article a {
+    text-transform: uppercase;
+    color: $dark-pink;
+    font-size: .75rem;
+    font-weight: $weight-bold;
+    &:hover {
+      color: $gator-orange;
+    }
+  }
+}
+
+.lil-pub-button {
+  background: linear-gradient(to right, $gator-pink, $gator-orange);
+  color: $white;
+  font-weight: bold;
+  display: inline-flex;
+  font-size: .75rem;
+  height: 1.3em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  margin-right: 0.25em;
+  margin-top: 0.3em;
+  border: 0px;
+  &:hover {
+    color: rgba(255, 255, 255, 0.65);
+    background: linear-gradient(to right, $gator-orange, $gator-orange);
+  }
+  // font-size: $size-6;
+  // margin-top: -24px;
+  // margin-bottom: -6px;
 }
