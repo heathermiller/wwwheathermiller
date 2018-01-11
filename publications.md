@@ -107,11 +107,10 @@ title: Publications
   <div class="column publication">
     <div class="title">{{ pub.title }}</div>
     <div class="authors">{{ pub.authors }}</div>
-    <div class="thesis">{{ pub.thesis-type }}</div>
-    <div class="director">{{ pub.director }}</div>
-    <div class="committee">{{ pub.committee }}</div>
-    <div class="university">{{ pub.university }}</div>
-    <div class="year">{{ pub.month }} {{ pub.year }}</div>
+    <div class="thesis"><i>{{ pub.thesis-type }}</i></div>
+    <div class="director"><b>Thesis Advisor:</b> {{ pub.director }}</div>
+    <div class="committee"><b>Thesis Committee:</b> {{ pub.committee }}</div>
+    <div class="university-year">{{ pub.university }}, {{ pub.month }} {{ pub.year }}</div>
     {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
   </div>
 </div>
