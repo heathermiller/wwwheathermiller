@@ -1,0 +1,43 @@
+---
+layout: default
+---
+{% include header2.html %}
+{% include navbar2.html %}
+
+
+<section class="section">
+  <div class="container main">
+    <div class="columns">
+      <div class="column is-one-quarter content">
+        <h1>{{ page.course-number }}</h1>
+        <strong>Northeastern University</strong>
+        <br>College of Computer and Information Science
+        <hr>
+        <strong>{{ page.semester }}</strong>
+        <br><strong>When: </strong>{{ page.times }}
+        <br><strong>Where: </strong>{{ page.location }}
+        <hr>
+        <strong>Instructor:</strong> {{ page.instructor }}
+        <br><strong>Office: </strong>{{ page.office }}
+        <br><strong>Office Hours: </strong>{{ page.instructor-office-hours }}
+        <br><i>Contact us via <a href="{{ page.piazza-url }}">Piazza</a></i>
+        <br>
+        <br><strong>TA:</strong> {{ page.ta }}
+        <br><strong>Office:</strong> {{ page.ta-office }}
+        <br><strong>Office Hours:</strong> {{ page.ta-office-hours }}
+        <br><i>Contact us via <a href="{{ page.piazza-url }}">Piazza</a></i>
+        <hr>
+        Quick links:
+        {% for link in page.toc-links %}
+        <br><a href="{{ link.url }}">{{ link.text }}</a>
+        {% endfor %}
+      </div>
+      <div class="column content">
+        <h1>{{ page.course-title }}</h1>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include footer2.html %}
