@@ -209,7 +209,7 @@ Slides and other materials will be posted here.
 **Intro to Scala**
 
 - [Intro to Scala](scala-tutorial/slides.html), slide deck used in class.
-- Scala 101, [a free set of video lectures](https://cognitiveclass.ai/courses/introduction-to-scala/) on cognitiveclass.ai. Taught by [Jamie Allen](https://twitter.com/jamie_allen).
+- Scala 101, [a free set of short video lectures](https://cognitiveclass.ai/courses/introduction-to-scala/) on cognitiveclass.ai. Taught by [Jamie Allen](https://twitter.com/jamie_allen).
   - Corresponding slides:
   - [2.1 Classes](pdf/2-1.pdf)
   - [2.2 Immutable and Mutable Fields](pdf/2-2.pdf)
