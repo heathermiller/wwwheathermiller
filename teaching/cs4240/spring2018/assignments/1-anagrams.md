@@ -18,7 +18,7 @@ exercise, which can be found here:
 Note that Scala uses the `String` from Java, therefore the documentation
 for strings has to be looked up in the Javadoc API:
 
-[http://docs.oracle.com/javase/6/docs/api/java/lang/String.html](http://docs.oracle.com/javase/6/docs/api/java/lang/String.html)
+[http://docs.oracle.com/javase/8/docs/api/java/lang/String.html](http://docs.oracle.com/javase/8/docs/api/java/lang/String.html)
 
 ## The problem
 
