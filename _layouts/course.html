@@ -11,6 +11,7 @@ layout: default
     <div class="columns">
       <div class="column is-one-quarter content">
         <h1>{{ course.course-number }}</h1>
+        <div class="is-hidden-tablet"><h1>{{ course.course-title }}</h1></div>
         <strong>Northeastern University</strong>
         <br>College of Computer and Information Science
         <hr>
@@ -34,7 +35,7 @@ layout: default
         {% endfor %}
       </div>
       <div class="column content">
-        <h1>{{ course.course-title }}</h1>
+        <div class="is-hidden-mobile"><h1>{{ course.course-title }}</h1></div>
         {{ content }}
       </div>
     </div>
