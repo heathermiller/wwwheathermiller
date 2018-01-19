@@ -42,7 +42,16 @@ code, pre {
   font-family: "Fira Code", monospace;
 }
 
-pre {
+code.highlighter-rouge {
+    background-color: transparentize($white, 0.9);
+    color: transparentize($white, 0.2);
+    font-size: .875em;
+    font-weight: normal;
+    padding: 0em 0.25em 0em;
+    border-radius: 2px;
+}
+
+.highlight, pre.highlight {
   background-color: $almost-black;
 }
 

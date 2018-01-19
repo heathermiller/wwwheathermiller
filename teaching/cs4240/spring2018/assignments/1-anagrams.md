@@ -81,7 +81,9 @@ which are both valid anagrams.
 
 We represent the words of a sentence with the `String` data type:
 
+```scala
     type Word = String
+```
 
 Words contain lowercase and uppercase characters, and no whitespace,
 punctuation or other special characters.
@@ -90,13 +92,17 @@ Since we are ignoring the punctuation characters of the sentence
 as well as the whitespace characters, we will represent sentences
 as lists of words:
 
+```scala
     type Sentence = List[Word]
+```
 
 We mentioned previously that we will transform words and sentences into
 occurrence lists. We represent the occurrence lists as sorted lists of
 character and integers pairs:
 
+```scala
     type Occurrences = List[(Char, Int)]
+```
 
 The list should be sorted by the characters in an ascending order.
 Since we ignore the character casing, all the characters in the occurrence
@@ -109,7 +115,9 @@ sentence do not appear in the occurrence list either.
 Finally, the dictionary of all the meaningful English words is represented
 as a `List` of words:
 
+```scala
     val dictionary: List[Word] = loadDictionary
+```
 
 The dictionary already exists for this exercise and is loaded for you using
 the `loadDictionary` utility method.
@@ -123,29 +131,37 @@ hence its name.
 
 Here is one example:
 
+```scala
     List("Every", "student", "likes", "Scala").groupBy((element: String) => element.length)
+```
 
 produces:
 
+```scala
     Map(
       5 -> List("Every", "likes", "Scala"),
       7 -> List("student")
     )
+```
 
 Above, the key is the `length` of the string and the type of the key is `Int`. Every
 `String` with the same `length` is grouped under the same key -- its `length`.
 
 Here is another example:
 
+```scala
     List(0, 1, 2, 1, 0).groupBy((element: Int) => element)
+```
 
 produces:
 
+```scala
     Map(
       0 -> List(0, 0),
       1 -> List(1, 1),
       2 -> List(2)
     )
+```
 
 `Map`s provide efficient lookup of all the values mapped to a certain key. Any collection
 of pairs can be transformed into a `Map` using the `toMap` method. Similarly, any `Map` can
@@ -161,13 +177,17 @@ we produced the occurrence list by recursively traversing a list of characters.
 This time we will use the `groupBy` method from the Collections API (hint: you
 may additionally use other methods, such as `map` and `toList`).
 
+```scala
     def wordOccurrences(w: Word): Occurrences
+```
 
 Next, we implement another version of the method for entire sentences.
 We can concatenate the words of the sentence into a single word and then reuse
 the method `wordOccurrences` that we already have.
 
+```scala
     def sentenceOccurrences(s: Sentence): Occurrences
+```
 
 ## Computing Anagrams of a Word
 
@@ -176,24 +196,32 @@ of a word have the same occurrence list. To allow efficient lookup of all the wo
 with the same occurrence list, we will have to _group_ the words of the dictionary
 according to their occurrence lists.
 
+```scala
     lazy val dictionaryByOccurrences: Map[Occurrences, List[Word]]
+```
 
 We then implement the method `wordAnagrams` which returns the list of anagrams of
 a single word:
 
+```scala
     def wordAnagrams(word: Word): List[Word]
+```
 
 ## Computing Subsets of a Set
 
 To compute all the anagrams of a sentence, we will need a helper method which,
 given an occurrence list, produces all the subsets of that occurrence list.
 
+```scala
     def combinations(occurrences: Occurrences): List[Occurrences]
+```
 
 The `combinations` method should return all possible ways in which we can pick
 a subset of characters from `occurrences`. For example, given the occurrence list:
 
+```scala
     List(('a', 2), ('b', 2))
+```
 
 the list of all subsets is:
 
@@ -223,12 +251,16 @@ We now implement another helper method called `subtract` which, given two occurr
 lists `x` and `y`, subtracts the frequencies of the occurrence list `y` from the
 frequencies of the occurrence list `x`:
 
+```scala
     def subtract(x: Occurrences, y: Occurrences): Occurrences
+```
 
 For example, given two occurrence lists for words `lard` and `r`:
 
+```scala
     val x = List(('a', 1), ('d', 1), ('l', 1), ('r', 1))
     val y = List(('r', 1))
+```
 
 the `subtract(x, y)` is `List(('a', 1), ('d', 1), ('l', 1))`.
 
@@ -242,7 +274,9 @@ Hint: you can use `foldLeft`, and `-`, `apply` and `updated` operations on `Map`
 
 Now we can finally implement our `sentenceAnagrams` method for sequences.
 
+```scala
     def sentenceAnagrams(sentence: Sentence): List[Sentence]
+```
 
 Note that the anagram of the empty sentence is the empty sentence itself.
 
