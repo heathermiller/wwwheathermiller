@@ -1,29 +1,6 @@
 ---
 layout: course
-course-title: "Large-Scale Parallel Data Processing"
-course-number: CS 4240
-times: "Thursdays 6-9pm"
-location: "Snell Library 111"
-semester: "Spring 2018"
-instructor: "Heather Miller"
-instructor-email: "heather@ccs.neu.edu"
-office: "WVH 328"
-ta: "Rutul Patel"
-ta-email: "patel.ru@husky.neu.edu"
-instructor-office-hours: "Thursdays 1-3pm"
-ta-office: "TBA"
-ta-office-hours: "Tuesdays 2pm-4pm"
-piazza-url: "https://piazza.com/northeastern/spring2018/cs4240/home"
-blackboard-url: ""
-
-toc-links:
-  - text: "Schedule"
-    url: "#schedule"
-  - text: "Assignments"
-    url: "#assignments"
-  - text: "Resources"
-    url: "#resources"
-
+course-ref: cs4240spring2018
 ---
 
 This course covers techniques for analyzing very large data sets, with an
@@ -195,7 +172,7 @@ Assignments can be submitted on [the course's Blackboard page]({{ blackboard-url
   </thead>
   <tbody>
     <tr>
-      <td>Assignment 1: Intro to Scala</td>
+      <td><a href="assignments/1-anagrams.html">Assignment 1: Intro to Scala</a></td>
       <td>January 19, noon</td>
       <td>January 25, noon</td>
     </tr>                                                   
