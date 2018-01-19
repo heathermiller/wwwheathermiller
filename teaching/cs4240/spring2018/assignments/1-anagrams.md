@@ -197,6 +197,7 @@ a subset of characters from `occurrences`. For example, given the occurrence lis
 
 the list of all subsets is:
 
+```scala
     List(
       List(),
       List(('a', 1)),
@@ -208,6 +209,7 @@ the list of all subsets is:
       List(('a', 1), ('b', 2)),
       List(('a', 2), ('b', 2))
     )
+```
 
 The order in which you return the subsets does not matter as long as they are
 all included. Note that there is only one subset of an empty occurrence list,

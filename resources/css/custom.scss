@@ -23,13 +23,10 @@ $base-duration: 350ms;
 $base-timing: ease;
 $base-transition: all $base-duration $base-timing;
 
+$highlight-gradient: linear-gradient(135deg, $gator-pink, $gator-orange);
+
 html {
   background: $dark-blue-bg;
-  // --start: hsl(340, 55%, 45%);
-  // --end: hsl(280, 45%, 55%);
-  --start: $gator-pink;
-  --end: $gator-orange;
-  --gradient: linear-gradient(135deg, var(--start), var(--end));
 }
 
 * {
@@ -39,6 +36,14 @@ html {
 body {
   color: $blue-gray;
   font-weight: 400;
+}
+
+code, pre {
+  font-family: "Fira Code", monospace;
+}
+
+pre {
+  background-color: $almost-black;
 }
 
 .slogan {
@@ -257,14 +262,13 @@ body {
     }
 }
 .highlight-anim:before {
-    --padding: 0em;
     content: "";
     position: absolute;
-    top: var(--padding);
+    top: 0em;
     right: 0;
-    bottom: var(--padding);
+    bottom: 0em;
     left: 0;
-    background: var(--gradient);
+    background: $highlight-gradient;
     -webkit-transform-origin: left center;
     transform-origin: left center;
     -webkit-animation: highlight__scaleIn 1.5s cubic-bezier(.22, 1, .32, 1) .6s backwards;

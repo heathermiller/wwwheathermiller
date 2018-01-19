@@ -159,7 +159,7 @@ Thus, as a consequence, attendance is expected.
 There will be a handful of projects distributed approximately every two weeks.
 Projects are due by noon on Thursdays.
 
-Assignments can be submitted on [the course's Blackboard page]({{ blackboard-url }})
+Assignments can be submitted on [the course's Blackboard page]({{ site.data.courses[page.course-ref].blackboard-url }})
 
 
 <table class="table">
@@ -202,8 +202,8 @@ Slides and other materials will be posted here.
 
 **Slides:**
 
-- [Intro, Why Scala, Why Spark]({{ site.baseurl }}/teaching/cs4240/pdf/spark-1-1.pdf)
-- [Data-Parallel to Distributed Data-Parallel]({{ site.baseurl }}/teaching/cs4240/pdf/spark-1-2.pdf)
-- [Latency]({{ site.baseurl }}/teaching/cs4240/pdf/spark-1-3.pdf)
+- [Intro, Why Scala, Why Spark]({{ site.baseurl }}/teaching/spring2018/cs4240/pdf/spark-1-1.pdf)
+- [Data-Parallel to Distributed Data-Parallel]({{ site.baseurl }}/teaching/spring2018/cs4240/pdf/spark-1-2.pdf)
+- [Latency]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-1-3.pdf)
 
 **Intro to Scala**
