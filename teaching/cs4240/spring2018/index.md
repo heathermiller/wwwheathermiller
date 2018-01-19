@@ -27,7 +27,7 @@ Communication with the instructor and teaching assistants is exclusively through
 [Piazza]({{ piazza-url }}). If you wish to contact the instructor privately,
 send a private note.
 
-Grades will be managed, and assignments will be collected through [the course's Blackboard page]({{ blackboard-url }}).
+Grades will be managed and assignments will be collected through [the course's Blackboard page]({{ blackboard-url }}).
 
 ## Recommended Books
 
@@ -232,3 +232,5 @@ Slides and other materials will be posted here.
   - [5.4 Handling Failures](pdf/5-4.pdf)
   - [5.5 Handling Futures](pdf/5-5.pdf)
   - [All slides](pdf/scala101.pdf)
+- [Scala: an Introduction](http://janvitek.org/pdpmr/f17/notes/scala.html), by [Konrad Siek](http://www.cs.put.poznan.pl/ksiek/).
+- [Twitter's Scala School](https://twitter.github.io/scala_school/), Scala onboarding materials used by Twitter.
