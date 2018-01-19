@@ -207,3 +207,28 @@ Slides and other materials will be posted here.
 - [Latency]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-1-3.pdf)
 
 **Intro to Scala**
+
+- [Intro to Scala](scala-tutorial/slides.html), slide deck used in class.
+- Scala 101, [a free set of video lectures](https://cognitiveclass.ai/courses/introduction-to-scala/) on cognitiveclass.ai. Taught by [Jamie Allen](https://twitter.com/jamie_allen).
+  - Corresponding slides:
+  - [2.1 Classes](pdf/2-1.pdf)
+  - [2.2 Immutable and Mutable Fields](pdf/2-2.pdf)
+  - [2.3 Methods](pdf/2-3.pdf)
+  - [2.4 Default and Named Arguments](pdf/2-4.pdf)
+  - [2.5 Objects](pdf/2-5.pdf)
+  - [3.1 Companion Objects](pdf/3-1.pdf)
+  - [3.2 Case Classes and Case Objects](pdf/3-2.pdf)
+  - [3.3 Apply and Unapply](pdf/3-3.pdf)
+  - [3.4 Synthetic Methods](pdf/3-4.pdf)
+  - [3.5 Immutability and Thread Safety](pdf/3-5.pdf)
+  - [4.1 Collections Overview](pdf/4-1.pdf)
+  - [4.2 Sequences and Sets](pdf/4-2.pdf)
+  - [4.3 Option](pdf/4-3.pdf)
+  - [4.4 Tuples and Maps](pdf/4-4.pdf)
+  - [4.5 Higher Order Functions](pdf/4-5.pdf)
+  - [5.1 For Expressions](pdf/5-1.pdf)
+  - [5.2 Pattern Matching](pdf/5-2.pdf)
+  - [5.3 Handling Options](pdf/5-3.pdf)
+  - [5.4 Handling Failures](pdf/5-4.pdf)
+  - [5.5 Handling Futures](pdf/5-5.pdf)
+  - [All slides](pdf/scala101.pdf)

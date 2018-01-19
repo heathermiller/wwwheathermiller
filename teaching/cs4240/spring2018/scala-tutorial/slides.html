@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Brief Intro to Scala</title>
+    <meta charset='utf-8'>
+    <meta content='width=1024, user-scalable=no' name='viewport'>
+    <!-- deck.js's core css -->
+    <link href="deck.js/core/deck.core.css" rel="stylesheet" type="text/css"/>
+    <!-- deck.js extension CSS files -->
+    <link href="deck.js/extensions/deck.js-codemirror/deck.codemirror.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/goto/deck.goto.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/hash/deck.hash.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/menu/deck.menu.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/navigation/deck.navigation.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/scale/deck.scale.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/status/deck.status.css" rel="stylesheet" type="text/css"/>
+    <!-- all css in the css dir: Keydown CSS, your custom CSS, and themes from deck.js -->
+    <link href="css/keydown.css" rel="stylesheet" type="text/css"/>
+    <link href="css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="css/scala-2.10.css" rel="stylesheet" type="text/css"/>
+    <link href="css/swiss.css" rel="stylesheet" type="text/css"/>
+    <!-- Modernizr (provided for legacy browsers) -->
+    <script src="deck.js/support/modernizr.custom.js" type="text/javascript"></script>
+  </head>
+  <body class='deck-container keydown'>
+    <section class='intro slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>A Brief Intro to Scala</h1>
+
+        <p><img height="50%" src="images/scala.png"/></p>
+
+        <h4>Heather Miller</h4>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>What is Scala?</h1>
+
+        <ul>
+        <li>A programming language running on the JVM</li>
+        <li>Statically typed, combines object-orientation and functional programming</li>
+        <li>Concise</li>
+        <li>Fully interoperable with Java</li>
+        <li>As fast as Java</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>History</h1>
+
+        <ul>
+          <li>"Make Java better"
+            <ul>
+              <li>1997 - Pizza and GJ (Odersky, Wadler)</li>
+              <li>2000 - Java 5 (generics)</li>
+            </ul>
+          </li>
+          <li>"Make a better Java"
+            <ul>
+              <li>first release 2004</li>
+              <li>adoption begins 2007</li>
+              <li>first Scala conference 2008</li>
+            </ul>
+          </li>
+        </ul>
+
+        <img src="images/martin.jpg" style="display: inline; ; vertical-align: middle; margin-top: 30px" width="415px"/>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Adoption</h1>
+
+        <p>According to StackOverflow and GitHub Scala is used a lot.</p>
+
+        <p><img src="images/lang-rank-617-wm.png" height="847px"/></p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Momentum</h1>
+
+        <ul>
+        <li>scala-lang.org: >300,000 visitors/month</li>
+        <li>>25 books in print
+          <ul>
+            <li>Selection on <a href="http://www.scala-lang.org/documentation/books.html">scala-lang.org</a>
+          </ul>
+        </li>
+        <li>>65 active user groups
+          <ul>
+            <li>See <a href="http://www.scala-tribes.org/">scala-tribes.org</a>
+            <li>Including a very active group in Boston!: <a href="https://www.meetup.com/boston-scala/">Boston Area Scala Enthusiasts</a>
+          </ul>
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Philosophy</h1>
+
+        <ul>
+        <li>Scalable language
+          <ul>
+            <li>same concepts in small and large applications</li>
+          </ul>
+        </li>
+        <li>Deep rather than broad
+          <ul>
+            <li>focus on abstraction and composition</li>
+          </ul>
+        </li>
+        <li>"Growable language" (Guy Steele)
+          <ul>
+            <li>embed DSLs/add new types</li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>First Example</h1>
+        <h2>Java</h2>
+        <p>
+          <textarea class='code' display='none' mode='text/x-java'>
+public class Person {
+  public final String name;
+  public final int age;
+  Person(String name, int age) {
+      this.name = name;
+      this.age = age;
+  }
+}</textarea>
+        </p>
+
+        <h2>Scala</h2>
+        <p>
+          <textarea class='code' display='none' mode='text/x-scala'>
+class Person(val name: String, val age: Int)</textarea>
+        </p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Using arrays in...</h1>
+        <h2>... Java:</h2>
+        <p>
+          <textarea class='code' display='none' mode='text/x-java'>
+import java.util.ArrayList;
+...
+Person[] people;
+Person[] minors;
+Person[] adults;
+{  ArrayList<Person> minorsList = new ArrayList<Person>();
+   ArrayList<Person> adultsList = new ArrayList<Person>();
+   for (int i = 0; i < people.length; i++)
+       (people[i].age < 18 ? minorsList : adultsList)
+       .add(people[i]);
+   minors = minorsList.toArray(people);
+   adults = adultsList.toArray(people);
+}</textarea>
+        </p>
+
+        <h2>... and in Scala:</h2>
+        <p>
+          <textarea class='code' display='none' mode='text/x-scala'>
+val people: Array[Person]
+// a tuple in a pattern match:
+val (minors, adults) =
+  people partition (_.age < 18) // a lambda</textarea>
+        </p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Scala Basics</h2>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Running Scala</h1>
+
+        <ul>
+        <li>Compiled to Java bytecode
+          <ul>
+            <li>experimental JavaScript backend: <a href="http://www.scala-js.org/">Scala.js</a></li>
+            <li>experimental LLVM backend: <a href="http://www.scala-native.org/">Scala Native</a></li>
+          </ul>
+        </li>
+        <li>Read-Eval-Print-Loop (REPL)
+          <ul>
+            <li>fast turnaround</li>
+            <li>easy experimentation/testing</li>
+            <li>available within many tools: Eclipse IDE, sbt, <a href="http://www.scastie.scala-lang.org/">Scastie (Scala in the browser)</a>, ...</li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Essentials</h1>
+
+        <ul>
+        <li>Every value is an object</li>
+        <li>Everything is an expression (evaluates to a value)</li>
+        <li>Every operation is a method call
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Primitives</h1>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+val x: Int = 10 // type can also be inferred
+val y = x + 10  // same as x.+(10)</textarea>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Complex numbers</h1>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+class Complex(val re: Int, val im: Int) {
+
+  def +(that: Complex) =
+    new Complex(this.re + that.re, this.im + that.im)
+
+  // ...
+
+  override def toString =
+    "%d + %di".format(re, im)
+}
+
+val c1 = new Complex(1, 2)
+val c2 = new Complex(2, 2)
+c1 + c2</textarea>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Everything is an expression</h1>
+
+        <ul>
+          <li>No statements</li>
+          <li>Reduces the need for return and side-effects</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Expression examples</h1>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+def max(x: Int, y: Int) =
+  if (x > y) x else y
+
+val res = max(10, 5)
+
+var x = 0
+val t = {
+  x = x + 10
+  x - 1
+}</textarea>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>What about println?</h1>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+val x = println("hello, world")</textarea>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Classes and traits</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Classes</h1>
+
+        <p>When compiled, this class will look and behave exactly like the
+           obvious translation to a Java class. No glue code necessary.</p>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+abstract class Node[T](val v: T, next: Node[T])
+         extends List(v, next) {
+  val cache: Int
+
+  def first: T
+  def children = List(next)
+  override def toString = "Node " + v
+}</textarea>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Traits</h1>
+
+        <ul>
+          <li>Like Java interfaces, but in addition
+            <ul>
+              <li>allow concrete methods, fields, types</li>
+            </ul>
+          </li>
+          <li>Like Scala classes, but without constructor parameters</li>
+          <li>Allow (a form of) multiple inheritance
+            <ul>
+              <li>mix-in composition</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Trait example</h1>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+trait Ordered[A] extends java.lang.Comparable[A] {
+  def <  (that: A): Boolean = (this compareTo that) <  0
+  def >  (that: A): Boolean = (this compareTo that) >  0
+  def <= (that: A): Boolean = (this compareTo that) <= 0
+  def >= (that: A): Boolean = (this compareTo that) >= 0
+}
+
+case class Person(val name: String, val age: Int)
+     extends Ordered[Person] {
+
+  def compareTo(that: Person): Int =
+    if (name < that.name) -1
+    else if (name > that.name) 1
+    else age - that.age
+}
+
+val p1 = new Person("anton", 10)
+val p2 = new Person("berta", 5)
+val p3 = new Person("anton", 9)
+val ps = List(p1, p2, p3)
+ps.sorted</textarea>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Functional Programming</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>What is FP?</h1>
+
+        <ul>
+          <li>Use of functions (in the mathematical sense)
+            <ul>
+              <li>referential transparency (no side-effects)</li>
+            </ul>
+          </li>
+          <li>Immutable objects</li>
+          <li>Functions are values</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Scala as a Functional Programming Language</h1>
+
+        <ul>
+          <li>Use val instead of var</li>
+          <li>Immutable collections in the standard library</li>
+          <li>Leverage function literals and closures</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Function literals</h1>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+val succ = (x: Int) => x + 1
+succ(1)</textarea>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Equivalent forms</h1>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+(x: Int) => x + 1
+x => x + 1         // infer type
+_ + x              // placeholder notation</textarea>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Higher-Order Functions</h1>
+
+        <ul>
+          <li>Functions that take or return functions</li>
+          <li>Almost eliminate the need for loops over collections</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Higher-Order Functions: Examples</h1>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+val xs = List(1, 2, 3, 4, 5)
+xs.foreach(println)
+
+val allLessThanTen = xs.forall(_ < 10)
+
+xs.map(_ * 2)</textarea>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+def findBelow(limit: Int) =
+  persons.filter(_.age < limit)</textarea>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Everything is an object</h1>
+
+        <ul>
+          <li>Closures are objects, too</li>
+          <li>Instances of trait <code>Function1[A, B]</code> (compiler generated)</li>
+        </ul>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+trait Function1[R, A] {
+  def apply(x: A): R
+}</textarea>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Syntactic Sugar</h1>
+
+        <ul>
+          <li>Why can I call <code>succ(10)</code>?</li>
+          <li><code>f(args)</code> is desugared to <code>f.apply(args)</code></li>
+          <li>You can define your own <code>apply</code> methods</li>
+          <li>...can I subclass <code>FunctionN</code>?</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Function Subtypes</h1>
+
+        <ul>
+          <li>Yes! Many collections are functions.
+          <ul>
+            <li>Sequences are <code>Int => T</code></li>
+            <li>Sets are <code>T => Boolean</code></li>
+            <li>Maps are <code>K => V</code></li>
+          </ul></li>
+        </ul>
+
+<textarea class='code' display='none' mode='text/x-scala'>
+val even = Set(2, 4, 6, 8, 10)
+val res1 = even(4)
+val res2 = even(3)</textarea>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Standard Library</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Collections</h1>
+
+        <ul>
+          <li>Generic (<code>List[T]</code>, <code>Map[K, V]</code>)</li>
+          <li>Mutable and immutable implementations (default is immutable)</li>
+          <li>Uniform return type principle</li>
+          <li>No compiler magic!</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Example: Maps</h1>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+val capitals = Map("France" -> "Paris",
+                   "Switzerland" -> "Bern",
+                   "Sweden" -> "Stockholm")
+
+val someCity = capitals("France")
+
+val resOfAdd = capitals + ("Romania" -> "Bucharest")
+
+capitals
+
+val filtered = capitals.filter(_._2 == "Paris")</textarea>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>For-comprehensions</h1>
+
+        <ul>
+          <li>More general than for-loops</li>
+          <li>Used to iterate, filter and generate new collections</li>
+        </ul>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+for (p <- persons; pr <- p.projects;
+  if pr.overdue) yield p.name</textarea>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>For-comprehensions</h1>
+
+        <ul>
+          <li>Translated to calls to <code>filter</code>, <code>map</code>, <code>flatMap</code></li>
+          <li>Readily available to any class implementing those methods</li>
+          <li>Can be used to query a database
+            <ul>
+              <li>Implement <code>filter</code>, <code>map</code>, <code>flatmap</code> to generate and forward SQL</li>
+              <li>SLICK, Squeryl</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Pattern matching</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Pattern matching</h1>
+
+        <ul>
+          <li>A way to match and deconstruct structured data</li>
+          <li>A powerful <code>switch</code> statement (expression, really)</li>
+        </ul>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+// Define a set of case classes for representing binary trees.
+sealed abstract class Tree
+case class Node(elem: Int, left: Tree, right: Tree) extends Tree
+case object Leaf extends Tree
+
+// Return the in-order traversal sequence of a given tree.
+def inOrder(t: Tree): List[Int] = t match {
+  case Node(e, l, r) => inOrder(l) ::: List(e) ::: inOrder(r)
+  case Leaf          => List()
+}</textarea>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h2>Open-Source Ecosystem</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Scala Open Source Project</h1>
+
+        <ul>
+          <li>Scala compiler, standard library, and modules open-source (BSD license)
+          <ul>
+            <li>All source on GitHub: <a href="https://github.com/scala/">https://github.com/scala/</a></li>
+            <li>Scala release 2.12.0 has hundreds of contributors</li>
+          </ul></li>
+          <li>Contributions
+          <ul>
+            <li>Report issues (<a href="https://issues.scala-lang.org/">https://issues.scala-lang.org/</a>)</li>
+            <li>Help with the documentation (<a href="http://docs.scala-lang.org">http://docs.scala-lang.org</a>)</li>
+            <li>Fix bugs in compiler and other tools</li>
+            <li>Comprehensive <a href="http://scala-lang.org/contribute/guide.html">contributing guide</a></li>
+          </ul></li>
+        </ul>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Scala modules</h1>
+
+        <ul>
+            <li>scala-swing</li>
+            <li>scala-async</li>
+            <li>scala-pickling</li>
+            <li>scala-parser-combinators</li>
+        </ul>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Building and Testing</h1>
+
+        <ul>
+          <li>Testing
+          <ul>
+            <li>ScalaTest</li>
+            <li>specs2</li>
+            <li>ScalaCheck: generate random test inputs</li>
+            <li>any Java testing framework</li>
+          </ul></li>
+          <li>Building
+          <ul>
+            <li>Build tools: sbt, Maven, Gradle, ant, ...</li>
+            <li>IntelliJ Survey at Scala Days 2013 (<a href="blog.jetbrains.com/scala/2013/06/20/intellij-idea-at-scala-days-2013-survey-and-license-winners/">blog</a>):<br/><img src="images/build-tool.png" height="408px"/>
+            </li>
+          </ul></li>
+        </ul>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+<!--
+          <li>Development model
+          <ul>
+            <li>Every change submitted as a "pull request" (a request to merge a private branch into the master branch)</li>
+            <li>Each pull request is <i>reviewed</i> by an expert in the affected area</li>
+            <li>A committer can merge the pull request if all reviewers give their OK</li>
+          </ul></li>
+//-->
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Testing with ScalaTest</h1>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+import collection.mutable.Stack
+import org.scalatest._
+
+class ExampleSpec extends FlatSpec with Matchers {
+
+  "A Stack" should "pop values in last-in-first-out order" in {
+    val stack = new Stack[Int]
+    stack.push(1)
+    stack.push(2)
+    stack.pop() should be (2)
+    stack.pop() should be (1)
+  }
+
+  it should "throw NoSuchElementException if an empty stack is popped" in {
+    val emptyStack = new Stack[Int]
+    a [NoSuchElementException] should be thrownBy {
+      emptyStack.pop()
+    }
+  }
+}</textarea>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+    <section class='left slide top'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>ScalaCheck: Property-based testing</h1>
+
+        <textarea class='code' display='none' mode='text/x-scala'>
+import org.scalacheck.Properties
+import org.scalacheck.Prop.forAll
+
+object StringSpecification extends Properties("String") {
+
+  property("startsWith") = forAll { (a: String, b: String) =>
+    (a+b).startsWith(a)
+  }
+
+  property("concatenate") = forAll { (a: String, b: String) =>
+    (a+b).length > a.length && (a+b).length > b.length
+  }
+
+  property("substring") = forAll { (a: String, b: String, c: String) =>
+    (a+b+c).substring(a.length, a.length+b.length) == b
+  }
+
+}</textarea>
+
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+
+
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Thanks!</h1>
+
+        <h1>Questions!</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <!-- deck.js navigation extension -->
+    <a class='deck-prev-link' href='#' title='Previous'>&#8592;</a>
+    <a class='deck-next-link' href='#' title='Next'>&#8594;</a>
+    <!-- deck.js hash extension -->
+    <a class='deck-permalink' href='.' title='Permalink to this slide'>#</a>
+    <!-- deck.js status extension -->
+    <p class='deck-status'>
+      <span class='deck-status-current'></span>
+      /
+      <span class='deck-status-total'></span>
+    </p>
+    <!-- jQuery & deck.js -->
+    <script src="deck.js/support/jquery.1.6.4.min.js" type="text/javascript"></script>
+    <script src="deck.js/core/deck.core.js" type="text/javascript"></script>
+    <!-- deck.js extension JS files -->
+    <script src="deck.js/extensions/deck.js-codemirror/codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/deck.codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/introduction/introduction.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/introduction/modernizr.custom.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/clike/clike.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/clojure/clojure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/coffeescript/coffeescript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/css/css.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/diff/diff.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/haskell/haskell.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/lua/lua.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/php/php.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/plsql/plsql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/python/python.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/r/r.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/rst/rst.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/ruby/ruby.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/scheme/scheme.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/smalltalk/smalltalk.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/sparql/sparql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/stex/stex.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/velocity/velocity.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/xml/xml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/xmlpure/xmlpure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/mode/yaml/yaml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/deck.js-codemirror/scala_completion.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/goto/deck.goto.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/hash/deck.hash.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/menu/deck.menu.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/navigation/deck.navigation.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/scale/deck.scale.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/status/deck.status.js" type="text/javascript"></script>
+    <!-- your custom JS here, including call to initialize deck.js-codemirror -->
+    <script src="js/scala-2.10.js" type="text/javascript"></script>
+    <!-- Initialize the deck. -->
+    <script type='text/javascript'>
+      $(function() { $.deck('.slide'); });
+    </script>
+  </body>
+</html>
