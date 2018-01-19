@@ -229,7 +229,7 @@ body {
 }
 
 
-.highlight {
+.highlight-anim {
     position: relative;
     font-weight: 400;
     color: $white;
@@ -256,7 +256,7 @@ body {
         transform: scaleX(1)
     }
 }
-.highlight:before {
+.highlight-anim:before {
     --padding: 0em;
     content: "";
     position: absolute;
@@ -270,11 +270,11 @@ body {
     -webkit-animation: highlight__scaleIn 1.5s cubic-bezier(.22, 1, .32, 1) .6s backwards;
     animation: highlight__scaleIn 1.5s cubic-bezier(.22, 1, .32, 1) .6s backwards
 }
-.highlight:first-child:before {
+.highlight-anim:first-child:before {
     -webkit-animation-delay: .3s;
     animation-delay: .3s
 }
-.highlight__inner {
+.highlight__inner-anim {
     position: relative;
 }
 
