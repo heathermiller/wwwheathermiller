@@ -21,7 +21,8 @@ toc-links:
     url: "#schedule"
   - text: "Assignments"
     url: "#assignments"
-
+  - text: "Resources"
+    url: "#resources"
 
 ---
 
@@ -219,3 +220,13 @@ specific needs as early as possible.
 ## Resources
 
 Slides and other materials will be posted here.
+
+### Jan 18: Intro, Data Parallelism, and Scala
+
+**Slides:**
+
+- [Intro, Why Scala, Why Spark]({{ site.baseurl }}/teaching/cs4240/pdf/spark-1-1.pdf)
+- [Data-Parallel to Distributed Data-Parallel]({{ site.baseurl }}/teaching/cs4240/pdf/spark-1-2.pdf)
+- [Latency]({{ site.baseurl }}/teaching/cs4240/pdf/spark-1-3.pdf)
+
+**Intro to Scala**

@@ -842,11 +842,17 @@ $scala-sm-height: 22px;
   strong {
     color: inherit;
   }
-  h1, h2, h3 {
+  h1, h2 {
     font-weight: 500;
   }
   h2 {
     color: $white;
+  }
+  h3 {
+    color: $white;
+    font-size: 1.2em;
+    font-weight: 600;
+    // text-transform: uppercase;
   }
   .table {
     background: transparent;
