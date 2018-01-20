@@ -307,3 +307,23 @@ One way to improve the performance is to save the results obtained the first tim
 when you compute the anagrams for an occurence list, and use the stored result if
 you need the same result a second time.
 Try to write a new method `sentenceAnagramsMemo` which does this.
+
+
+## Test! Test! Test!
+
+We will run your submissions against a bigger test suite than we provided to
+you. So if you want full points, be sure to add your own tests to double check
+that you've caught all corner cases.
+
+You can also style check your  by running `styleCheck` in the sbt shell.
+
+
+## Submission and Evaluation
+
+You will be graded out of 10 points. 2 points are awarded for style; don't
+submit code written in a Java-esque style. Again, you can also style check your
+code by running `styleCheck` in the sbt shell. 8 points are awarded for
+correctness of your solution.
+
+To submit your assignment, simply zip the entire `anagrams` directory and upload
+`anagrams.zip` to Blackboard.
