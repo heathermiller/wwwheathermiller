@@ -87,17 +87,17 @@ University students from [Safari Books Online](http://proquest.safaribooksonline
     <tr>
       <td>6</td>
       <td>Feb 15</td>
-      <td>DataFrames</td>
+      <td>DataFrames & Datasets</td>
     </tr>    
     <tr>
       <td>7</td>
       <td>Feb 22</td>
-      <td>Datasets</td>
+      <td>Midterm</td>
     </tr>    
     <tr>
       <td>8</td>
       <td>Mar 1</td>
-      <td>Midterm</td>
+      <td>Intro to Streaming and Spark Streaming</td>
     </tr>    
     <tr>
       <td>9</td>
@@ -107,17 +107,17 @@ University students from [Safari Books Online](http://proquest.safaribooksonline
     <tr>
       <td>10</td>
       <td>Mar 15</td>
-      <td>Intro to Streaming and Spark Streaming</td>
+      <td>Intro to Apache Kafka</td>
     </tr>    
     <tr>
       <td>11</td>
       <td>Mar 22</td>
-      <td>Intro to Apache Kafka</td>
+      <td>Apache Kafka</td>
     </tr>    
     <tr>
       <td>12</td>
       <td>Mar 29</td>
-      <td>Apache Kafka</td>
+      <td></td>
     </tr>    
     <tr>
       <td>13</td>
