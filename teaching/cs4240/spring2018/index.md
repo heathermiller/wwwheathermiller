@@ -177,7 +177,7 @@ Assignments can be submitted on [the course's Blackboard page]({{ site.data.cour
       <td>January 25, noon</td>
     </tr>      
     <tr>
-      <td><a href="assignments/1-anagrams.html">Assignment 2: Wikipedia</a></td>
+      <td><a href="assignments/2-wikipedia.html">Assignment 2: Wikipedia</a></td>
       <td>January 25, noon</td>
       <td>February 1, noon</td>
     </tr>
