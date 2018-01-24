@@ -172,10 +172,25 @@ Assignments can be submitted on [the course's Blackboard page]({{ site.data.cour
   </thead>
   <tbody>
     <tr>
-      <td><a href="assignments/1-anagrams.html">Assignment 1: Intro to Scala</a></td>
+      <td><a href="assignments/1-anagrams.html">Assignment 1: Anagrams</a></td>
       <td>January 19, noon</td>
       <td>January 25, noon</td>
-    </tr>                                                   
+    </tr>      
+    <tr>
+      <td><a href="assignments/1-anagrams.html">Assignment 2: Wikipedia</a></td>
+      <td>January 25, noon</td>
+      <td>February 1, noon</td>
+    </tr>
+    <tr>
+      <td>Assignment 3</td>
+      <td>February 1, noon</td>
+      <td>February 15, noon</td>
+    </tr>
+    <tr>
+      <td>Assignment 3</td>
+      <td>February 1, noon</td>
+      <td>February 15, noon</td>
+    </tr>    
   </tbody>
 </table>
 
@@ -202,8 +217,8 @@ Slides and other materials will be posted here.
 
 **Slides:**
 
-- [Intro, Why Scala, Why Spark]({{ site.baseurl }}/teaching/spring2018/cs4240/pdf/spark-1-1.pdf)
-- [Data-Parallel to Distributed Data-Parallel]({{ site.baseurl }}/teaching/spring2018/cs4240/pdf/spark-1-2.pdf)
+- [Intro, Why Scala, Why Spark]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-1-1.pdf)
+- [Data-Parallel to Distributed Data-Parallel]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-1-2.pdf)
 - [Latency]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-1-3.pdf)
 
 **Intro to Scala**
@@ -234,3 +249,13 @@ Slides and other materials will be posted here.
   - [All slides](pdf/scala101.pdf)
 - [Scala: an Introduction](http://janvitek.org/pdpmr/f17/notes/scala.html), by [Konrad Siek](http://www.cs.put.poznan.pl/ksiek/).
 - [Twitter's Scala School](https://twitter.github.io/scala_school/), Scala onboarding materials used by Twitter.
+
+### Jan 25: Intro to Spark
+
+**Slides:**
+
+- [Resilient Distributed Datasets (RDDs)]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-1-4.pdf)
+- [Transformations and Actions]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-1-5.pdf)
+- [Evaluation in Spark: Unlike Scala Collections!]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-1-6.pdf)
+- [Cluster Toplogy Matters!]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-1-7.pdf)
+- [Reduction Operations]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-2-1.pdf)
