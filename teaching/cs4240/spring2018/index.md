@@ -268,3 +268,13 @@ Slides and other materials will be posted here.
 - [Distributed Key-Value Pairs (Pair RDDs)]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-2-2.pdf)
 - [Transformations and Actions on Pair RDDs]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-2-3.pdf)
 - [Joins]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-2-4.pdf)
+
+
+### Feb 8: Shuffling, Partitioning
+
+**Slides:**
+
+- [Shuffling: What it is and why it's important]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-3-1.pdf)
+- [Partitioning]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-3-2.pdf)
+- [Optimizing with Partitioners]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-3-3.pdf)
+- [Wide vs Narrow Dependencies]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-3-4.pdf)
