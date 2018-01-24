@@ -259,3 +259,12 @@ Slides and other materials will be posted here.
 - [Evaluation in Spark: Unlike Scala Collections!]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-1-6.pdf)
 - [Cluster Toplogy Matters!]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-1-7.pdf)
 - [Reduction Operations]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-2-1.pdf)
+
+
+### Feb 1: Key-Value Pairs and Joins
+
+**Slides:**
+
+- [Distributed Key-Value Pairs (Pair RDDs)]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-2-2.pdf)
+- [Transformations and Actions on Pair RDDs]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-2-3.pdf)
+- [Joins]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-2-4.pdf)
