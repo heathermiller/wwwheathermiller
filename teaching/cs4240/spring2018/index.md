@@ -37,6 +37,7 @@ useful for reference and self-study.
 
 - [Learning Spark](https://www.amazon.com/Learning-Spark-Lightning-Fast-Data-Analysis/dp/1449358624/ref=sr_1_4?s=books&ie=UTF8&qid=1516313171&sr=1-4&keywords=learning+spark) (2015), by Holden Karau,‎ Andy Konwinski,‎ Patrick Wendell,‎ Matei Zaharia
 - [High Performance Spark](https://www.amazon.com/High-Performance-Spark-Practices-Optimizing/dp/1491943203/ref=sr_1_1?s=books&ie=UTF8&qid=1516313190&sr=1-1&keywords=high+performance+spark) (2017), by Holden Karau,‎ Rachel Warren
+- [Kafka: The Definitive Guide](https://www.amazon.com/Kafka-Definitive-Real-Time-Stream-Processing/dp/1491936169) (2017), by Gwen Shapira, Neha Narkhede, Todd Palino ([free PDF](https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf))
 
 Some of these books are available online (and for free) for Northeastern
 University students from [Safari Books Online](http://proquest.safaribooksonline.com.ezproxy.neu.edu/).
