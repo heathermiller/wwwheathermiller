@@ -24,10 +24,10 @@ student codewalks.
 ## Communication
 
 Communication with the instructor and teaching assistants is exclusively through
-[Piazza]({{ piazza-url }}). If you wish to contact the instructor privately,
+[Piazza]({{ site.data.courses[page.course-ref].piazza-url }}). If you wish to contact the instructor privately,
 send a private note.
 
-Grades will be managed and assignments will be collected through [the course's Blackboard page]({{ blackboard-url }}).
+Grades will be managed and assignments will be collected through [the course's Blackboard page]({{ site.data.courses[page.course-ref].blackboard-url }}).
 
 ## Recommended Books
 
