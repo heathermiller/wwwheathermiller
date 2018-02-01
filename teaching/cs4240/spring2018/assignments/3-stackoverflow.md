@@ -73,13 +73,13 @@ A short explanation of the comma-separated fields follows.
 
 You will see the following code in the main class:
 
-~~~
+```scala
   val lines   = sc.textFile("src/main/resources/stackoverflow/stackoverflow.csv")  
   val raw     = rawPostings(lines)  
   val grouped = groupedPostings(raw)  
   val scored  = scoredPostings(grouped)  
   val vectors = vectorPostings(scored)
-~~~
+```
 
 It corresponds to the following steps:
 
@@ -99,9 +99,9 @@ We will now look at how you process the data before applying the kmeans algorith
 
 The first method you will have to implement is `groupedPostings`:
 
-~~~
+```scala
 val grouped = groupedPostings(raw)
-~~~
+```
 
 In the `raw` variable we have simple postings, either questions or
 answers, but in order to use the data we need to assemble them together. Questions
@@ -124,21 +124,21 @@ Finally, in the description we used QID, Question and Answer types, which we've
 defined as type aliases for `Posting`s and `Int`s. The full list of type aliases is
 available in `package.scala`:
 
-~~~
+```scala
 type Question = Posting
 type Answer = Posting
 type QID = Int
 type HighScore = Int
 type LangIndex = Int
-~~~
+```
 
 The above information should allow you to implement the `groupedPostings`
 method. Its signature is:
 
-~~~
+```scala
 def groupedPostings(postings: RDD[Posting]):
     RDD[(QID, Iterable[(Question, Answer)])]
-~~~
+```
 
 ### Computing Scores
 
@@ -147,19 +147,19 @@ RDD containing pairs of (a) questions and (b) the score of the answer with the
 highest score (note: this does **_not_** have to be the answer marked as
 `acceptedAnswer`!). The type of this scored RDD is:
 
-~~~
+```scala
 val scored: RDD[(Question, HighScore)] = ???
-~~~
+```
 
 For example, the `scored` RDD should contain the following tuples:
 
-~~~
+```scala
 ((1, 6,   None, None, 140, Some(CSS)),  67)
 ((1, 42,  None, None, 155, Some(PHP)),  89)
 ((1, 72,  None, None, 16,  Some(Ruby)), 3)
 ((1, 126, None, None, 33,  Some(Java)), 30)
 ((1, 174, None, None, 38,  Some(C#)),   20)
-~~~
+```
 
 _Hint: use the provided **`answerHighScore`** given in **`scoredPostings`**._
 
@@ -181,19 +181,19 @@ You will learn later what this distance means and why it is set to this value.
 
 The type of the `vectors` RDD is as follows:
 
-~~~
+```scala
 val vectors: RDD[(LangIndex, HighScore)] = ???
-~~~
+scala
 
 For example, the `vectors` RDD should contain the following tuples:
 
-~~~
+```scala
 (350000, 67)
 (100000, 89)
 (300000, 3)
 (50000,  30)
 (200000, 20)
-~~~
+```
 
 Implement this functionality in method `vectorPostings` and by using
 the given the `firstLangInTag` helper method.
@@ -202,9 +202,9 @@ _(Idea for test: **`scored`** RDD should have 2121822 entries)_
 
 ## Kmeans Clustering
 
-~~~
+```scala
 val means = kmeans(sampleVectors(vectors), vectors)
-~~~
+```
 
 Based on these initial means, and the provided variables `converged`
 method, implement the K-means algorithm by iteratively:
@@ -228,9 +228,9 @@ and so on. Be patient, in 44 iterations the distance will drop from over 100000 
 If you want to get the results faster, feel free to downsample the data (each
 iteration is faster, but it still takes around 40 steps to converge):
 
-~~~
+```scala
 val scored  = scoredPostings(grouped).sample(true, 0.1, 0)
-~~~
+```
 
 However, keep in mind that we will test your assignment on the full data set. So
 that means you can downsample for experimentation, but make sure your algorithm
@@ -251,10 +251,10 @@ to the score. See which language dominates the top questions now?
 
 After the call to kmeans, we have the following code in method `main`:
 
-~~~
+```scala
 val results = clusterResults(means, vectors)
 printResults(results)
-~~~
+```
 
 Implement the `clusterResults` method, which, for each cluster, computes:
 

@@ -91,7 +91,7 @@ the language).
 An example of what `rankLangs` might return might look like this, for
 example:
 
-```
+```scala
 List(("Scala", 999999), ("JavaScript", 1278), ("LOLCODE", 982), ("Java", 42))
 ```
 
