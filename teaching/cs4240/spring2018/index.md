@@ -183,7 +183,7 @@ Assignments can be submitted on [the course's Blackboard page]({{ site.data.cour
       <td>February 1, noon</td>
     </tr>
     <tr>
-      <td>Assignment 3</td>
+      <td><a href="assignments/3-stackoverflow.html">Assignment 3: StackOverflow</a></td>
       <td>February 1, noon</td>
       <td>February 15, noon</td>
     </tr>
