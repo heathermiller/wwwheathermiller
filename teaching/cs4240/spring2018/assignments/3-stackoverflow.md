@@ -183,7 +183,7 @@ The type of the `vectors` RDD is as follows:
 
 ```scala
 val vectors: RDD[(LangIndex, HighScore)] = ???
-scala
+```
 
 For example, the `vectors` RDD should contain the following tuples:
 
