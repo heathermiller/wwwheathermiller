@@ -116,9 +116,12 @@ workshops:
 #   - title: conf paper A
 #     authors: H. Miller etc
 
-
 in-preparation:
   pubs:
+    - title: "Partisan: Enabling Cloud-Scale Erlang Applications"
+      authors: C. Meiklejohn, H. Miller
+      pdf: "https://arxiv.org/abs/1802.02652"
+
     - title: Monotonicity Types
       authors: K. Clancy, H. Miller, C. Meiklejohn
       pdf: "https://infoscience.epfl.ch/record/231867"
