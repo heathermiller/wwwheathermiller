@@ -42,6 +42,12 @@ code, pre {
   font-family: "Fira Code", monospace;
 }
 
+div.highlighter-rouge {
+  width:100% !important;
+  position: relative;
+  overflow-x: scroll;
+}
+
 code.highlighter-rouge {
     background-color: transparentize($white, 0.9);
     color: transparentize($white, 0.2);
@@ -49,6 +55,10 @@ code.highlighter-rouge {
     font-weight: normal;
     padding: 0em 0.25em 0em;
     border-radius: 2px;
+}
+
+.highlight {
+  // width: 100%;
 }
 
 .highlight, pre.highlight {
@@ -841,6 +851,7 @@ $scala-sm-height: 22px;
 
 
 .main > .columns > .content {
+  overflow: hidden;
   a {
     color: $white;
     border-bottom: solid 2px $dark-pink;

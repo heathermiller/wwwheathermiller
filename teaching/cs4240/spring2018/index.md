@@ -188,7 +188,7 @@ Assignments can be submitted on [the course's Blackboard page]({{ site.data.cour
       <td>February 15, noon</td>
     </tr>
     <tr>
-      <td>Assignment 4</td>
+      <td><a href="assignments/4-timeusage.html">Assignment 4: Time Usage</a></td>
       <td>February 8, noon</td>
       <td>February 22, noon</td>
     </tr>    
