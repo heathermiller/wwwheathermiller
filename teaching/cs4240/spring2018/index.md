@@ -279,3 +279,13 @@ Slides and other materials will be posted here.
 - [Partitioning]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-3-2.pdf)
 - [Optimizing with Partitioners]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-3-3.pdf)
 - [Wide vs Narrow Dependencies]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-3-4.pdf)
+
+## Feb 15: SQL, Dataframes, and Datasets
+
+**Slides**
+
+- [Structure and Optimization]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-4-1.pdf)
+- [Spark SQL]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-4-2.pdf)
+- [DataFrames (1)]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-4-3.pdf)
+- [DataFrames (2)]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-4-4.pdf)
+- [Datasets]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-4-5.pdf)
