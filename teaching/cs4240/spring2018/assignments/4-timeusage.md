@@ -6,7 +6,7 @@ course-ref: cs4240spring2018
 # Assignment 4: Time Usage
 
 To start, first download the assignment:
-[stackoverflow.zip](4-timeusage.zip).
+[timeusage.zip.zip](4-timeusage.zip).
 For this assignment, you also need to download the data (164 MB):
 
 [http://alaska.epfl.ch/~dockermoocs/bigdata/atussum.csv](http://alaska.epfl.ch/~dockermoocs/bigdata/atussum.csv)
