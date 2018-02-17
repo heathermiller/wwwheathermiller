@@ -280,7 +280,7 @@ Slides and other materials will be posted here.
 - [Optimizing with Partitioners]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-3-3.pdf)
 - [Wide vs Narrow Dependencies]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-3-4.pdf)
 
-## Feb 15: SQL, Dataframes, and Datasets
+### Feb 15: SQL, Dataframes, and Datasets
 
 **Slides**
 
