@@ -98,7 +98,7 @@ University students from [Safari Books Online](http://proquest.safaribooksonline
     <tr>
       <td>8</td>
       <td>Mar 1</td>
-      <td>Intro to Streaming and Spark Streaming</td>
+      <td>Other Big Data Tools, Introduction to Streaming</td>
     </tr>    
     <tr>
       <td>9</td>
@@ -108,7 +108,7 @@ University students from [Safari Books Online](http://proquest.safaribooksonline
     <tr>
       <td>10</td>
       <td>Mar 15</td>
-      <td>Intro to Apache Kafka</td>
+      <td>Spark Streaming</td>
     </tr>    
     <tr>
       <td>11</td>
@@ -200,6 +200,18 @@ Assignments can be submitted on [the course's Blackboard page]({{ site.data.cour
 Students join up in pairs, and will propose a significant data processing
 application as a final project. A one page project proposal will be due midway
 through the semester describing the project plan.
+
+### Timeline for Final Project
+
+**March 1st** Names of partners for final project due in class.
+
+**March 15-19th** Brainstorming meeting about final project topic with Heather. [Claim an appointment slot here](https://www.canumeet.com/heathermiller/final-project-meetings?date=03-15-2018).
+
+**March 22nd** Project proposal due.
+
+**April 12th** Project demos/presentations in class.
+
+**April 18th** Project reports due by email.
 
 
 ## Special Accommodations
