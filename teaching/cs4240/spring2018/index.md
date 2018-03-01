@@ -303,3 +303,10 @@ Slides and other materials will be posted here.
 - [DataFrames (1)]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-4-3.pdf)
 - [DataFrames (2)]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-4-4.pdf)
 - [Datasets]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-4-5.pdf)
+
+### Mar 1: Other Big Data Tools, Intro to Stream Processing
+
+**Slides**
+
+- [Other Big Data Tools]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-5-1.pdf)
+- [Introduction to Stream Processing]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-5-2.pdf)
