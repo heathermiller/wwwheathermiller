@@ -201,6 +201,8 @@ Students join up in pairs, and will propose a significant data processing
 application as a final project. A one page project proposal will be due midway
 through the semester describing the project plan.
 
+[More details about the final project]({{ site.baseurl }}/teaching/cs4240/spring2018/final-project.html).
+
 ### Timeline for Final Project
 
 **March 1st** Names of partners for final project due in class.
