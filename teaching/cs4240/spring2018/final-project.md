@@ -49,3 +49,11 @@ Here are some datasets to serve as inspiration for your project:
 - [Million Song Dataset](https://www.opensciencedatacloud.org/publicdata/million-song-dataset) (199GB)
 - [Project Gutenberg](https://www.opensciencedatacloud.org/publicdata/gutenberg), The text of over 42,000 free ebooks. (742GB)
 - [Dark Net Market archives, 2011-2015](https://archive.org/details/dnmarchives) (52GB compressed)
+
+**Other lists of datasets:**
+
+- [Reddit /r/datasets](https://www.reddit.com/r/datasets/)
+- [Public data sets on AWS S3](https://archive.org/details/datasets)
+- [Academic Torrents](http://academictorrents.com/)
+- [Open Science Data Cloud](https://www.opensciencedatacloud.org/publicdata/)
+- [Great Github list of public data sets](http://www.datasciencecentral.com/profiles/blog/show?id=6448529%3ABlogPost%3A268197)
