@@ -113,17 +113,17 @@ University students from [Safari Books Online](http://proquest.safaribooksonline
     <tr>
       <td>11</td>
       <td>Mar 22</td>
-      <td>Apache Kafka</td>
+      <td>Structured Streaming, Apache Kafka</td>
     </tr>    
     <tr>
       <td>12</td>
       <td>Mar 29</td>
-      <td></td>
+      <td>TensorFlow</td>
     </tr>    
     <tr>
       <td>13</td>
       <td>Apr 5</td>
-      <td></td>
+      <td>Hadoop</td>
     </tr>    
     <tr>
       <td>14</td>
@@ -310,3 +310,6 @@ Slides and other materials will be posted here.
 
 - [Other Big Data Tools]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-5-1.pdf)
 - [Introduction to Stream Processing]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-5-2.pdf)
+
+
+### Mar 15: Spark Streaming
