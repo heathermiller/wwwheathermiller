@@ -313,3 +313,9 @@ Slides and other materials will be posted here.
 
 
 ### Mar 15: Spark Streaming
+
+**Slides**
+
+- [Spark Streaming and DStreams]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-6-1.pdf)
+- [Using foreachRDD]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-6-2.pdf)
+- [Windowing]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-6-3.pdf)
