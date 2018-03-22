@@ -27,6 +27,7 @@ title: Publications
   <div class="column publication">
     <div class="title">{{ pub.title }}</div>
     <div class="authors">{{ pub.authors }}</div>
+    {% if pub.under-submission == true %}<div class="under-submission">Under Submission</div>{% endif %}
     {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
   </div>
 </div>

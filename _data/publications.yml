@@ -121,6 +121,12 @@ in-preparation:
     - title: "Partisan: Enabling Cloud-Scale Erlang Applications"
       authors: C. Meiklejohn, H. Miller
       pdf: "https://arxiv.org/abs/1802.02652"
+      under-submission: true
+
+    - title: "Towards a Solution to the Red Wedding Problem"
+      authors: C. Meiklejohn, H. Miller, Z. Lakhani
+      pdf: "http://christophermeiklejohn.com/publications/hotedge-2018-preprint.pdf"
+      under-submission: true
 
     - title: Monotonicity Types
       authors: K. Clancy, H. Miller, C. Meiklejohn
