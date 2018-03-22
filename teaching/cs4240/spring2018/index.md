@@ -113,17 +113,17 @@ University students from [Safari Books Online](http://proquest.safaribooksonline
     <tr>
       <td>11</td>
       <td>Mar 22</td>
-      <td>Structured Streaming, Apache Kafka</td>
+      <td>Stateful & Structured Streaming</td>
     </tr>    
     <tr>
       <td>12</td>
       <td>Mar 29</td>
-      <td>TensorFlow</td>
+      <td>Apache Kafka</td>
     </tr>    
     <tr>
       <td>13</td>
       <td>Apr 5</td>
-      <td>Hadoop</td>
+      <td>TensorFlow & Hadoop</td>
     </tr>    
     <tr>
       <td>14</td>
@@ -319,3 +319,10 @@ Slides and other materials will be posted here.
 - [Spark Streaming and DStreams]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-6-1.pdf)
 - [Using foreachRDD]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-6-2.pdf)
 - [Windowing]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-6-3.pdf)
+
+### Mar 15: Stateful & Structured Streaming
+
+**Slides**
+
+- [State and DStreams]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-7-1.pdf)
+- [Structured Streaming]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-7-2.pdf)
