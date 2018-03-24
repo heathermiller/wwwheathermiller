@@ -15,8 +15,9 @@ refereed:
   - title: "A Programming Model and Foundation for Lineage-Based Distributed Computation"
     authors: P. Haller, H. Miller, N. Müller
     pdf: "https://infoscience.epfl.ch/record/230304"
+    cambridge: "https://www.cambridge.org/core/journals/journal-of-functional-programming/article/programming-model-and-foundation-for-lineagebased-distributed-computation/B410CE79B21E33462843B408B716E1E5"
     abbrv: JFP
-    journal: "Journal of Functional Programming, to appear"
+    journal: "Journal of Functional Programming, Volume 28, e7."
     year: 2018
 
   - title: "Simplicitly: Foundations and Applications of Implicit Function Types"
