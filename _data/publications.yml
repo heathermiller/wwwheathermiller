@@ -51,8 +51,8 @@ refereed:
 
   - title: "Functional Programming For All! Scaling a MOOC for Students and Professionals Alike"
     authors: H. Miller, P. Haller, L. Rytz and M. Odersky
-    pdf: "https://infoscience.epfl.ch/record/191239"
-    acmdl: "https://dl.acm.org/citation.cfm?id=2945659&CFID=979034943&CFTOKEN=67460629"
+    pdf: "https://infoscience.epfl.ch/record/190022/"
+    acmdl: "https://dl.acm.org/citation.cfm?id=2591161"
     abbrv: ICSE
     conference-full: 36th International Conference on Software Engineering, SEET Track
     month: June
