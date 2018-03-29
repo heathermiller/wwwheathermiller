@@ -207,7 +207,7 @@ through the semester describing the project plan.
 
 **March 1st** Names of partners for final project due in class.
 
-**March 15-19th** Brainstorming meeting about final project topic with Heather. [Claim an appointment slot here](https://www.canumeet.com/heathermiller/final-project-meetings?date=03-15-2018).
+**March 15-19th** Brainstorming meeting about final project topic with Heather. [Claim an appointment slot here](http://heathercmiller.youcanbook.me).
 
 **March 22nd** Project proposal due.
 
@@ -326,3 +326,12 @@ Slides and other materials will be posted here.
 
 - [State and DStreams]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-7-1.pdf)
 - [Structured Streaming]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-7-2.pdf)
+
+### Mar 29: Apache Kafka
+
+**Slides**
+
+- [Publish-Subscribe]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-8-1.pdf)
+- [Kafka Core Concepts]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-8-2.pdf)
+- [Kafka Producers]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-8-3.pdf)
+- [Kafka Consumers]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-8-4.pdf)
