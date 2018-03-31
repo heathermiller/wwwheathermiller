@@ -42,3 +42,5 @@ highlighter: null
 
 sass:
   style: compressed
+
+livereload: true

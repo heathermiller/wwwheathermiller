@@ -895,3 +895,201 @@ $scala-sm-height: 22px;
     }
   }
 }
+
+.blog {
+  font-size: 1.32rem;
+  line-height: 1.32;
+  color: #a7bacd;
+  blockquote {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-left: 5px solid rgba(255, 255, 255, 0.2);
+  }
+  .highlight {
+    // padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h1, h2 {
+    font-weight: 600 !important;
+  }
+  h3 {
+    margin-top: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  h4 {
+    // color: lighten(#405E82, 20%);
+    color: $white;
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    font-weight: 900 !important;
+  }
+}
+
+.hidden{
+  display:none!important
+}
+
+.affix {
+    position: fixed;
+}
+
+nav[data-toggle='toc'] {
+  margin-top: 30px;
+}
+
+/* small screens */
+@media (max-width: 768px) {
+  /* override the Affix plugin so that the navigation isn't sticky */
+  nav.affix[data-toggle='toc'] {
+    position: static;
+  }
+
+  /* PICK ONE */
+  /* don't expand nested items, which pushes down the rest of the page when navigating */
+  /*nav[data-toggle='toc'] .nav .active .nav {
+    display: none;
+  }*/
+  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
+  /*nav[data-toggle='toc'] .nav .nav {
+    display: block;
+  }*/
+}
+
+/* sidebar */
+#toc {
+  // font-family: 'BS', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  /*padding-left: 20px;*/
+  margin-top: 50px;
+  // margin-bottom: 20px;
+  // max-width: 292px;
+}
+
+#toc a:link {
+  font-weight: 300;
+}
+
+#toc ul {
+  margin-bottom: 14px;
+}
+
+#toc ul li {
+  margin-bottom: 0px;
+  list-style: none;
+}
+
+
+#toc .nav>li {
+  margin-left: none;
+}
+
+/* all links */
+#toc .nav>li>a {
+    /*color: #999;*/
+    /*color: #7B7263;*/
+    color: $blue-gray;
+    // border-left: 2px solid transparent;
+    // padding: 4px 20px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-bottom: none;
+    line-height: 1.5em;
+}
+
+/* nested links */
+#toc .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    // padding-left: 36px;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+#toc > .nav > li > a {
+  font-weight: 700;
+}
+
+/* active & hover links */
+#toc .nav>.active>a,
+#toc .nav>li>a:hover,
+#toc .nav>li>a:focus {
+    color: $white;
+    text-decoration: none;
+    background-color: transparent;
+    /*border-left-color: #563d7c;*/
+    /*border-left-color: #34495e;*/
+    border-left-color: $white;
+    margin-left: 0px;
+}
+/* all active links */
+#toc .nav>.active>a,
+#toc .nav>.active:hover>a,
+#toc .nav>.active:focus>a {
+    font-weight: 700;
+}
+/* nested active links */
+#toc .nav .nav>.active>a,
+#toc .nav .nav>.active:hover>a,
+#toc .nav .nav>.active:focus>a {
+    font-weight: 500;
+}
+
+/* hide inactive nested list */
+#toc .nav ul.nav {
+    display: none;
+    // margin-left: -24px;
+}
+/* show active nested list */
+#toc .nav>.active>ul.nav {
+    display: block;
+}
+
+.toc-header {
+  margin-left: 24px;
+  /*color: #8B8480;*/
+  /*color: #7B7263;*/
+  color: #797979;
+  font-style: italic;
+}
+
+.toc-hide,
+.toc-expand {
+  font-size: 9px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(153, 153, 153, 0.4);
+  padding: 3px 4px;
+  /*background-color: rgba(149, 165, 166, 0.08);*/
+  /*padding: 4px;*/
+  /*padding-right: 10px;*/
+  border-radius: 2px 2px 2px 2px;
+  margin-right: 4px;
+  -webkit-transition: color .1s ease-in;
+  -moz-transition: color .1s ease-in;
+  -ms-transition: color .1s ease-in;
+  -o-transition: color .1s ease-in;
+  transition: color .1s ease-in;
+}
+
+.toc-hide:hover,
+.toc-expand:hover {
+  background: $highlight-gradient;
+  -webkit-transition: color .2s ease-in;
+  -moz-transition: color .2s ease-in;
+  -ms-transition: color .2s ease-in;
+  -o-transition: color .2s ease-in;
+  transition: color .2s ease-in;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.toc-hide {
+  margin-left: 100px;
+}
+
+.toc-contents {
+  // font-family: "SN", serif;
+  color: $blue-gray;
+  font-size: 18px;
+}
