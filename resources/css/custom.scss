@@ -904,7 +904,7 @@ $scala-sm-height: 22px;
     background-color: rgba(255, 255, 255, 0.07);
     border-left: 5px solid rgba(255, 255, 255, 0.2);
   }
-  .highlight {
+  .highlighter-rouge {
     // padding: 1.25rem 1.5rem;
     margin-bottom: 1.5rem;
   }
@@ -1092,4 +1092,15 @@ nav[data-toggle='toc'] {
   // font-family: "SN", serif;
   color: $blue-gray;
   font-size: 18px;
+}
+
+.subtitle {
+  // color: lighten(#405E82, 20%);
+  // color: lighten(#45535f, 10%);
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  color: #e6375a;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  font-weight: 800 !important;
 }
