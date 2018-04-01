@@ -20,50 +20,10 @@ cluster. We'll do this in 2 parts:
 We'll begin with the simple task of spinning up a Spark cluster on Amazon EC2,
 and running a very simple Spark program from the spark-shell (Spark's REPL).
 
-To do this, we'll need 2 tools.
+To do this, we'll need **[flintrock](https://github.com/nchammas/flintrock)**, a
+Python-based command-line tool designed to quickly and easily spin up Spark
+clusters on Amazon Web Services (AWS).
 
-1. **Spark** pre-built for Apache Hadoop.
-2. **flintrock**, a Python-based command-line tool designed to quickly and easily spin up Spark clusters on Amazon Web Services (AWS).
-
-## Downloading Spark
-
-Head over to [https://spark.apache.org/downloads.html](https://spark.apache.org/downloads.html).
-(*At the time of writing, Spark 2.2.0 will offer the smoothest set-up experience.*)
-
-Simply select the 2.2.0 release of Spark, ensure that the "pre-built for Apache
-Hadoop 2.7 and later" option is selected, and simply download [Spark 2.2.0,
-pre-built for Apache Hadoop 2.7 and
-later](https://www.apache.org/dyn/closer.lua/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz).
-
-Reasons to use flintrock over AWS’s Elastic Map Reduce (EMR); with flintrock,
-it's easier to pause a running cluster or do a number of Spark-specific cluster
-tasks directly from the command-line.
-
-Once downloaded, unzip, and cd into the `spark-2.2.0-bin-hadoop2.7` directory. To ensure everything works as expected, simply do:
-
-```shell
-$ ./bin/spark-shell
-```
-
-And you should see the following:
-
-```
-Spark context Web UI available at http://192.168.1.7:4040
-Spark context available as 'sc' (master = local[*], app id = local-1522601680458).
-Spark session available as 'spark'.
-Welcome to
-      ____              __
-     / __/__  ___ _____/ /__
-    _\ \/ _ \/ _ `/ __/  '_/
-   /___/ .__/\_,_/_/ /_/\_\   version 2.2.0
-      /_/
-
-Using Scala version 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_121)
-Type in expressions to have them evaluated.
-Type :help for more information.
-
-scala>
-```
 
 ## Setting Up flintrock and Amazon Web Services
 
