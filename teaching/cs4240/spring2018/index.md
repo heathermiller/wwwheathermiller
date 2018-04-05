@@ -335,3 +335,10 @@ Slides and other materials will be posted here.
 - [Kafka Core Concepts]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-8-2.pdf)
 - [Kafka Producers]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-8-3.pdf)
 - [Kafka Consumers]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/spark-8-4.pdf)
+
+### Apr 5: TensorFlow & Hadoop
+
+**Slides**
+
+- [TensorFlow]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/tensorflow.pdf)
+- [Hadoop]({{ site.baseurl }}/teaching/cs4240/spring2018/pdf/hadoop.pdf)
