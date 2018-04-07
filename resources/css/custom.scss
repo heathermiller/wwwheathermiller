@@ -1099,8 +1099,53 @@ nav[data-toggle='toc'] {
   // color: lighten(#45535f, 10%);
   margin-top: -1rem;
   margin-bottom: 1.5rem;
-  color: #e6375a;
+  color: $dark-pink;
   font-size: 1.35rem;
   text-transform: uppercase;
   font-weight: 800 !important;
+}
+
+.blog-index {
+  ul {
+    li::marker {
+      color: $dark-pink;
+    }
+    li:before {
+      // content: '\2022';
+      // content: "•";
+      content: '\f111';
+      font-family: 'FontAwesome';
+      font-size: 0.5em;
+      float: left;
+      margin-top: 0.7em;
+      margin-left: -2.25em;
+      color: $dark-pink;
+      font-weight: 900;
+    }
+    li {
+      list-style: none;
+    }
+    ul {
+      li:before {
+        content: '';
+      //   font-family: 'FontAwesome';
+      //   float: left;
+      //   margin-left: -1.5em;
+      //   color: $blue-gray;
+      //   font-weight: 900;
+      }
+      li {
+        list-style: circle;
+        a {
+          color: $blue-gray !important;
+          border-bottom: solid 2px rgba($gray-text, 0.45) !important;
+          &:hover,
+          &.is-active {
+            color: $white !important;
+            border-bottom: solid 2px $dark-pink !important;
+          }
+        }
+      }
+    }
+  }
 }

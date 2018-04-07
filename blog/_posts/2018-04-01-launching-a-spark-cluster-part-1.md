@@ -4,6 +4,7 @@ tag: "spark"
 title: "Running Spark on a Cluster: The Basics"
 by: "Heather Miller"
 subtitle: "Part 1: Start a Spark Cluster and Use The spark-shell"
+topics: [ distributed-computing ]
 ---
 
 

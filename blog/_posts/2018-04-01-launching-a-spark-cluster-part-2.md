@@ -4,6 +4,7 @@ tag: "spark"
 title: "Running Spark on a Cluster: The Basics"
 by: "Heather Miller"
 subtitle: "Part 2: Dependencies, S3, and Deploying via spark-submit"
+topics: [ distributed-computing ]
 ---
 
 
