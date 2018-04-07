@@ -11,7 +11,7 @@ topics: [ distributed-computing ]
 In this short guide, we'll walk through how to run modest Spark jobs on a
 cluster. We'll do this in 2 parts:
 
-- **Part 1:** (the [previous guide]({{ site.baseurl }}/blog/launching-a-spark-cluster-part-1.html)) We'll cover how to start up a Spark cluster using the flintrock command-line tool, and we'll run a simple word count example using the `spark-shell`, Spark's interactive REPL.
+- **Part 1:** (the [previous guide]({{ site.baseurl }}/blog/launching-a-spark-cluster-part-1.html)) We'll cover how to start up a Spark cluster using the Flintrock command-line tool, and we'll run a simple word count example using the `spark-shell`, Spark's interactive REPL.
 - **Part 2:** (this guide) We'll connect our Spark job to an S3 bucket, add a simple library dependency, and we'll develop the job in a normal IDE, using `spark-submit` to submit our job and its dependencies to the cluster, without invoking the spark-shell.
 
 In this guide, we assume you're developing a Spark application in your regular
@@ -22,14 +22,14 @@ To do this, we need a variety of tools:
 
 1. **Spark pre-built for Apache Hadoop**. Spark comes with a script called `spark-submit` which we will be using to submit our job to the cluster.
 2. **Scala and sbt**.
-3. **flintrock**. A command-line tool for launching Spark clusters. See [part 1]({{ site.baseurl }}/blog/launching-a-spark-cluster-part-1.html) for this.
-4. **A running cluster started with flintrock**. See [part 1]({{ site.baseurl }}/blog/launching-a-spark-cluster-part-1.html) for this.
+3. **Flintrock**. A command-line tool for launching Spark clusters. See [part 1]({{ site.baseurl }}/blog/launching-a-spark-cluster-part-1.html) for this.
+4. **A running cluster started with Flintrock**. See [part 1]({{ site.baseurl }}/blog/launching-a-spark-cluster-part-1.html) for this.
 
 Given these tools, our general workflow is as follows:
 
 1. Develop locally.
 2. When ready to deploy, compile, package up jars to send to cluster.
-3. Copy jars to master and worker nodes using flintrock.
+3. Copy jars to master and worker nodes using Flintrock.
 4. Use `spark-submit` script to start job.
 5. Check Spark web UI to see output (stdout/stderr).
 
@@ -43,7 +43,7 @@ Hadoop 2.7 and later" option is selected, and simply download [Spark 2.2.0,
 pre-built for Apache Hadoop 2.7 and
 later](https://www.apache.org/dyn/closer.lua/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz).
 
-Reasons to use flintrock over AWS’s Elastic Map Reduce (EMR); with flintrock,
+Reasons to use Flintrock over AWS’s Elastic Map Reduce (EMR); with Flintrock,
 it's easier to pause a running cluster or do a number of Spark-specific cluster
 tasks directly from the command-line.
 
@@ -187,7 +187,7 @@ have to copy it over to the master and worker nodes in the Spark cluster (named
 `my-spark-cluster`) we started in [part 1]({{ site.baseurl
 }}/blog/launching-a-spark-cluster-part-1.html).
 
-To do that, we use flintrock's `copy-file` command, which takes 3 arguments.
+To do that, we use Flintrock's `copy-file` command, which takes 3 arguments.
 
 ```shell
 $ flintrock copy-file [cluster-name] [path-to-local-jar] [path-to-remote-destination-of-jar]
@@ -207,7 +207,7 @@ flintrock copy-file my-spark-cluster \
 
 If you'd like to login to your master node and double-check that your jar is
 where it should be, or for any other sort of debugging on the master node, you
-can use flintrock for this too. Simply do:
+can use Flintrock for this too. Simply do:
 
 ```shell
 $ flintrock login my-spark-cluster
@@ -229,14 +229,14 @@ We'll need a few pieces of information to do the most minimal submit possible.
 Those include:
 
 - **the entry point for your Spark application**, i.e., the class where your main method resides.
-- **the URL of the master node of your cluster**. _Note: we can use flintrock to get this!_
+- **the URL of the master node of your cluster**. _Note: we can use Flintrock to get this!_
 - **the name and path of your application jar** that resides on your cluster nodes
 
 The entry point of our Spark application is simply `demodeploy.DemoDeploy`,
 since `DemoDeploy.scala` contains the main method of our application.
 
-To obtain the URL of the master node of our cluster, we use flintrock.
-flintrock's `describe` command provides basic information such as URLs about the
+To obtain the URL of the master node of our cluster, we use Flintrock.
+Flintrock's `describe` command provides basic information such as URLs about the
 cluster(s) you have running.
 
 ```shell
@@ -365,7 +365,7 @@ object DemoDeploy {
 To run this on our Spark cluster, we simply repeat the steps from above, namely:
 
 1. run sbt package to package up a jar to send to the cluster.
-2. copy the packaged jar to the cluster nodes using flintrock.
+2. copy the packaged jar to the cluster nodes using Flintrock.
 3. run `spark-submit` as configured above.
 
 In the Spark UI, you should be able to see the following output for that
@@ -471,7 +471,7 @@ machine:
 - [hadoop-aws-2.7.2.jar](http://central.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.7.2/hadoop-aws-2.7.2.jar)
 - [aws-java-sdk-1.7.4.jar](http://central.maven.org/maven2/com/amazonaws/aws-java-sdk/1.7.4/aws-java-sdk-1.7.4.jar)
 
-And then, using flintrock, <span style="font-weight: 900; color: #e6375a;">copy
+And then, using Flintrock, <span style="font-weight: 900; color: #e6375a;">copy
 them to the /home/ec2-user/spark/jars directory.</span> This will ensure that
 these dependencies are available to Spark:
 
@@ -488,7 +488,7 @@ $ flintrock copy-file my-spark-cluster \
 To run this on our Spark cluster, we simply repeat the steps from above, namely:
 
 1. run sbt package to package up a jar to send to the cluster.
-2. copy the packaged jar to the cluster nodes using flintrock.
+2. copy the packaged jar to the cluster nodes using Flintrock.
 3. run `spark-submit` as configured above.
 
 
@@ -497,4 +497,4 @@ driver's stdout:
 
 ![]({{ site.baseurl }}/resources/img/spark-cluster-guide-8.png)
 
-Et voilà! Now you know how to submit Spark jobs to a running Spark cluster using flintrock, how to add dependencies to your Spark job, and how to connect your Spark job to an S3 bucket &nbsp;<i class="em em-smiley"></i>
+Et voilà! Now you know how to submit Spark jobs to a running Spark cluster using Flintrock, how to add dependencies to your Spark job, and how to connect your Spark job to an S3 bucket &nbsp;<i class="em em-smiley"></i>

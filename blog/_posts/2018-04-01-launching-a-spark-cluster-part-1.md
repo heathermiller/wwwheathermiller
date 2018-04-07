@@ -11,7 +11,7 @@ topics: [ distributed-computing ]
 In this short guide, we'll walk through how to run modest Spark jobs on a
 cluster. We'll do this in 2 parts:
 
-- **Part 1:** (this guide) We'll cover how to start up a Spark cluster using the flintrock command-line tool, and we'll run a simple word count example using the `spark-shell`, Spark's interactive REPL.
+- **Part 1:** (this guide) We'll cover how to start up a Spark cluster using the Flintrock command-line tool, and we'll run a simple word count example using the `spark-shell`, Spark's interactive REPL.
 - **Part 2:** (the [next guide]({{ site.baseurl }}/blog/launching-a-spark-cluster-part-2.html)) We'll connect our Spark job to an S3 bucket, add a simple library dependency, and we'll develop the job in a normal IDE, using `spark-submit` to submit our job and its dependencies to the cluster, without invoking the spark-shell.
 
 <!-- *Note: these sorts of guides have a tendency of falling outdated very quickly. If you would like to help out in keeping this guide up-to-date, I'd be happy to accept a pull request with updates to [this page's source on GitHub](https://github.com/heathermiller/wwwheathermiller/blob/master/{{ page.relative_path }}).* -->
@@ -21,46 +21,46 @@ cluster. We'll do this in 2 parts:
 We'll begin with the simple task of spinning up a Spark cluster on Amazon EC2,
 and running a very simple Spark program from the spark-shell (Spark's REPL).
 
-To do this, we'll need **[flintrock](https://github.com/nchammas/flintrock)**, a
+To do this, we'll need **[Flintrock](https://github.com/nchammas/flintrock)**, a
 Python-based command-line tool designed to quickly and easily spin up Spark
 clusters on Amazon Web Services (AWS).
 
 
-## Setting Up flintrock and Amazon Web Services
+## Setting Up Flintrock and Amazon Web Services
 
-flintrock is a command-line tool that makes it easy to start/pause/tear down
+Flintrock is a command-line tool that makes it easy to start/pause/tear down
 Spark clusters, and to otherwise seamlessly interact with your cluster from the
 command line.
 
-#### Installing flintrock
+#### Installing Flintrock
 
-At the time of writing, the most up-to-date version of flintrock is 0.9.0.
+At the time of writing, the most up-to-date version of Flintrock is 0.9.0.
 
-To get the latest release of flintrock, simply install using
+To get the latest release of Flintrock, simply install using
 [pip](https://pip.pypa.io/en/stable/):
 
 ```
 $ pip3 install flintrock
 ```
 
-If you would like to use an option other than pip to get flintrock, see
-[flintrock's installation
+If you would like to use an option other than pip to get Flintrock, see
+[Flintrock's installation
 instructions.](https://github.com/nchammas/flintrock#installation)
 
-#### Creating a New AWS User for flintrock
+#### Creating a New AWS User for Flintrock
 
 I assume at this point that you've created an [AWS
 account](https://aws.amazon.com/).
 
 **Take note of the availability zone that your account is set for (top right
-corner of your AWS console). You will need to ensure that all of your flintrock
+corner of your AWS console). You will need to ensure that all of your Flintrock
 configuration is for the _same_ availability zone**
 
 In this guide, I am using `us-east-1`:
 
 ![]({{ site.baseurl }}/resources/img/spark-cluster-guide-1.png)
 
-We must now create a user that we can use with flintrock to start and manage a
+We must now create a user that we can use with Flintrock to start and manage a
 Spark cluster. For the sake of simplicity and reproducability, we're going to
 create an almost-root user, which has the rights to do most anything except AWS
 account administration such as changing billing details.
@@ -99,8 +99,8 @@ copy/paste the Access Key ID, Secret Access Key, and Password to a safe place.
 
 ![]({{ site.baseurl }}/resources/img/spark-cluster-guide-3.png)
 
-In order for flintrock to use your newly-created user's Access Key ID and Secret
-Access Key, you'll need to set the following environment variables so flintrock
+In order for Flintrock to use your newly-created user's Access Key ID and Secret
+Access Key, you'll need to set the following environment variables so Flintrock
 can use this user later.
 
 ```shell
@@ -126,9 +126,9 @@ To generate a key pair for you to use to authenticate, simply:
 $ chmod 400 spark_cluster.pem
 ```
 
-#### Configuring flintrock with AWS
+#### Configuring Flintrock with AWS
 
-Now, all we have to do is provide our desired cluster configuration to flintrock
+Now, all we have to do is provide our desired cluster configuration to Flintrock
 before we can start up our Spark cluster.
 
 To do this, at the command line, just do:
@@ -183,7 +183,7 @@ To explain this selection of options:
 - `install-hdfs` should be set to true if you want to access data in S3.
 
 
-## Starting a Spark Cluster with flintrock
+## Starting a Spark Cluster with Flintrock
 
 We now have everything we need setup to spin up a Spark cluster!
 
@@ -219,7 +219,7 @@ Cluster master: ec2-107-21-87-63.compute-1.amazonaws.com
 Login with: flintrock login my-spark-cluster
 ```
 
-_Note: if you get an error saying that flintrock could not find your AWS
+_Note: if you get an error saying that Flintrock could not find your AWS
 credentials, remember to set your `AWS_ACCESS_KEY_ID` and
 `AWS_SECRET_ACCESS_KEY` environment variables as specified above._
 
