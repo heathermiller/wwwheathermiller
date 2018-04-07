@@ -1106,10 +1106,11 @@ nav[data-toggle='toc'] {
 }
 
 .blog-index {
+  h4 {
+    margin-bottom: .4em !important;
+  }
   ul {
-    li::marker {
-      color: $dark-pink;
-    }
+    margin-top: .5em !important;
     li:before {
       // content: '\2022';
       content: '\f111';
@@ -1123,6 +1124,14 @@ nav[data-toggle='toc'] {
     }
     li {
       list-style: none;
+      a {
+        color: $blue-gray !important;
+        border-bottom: solid 2px rgba($gray-text, 0.45) !important;
+        &:hover,
+        &.is-active {
+          color: $white !important;
+          border-bottom: solid 2px $dark-pink !important;
+        }
     }
     ul {
       li:before {
@@ -1135,14 +1144,6 @@ nav[data-toggle='toc'] {
       }
       li {
         list-style: circle;
-        a {
-          color: $blue-gray !important;
-          border-bottom: solid 2px rgba($gray-text, 0.45) !important;
-          &:hover,
-          &.is-active {
-            color: $white !important;
-            border-bottom: solid 2px $dark-pink !important;
-          }
         }
       }
     }
