@@ -213,7 +213,7 @@ through the semester describing the project plan.
 
 **April 12th** Project demos/presentations in class.
 
-**April 18th** Project reports due by email.
+**April 22nd** Project reports in Blackboard before midnight.
 
 
 ## Special Accommodations

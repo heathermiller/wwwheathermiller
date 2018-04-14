@@ -57,3 +57,31 @@ Here are some datasets to serve as inspiration for your project:
 - [Academic Torrents](http://academictorrents.com/)
 - [Open Science Data Cloud](https://www.opensciencedatacloud.org/publicdata/)
 - [Great Github list of public data sets](http://www.datasciencecentral.com/profiles/blog/show?id=6448529%3ABlogPost%3A268197)
+
+## Final Project Report
+
+Your report should provide a clear introduction and problem sketch, a detailed walkthrough of the computations that you performed, and a treatment of the results you obtained. Your report should be around 10-12 pages in length.
+
+### Suggested format, three parts:
+
+- **Part 1**: Introduction, problem motivation, data
+  - Introduce and motivate the problem you're solving, **including a list of the specific questions you are answering with your analysis**. (1 page)
+  - Introduction of the datasets you started with, including schema information (1 page)
+- **Part 2**: Computation
+  - High-level diagram and explanation of your entire pipeline, including data cleaning (1 page)
+  - Description of the data cleaning that you have done. What did you transform the data _from_ and _to_? (1 page)
+  - Choose 3 interesting computations, highlight them, and walk through them in depth in the text (1 page per computation)
+  - Challenges that you came across and how you overcame them (1 page) (e.g., repartitioning data for performance improvements, etc.)
+  - Description of resources and tools you used to do your project, and the overall cost and amount of time it took (1 page)
+    - What cluster provider did you go with? How many machines did you use? Of what type, and in what datacenter?
+    - What systems did you use, and what language did you write in? What libraries did you use? What did your dependencies look like?
+    - How much did it cost overall, and how much time did each of your computations roughly take?
+- **Part 3**: Results (minimum 3 pages)
+  - Give a detailed treatment of what you results found, broken down into sections by the questions you set out to ask.
+  - Include visualizations of your results and/or screenshots of your system in use.
+
+
+### What I'm expecting each of you to deliver:
+
+- The above final report (either in PDF or as a static website) submitted to Blackboard by **11:59pm Sunday April 22nd**.
+- A link to a repository that I can reach that hosts your code. If your project is private, you can add me as a contributor (my GitHub username: heathermiller, my CCS GitHub username: heather)
