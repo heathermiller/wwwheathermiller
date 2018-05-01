@@ -71,6 +71,14 @@ refereed:
 
 workshops:
   pubs:
+  - title: "Towards a Solution to the Red Wedding Problem"
+    authors: C. Meiklejohn, H. Miller, Z. Lakhani
+    pdf: "http://christophermeiklejohn.com/publications/hotedge-2018-preprint.pdf"
+    abbrv: USENIX HotEdge
+    conference-full: USENIX Workshop on Hot Topics in Edge Computing
+    year: 2018
+    location: Boston, MA, USA
+
   - title: "Monotonicity Types for Distributed Dataflow"
     authors: K. Clancy, H. Miller
     pdf: "https://infoscience.epfl.ch/record/229896"
@@ -119,14 +127,14 @@ workshops:
 
 in-preparation:
   pubs:
+    - title: "Open Source Is A-Changin': How Qualitative Research Can Help Us Adapt"
+      authors: D. Klug, H. Miller
+      pdf: "https://infoscience.epfl.ch/record/255139"
+      under-submission: true
+
     - title: "Partisan: Enabling Cloud-Scale Erlang Applications"
       authors: C. Meiklejohn, H. Miller
       pdf: "https://arxiv.org/abs/1802.02652"
-      under-submission: true
-
-    - title: "Towards a Solution to the Red Wedding Problem"
-      authors: C. Meiklejohn, H. Miller, Z. Lakhani
-      pdf: "http://christophermeiklejohn.com/publications/hotedge-2018-preprint.pdf"
       under-submission: true
 
     - title: Monotonicity Types
