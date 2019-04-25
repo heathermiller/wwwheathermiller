@@ -20,20 +20,8 @@ title: Publications
 </div>
 {% endfor %}
 
-## Current Drafts
 
-{% for pub in site.data.publications.in-preparation.pubs %}
-<div class="columns">
-  <div class="column publication">
-    <div class="title">{{ pub.title }}</div>
-    <div class="authors">{{ pub.authors }}</div>
-    {% if pub.under-submission == true %}<div class="under-submission">Under Submission</div>{% endif %}
-    {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
-  </div>
-</div>
-{% endfor %}
-
-## Refereed Journal and Conference Papers
+## Refereed Papers
 
 {% for pub in site.data.publications.refereed.pubs %}
 <div class="columns is-mobile">
@@ -49,28 +37,23 @@ title: Publications
     {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
     {% if pub.acmdl %}<a class="button lil-pub-button" href="{{ pub.acmdl }}">ACM DL</a>{% endif %}
     {% if pub.cambridge %}<a class="button lil-pub-button" href="{{ pub.cambridge }}">Cambridge U. Press</a>{% endif %}
+    {% if pub.scidirect %}<a class="button lil-pub-button" href="{{ pub.scidirect }}">Science Direct</a>{% endif %}
   </div>
   <div class="column publication"><div class="abbrv">{{ pub.abbrv }} {{ pub.year }}</div></div>
 </div>
 {% endfor %}
 
-## Refereed Workshop Papers
 
-{% for pub in site.data.publications.workshops.pubs %}
-<div class="columns is-mobile">
-  <div class="column is-three-quarters publication">
+## Current Drafts
+
+{% for pub in site.data.publications.in-preparation.pubs %}
+<div class="columns">
+  <div class="column publication">
     <div class="title">{{ pub.title }}</div>
     <div class="authors">{{ pub.authors }}</div>
-    {% if pub.conference-full %}  
-      <div class="venue">{{ pub.conference-full }}</div>
-    {% elsif pub.journal %}
-      <div class="venue">{{ pub.journal }}</div>
-    {% endif %}
-    <div class="year">{{ pub.year }}</div>
+    {% if pub.under-submission == true %}<div class="under-submission">Under Submission</div>{% endif %}
     {% if pub.pdf %}<a class="button lil-pub-button" href="{{ pub.pdf }}">PDF</a>{% endif %}
-    {% if pub.acmdl %}<a class="button lil-pub-button" href="{{ pub.acmdl }}">ACM DL</a>{% endif %}
   </div>
-  <div class="column publication"><div class="abbrv">{{ pub.abbrv }} {{ pub.year }}</div></div>
 </div>
 {% endfor %}
 

@@ -86,32 +86,23 @@
         <div class="publication-head">Recent Work</div>
         <table class="table publications">
           <tbody>
-            <tr>
-              <td>
-                <div class="pub-title">Simplicitly: Foundations and Applications of Implicit Function Types</div>
-                <div class="pub-authors">M. Odersky, O. Blanvillain, F. Liu, A. Biboudis, H. Miller, and S. Stucki</div>
-                <div class="pub-conf-journal-name">ACM SIGPLAN Symposium on Principles of Programming Languages (POPL'18)</div>
-                <div class="pub-meta"><a href="https://infoscience.epfl.ch/record/229878/files/simplicitly_1.pdf"><span class="tag pub-tag">PDF</span></a><a href=""></div>
-              </td>
-              <td nowrap><div class="pub-conf-abbrv">POPL 2018</div></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="pub-title"> A Programming Model and Foundation for Lineage-Based Distributed Computation</div>
-                <div class="pub-authors">P. Haller, H. Miller and N. Müller</div>
-                <div class="pub-conf-journal-name">Journal of Functional Programming (to appear)</div>
-              </td>
-              <td nowrap><div class="pub-conf-abbrv">JFP 2018</div></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="pub-title">Function Passing: A Model for Typed, Distributed Functional Programming</div>
-                <div class="pub-authors">H. Miller, P. Haller, N. Müller, and J. Boullier</div>
-                <div class="pub-conf-journal-name">ACM SIGPLAN Systems, Programming, Languages and Applications: Software for Humanity (SPLASH'16), Onward!</div>
-                <div class="pub-meta"><a href="https://infoscience.epfl.ch/record/205822/files/f-p.pdf"><span class="tag pub-tag">PDF</span></a><a href=""></div>
-              </td>
-              <td nowrap><div class="pub-conf-abbrv">SPLASH 2016</div></td>
-            </tr>
+            {% for pub in site.data.publications.refereed.pubs limit:3 %}
+              <tr>
+                <td>
+                  <div class="pub-title">{{ pub.title }}</div>
+                  <div class="pub-authors">{{ pub.authors }}</div>
+                  <div class="pub-conf-journal-name">{% if pub.conference-full %}{{ pub.conference-full }}{% elsif pub.journal %}{{ pub.journal }}{% endif %}</div>
+                  <div class="pub-meta">
+                    {% if pub.pdf %}<a href="{{ pub.pdf }}"><span class="tag pub-tag">PDF</span></a>{% endif %}
+                    {% if pub.acmdl %}<a href="{{ pub.acmdl }}"><span class="tag pub-tag">ACM DL</span></a>{% endif %}
+                    {% if pub.cambridge %}<a href="{{ pub.cambridge }}"><span class="tag pub-tag">Cambridge U. Press</span></a>{% endif %}
+                    {% if pub.scidirect %}<a href="{{ pub.scidirect }}"><span class="tag pub-tag">Science Direct</span></a>{% endif %}
+                  </div>
+                </td>
+                <td nowrap><div class="pub-conf-abbrv">{{ pub.abbrv }} {{ pub.year }}</div></td>
+              </tr>
+              {{ item }}
+            {% endfor %}
           </tbody>
         </table>
         <a class="button publication-button" href="{{ site.baseurl }}/publications.html">Full Publication List</a>
