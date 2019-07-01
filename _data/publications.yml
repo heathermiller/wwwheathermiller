@@ -12,6 +12,22 @@ models and frameworks that the programmer uses to build these systems."
 
 refereed:
   pubs:
+  - title: "Scala Implicits Are Everywhere!"
+    authors: F. Krikava, J. Vitek, H. Miller
+    abbrv: OOPSLA
+    conference-full: "ACM SIGPLAN Conference on Object Oriented Programming, Systems, Languages and Applications"
+    month: October
+    year: 2019
+    location: Athens, Greece
+
+  - title: "Checking-in on Network Functions"
+    authors: Z. Lakhani, H. Miller
+    abbrv: ANRW
+    conference-full: "ACM, IRTF & ISOC Applied Networking Research Workshop"
+    month: July
+    year: 2019
+    location: Montreal, Quebec, Canada
+
   - title: "Partisan: Rethinking the Distributed Actor Runtime For Greater Scalability"
     authors: C. Meiklejohn, H. Miller, P. Alvaro
     abbrv: USENIX ATC
