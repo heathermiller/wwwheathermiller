@@ -228,7 +228,7 @@ code.highlighter-rouge {
   color: #ffffff;
 }
 
-.heather, .miller {
+.heather, .miller, .small-title-above {
   font-family: "Source Sans Pro";
   color: white;
   font-size: 22px;
@@ -238,8 +238,14 @@ code.highlighter-rouge {
   letter-spacing: -1px;
 }
 
-.miller {
+.miller, .small-title-above {
   font-weight: 800;
+}
+
+.small-title-above {
+  color: transparentize(white, 0.5);
+  text-transform: uppercase;
+  margin-top: 1em;
 }
 
 .job {
