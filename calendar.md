@@ -1,6 +1,7 @@
 ---
 layout: inner
 title: Calendar
+permalink: /calendar/
 ---
 
 <span style="font-weight: bold; color: #ffffff;">Hi there</span>.
