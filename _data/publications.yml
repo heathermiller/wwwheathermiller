@@ -12,6 +12,14 @@ models and frameworks that the programmer uses to build these systems."
 
 refereed:
   pubs:
+  - title: "Composing and Decomposing Op-Based CRDTs with Semidirect Products"
+    authors: M. Weidner, C. Meiklejohn, H. Miller
+    abbrv: ICFP
+    conference-full: "ACM SIGPLAN International Conference on Functional Programming"
+    month: August
+    year: 2020
+    location: Online
+
   - title: "Scala Implicits Are Everywhere!"
     authors: F. Krikava, J. Vitek, H. Miller
     abbrv: OOPSLA
@@ -209,7 +217,7 @@ in-preparation:
       under-submission: true
 
     - title: Monotonicity Types
-      authors: K. Clancy, H. Miller, C. Meiklejohn, P. Haller  
+      authors: K. Clancy, H. Miller, C. Meiklejohn, P. Haller
       under-submission: true
 
 
