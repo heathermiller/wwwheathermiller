@@ -12,6 +12,14 @@ models and frameworks that the programmer uses to build these systems."
 
 refereed:
   pubs:
+  - title: "Heard it Through the Gitvine: An Empirical Study of Tool Diffusion Across the npm Ecosystem"
+    authors: H. Lamba, A. Trockman, D. Armanios, C. Kästner, H. Miller, B. Vasilescu
+    abbrv: FSE
+    conference-full: "ACM Symposium on the Foundations of Software Engineering"
+    month: November
+    year: 2020
+    location: Sacremento, CA, USA
+
   - title: "Composing and Decomposing Op-Based CRDTs with Semidirect Products"
     authors: M. Weidner, C. Meiklejohn, H. Miller
     abbrv: ICFP
