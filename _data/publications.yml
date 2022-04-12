@@ -12,6 +12,15 @@ models and frameworks that the programmer uses to build these systems."
 
 refereed:
   pubs:
+  - title: "Service-level Fault Injection Testing"
+    authors: C. Meiklejohn, A. Estrada, Y. Song, H. Miller, R. Padhye
+    pdf: "https://christophermeiklejohn.com/publications/filibuster-socc-2021.pdf"
+    abbrv: SoCC
+    conference-full: "ACM Symposium on Cloud Computing"
+    month: November
+    year: 2021
+    location: "Seattle, WA, USA & Online"
+
   - title: "Heard it Through the Gitvine: An Empirical Study of Tool Diffusion Across the npm Ecosystem"
     authors: H. Lamba, A. Trockman, D. Armanios, C. Kästner, H. Miller, B. Vasilescu
     abbrv: FSE
