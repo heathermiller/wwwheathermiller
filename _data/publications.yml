@@ -12,6 +12,15 @@ models and frameworks that the programmer uses to build these systems."
 
 refereed:
   pubs:
+  - title: "Method overloading the circuit"
+    authors: C. Meiklejohn, L. Stark, C. Celozzi, M. Ranney, H. Miller
+    pdf: "https://dl.acm.org/doi/pdf/10.1145/3542929.3563466"
+    abbrv: SoCC
+    conference-full: "ACM Symposium on Cloud Computing"
+    month: November
+    year: 2022
+    location: "San Francisco, CA, USA & Online"
+    
   - title: "Service-level Fault Injection Testing"
     authors: C. Meiklejohn, A. Estrada, Y. Song, H. Miller, R. Padhye
     pdf: "https://christophermeiklejohn.com/publications/filibuster-socc-2021.pdf"
