@@ -12,6 +12,51 @@ models and frameworks that the programmer uses to build these systems."
 
 refereed:
   pubs:
+  - title: "DSPy: Compiling Declarative Language Model Calls into State-of-the-Art Pipelines"
+    authors: O. Khattab, A. Singhvi, P. Maheshwari, Z. Zhang, K. Santhanam, S. Vardhamanan, S. Haq, A. Sharma, T. T. Joshi, H. Moazam, H. Miller, M. Zaharia, C. Potts
+    pdf: "https://openreview.net/forum?id=sY5N0zY5Od"
+    abbrv: ICLR (spotlight)
+    conference-full: "International Conference on Learning Representations"
+    month: May
+    year: 2024
+    location: "Vienna, Austria"
+
+  - title: "Flexible Non-intrusive Dynamic Instrumentation for WebAssembly"
+    authors: B. L. Titzer, E. Gilbert, B. Wei Jie Teo, Y. Anand, K. Takayama, H. Miller
+    pdf: "https://dl.acm.org/doi/10.1145/3620666.3651338"
+    abbrv: ASPLOS
+    conference-full: "ACM International Conference on Architectural Support for Programming Languages and Operating Systems"
+    month: April
+    year: 2024
+    location: "San Diego, CA, USA"
+
+  - title: "Can My Microservice Tolerate an Unreliable Database? Resilience Testing with Fault Injection and Visualization"
+    authors: M. Assad, C. Meiklejohn, H. Miller, S. Krusche
+    pdf: "https://dl.acm.org/doi/10.1145/3639478.3640021"
+    abbrv: ICSE Demo
+    conference-full: "IEEE/ACM 46th International Conference on Software Engineering"
+    month: April
+    year: 2024
+    location: "Lisbon, Portugal"    
+
+  - title: "For-Each Operations in Collaborative Apps"
+    authors: M. Weidner, R. Pradeep, B. Geordie, H. Miller
+    pdf: "https://dl.acm.org/doi/10.1145/3578358.3591323"
+    abbrv: PaPoC
+    conference-full: "Workshop on Principles and Practice of Consistency for Distributed Data"
+    month: May
+    year: 2023
+    location: "Rome, Italy"
+
+  - title: "Programmer Experience When Using CRDTs to Build Collaborative Webapps: Initial Insights"
+    authors: Y. Zhang, M. Weidner, H. Miller
+    pdf: "https://kilthub.cmu.edu/articles/conference_contribution/Programmer_Experience_When_Using_CRDTs_to_Build_Collaborative_Webapps_Initial_Insights/22277341/1"
+    abbrv: PLATEAU
+    conference-full: "Workshop on the Intersection of Human Computer Interaction and Programming Languages"
+    month: February
+    year: 2023
+    location: "Pittsburgh, PA, USA"
+
   - title: "Method overloading the circuit"
     authors: C. Meiklejohn, L. Stark, C. Celozzi, M. Ranney, H. Miller
     pdf: "https://dl.acm.org/doi/pdf/10.1145/3542929.3563466"
